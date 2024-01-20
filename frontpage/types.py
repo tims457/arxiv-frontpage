@@ -8,11 +8,12 @@ class ArxivArticle(BaseModel):
     abstract: str
     sentences: List[str]
     url: str
+    category: str = ""
 
 
 class LabelConfig(BaseModel):
     name: str
-    instructions: str
+    instructions: str = ""
     label: str
     threshold: float = 0.7
 

@@ -2,7 +2,7 @@ from rich.console import Console
 import itertools as it
 
 from spacy.tokens import Span
-
+from .hf_models import HFModel
 
 console = Console()
 
@@ -70,6 +70,7 @@ def attach_spans(stream, label, min_spans=1, max_spans=1):
 
 
 def add_predictions(stream, model):
+    model = HFModel()
     for ex in stream:
         preds = model.predict(ex['sentences'])
         ex['preds'] = preds

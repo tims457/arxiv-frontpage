@@ -32,7 +32,8 @@ def parse(res: Result, nlp: Language) -> ArxivArticle:
         title=str(res.title),
         abstract=summary,
         sentences=sents,
-        url=str(res.entry_id)
+        url=str(res.entry_id),
+        category=res.primary_category,
     )
 
 @retry(tries=5, delay=1, backoff=2)
@@ -48,21 +49,48 @@ def main():
     results = list(items.results())
 
     console.log(f"Found {len(results)} results.")
+    categories = [
+                    "cs.AI",
+                    "cs.CE",
+                    "cs.LG",
+                    "cs.GT",
+                    "cs.MA",
+                    "cs.SI",
+                    "cs.NE",
+                    
+                    "gr-qc",
+                    "hep-th",
+                    "math-ph",
+                    
+                    "nlin.AO",
+                    
+                    "physics.comp-ph",
+                    "physics.soc-ph",
+                    "quant-ph",
+                    
+                    "q-fin.RM",
+    ]
 
     articles = [dict(parse(r, nlp=nlp)) 
                 for r in tqdm.tqdm(results) 
-                if age_in_days(r) < 2.5 and r.primary_category.startswith("cs")]
+                # if age_in_days(r) < 2.5 and r.primary_category.startswith("cs")
+                if age_in_days(r) < 2.5 and r.primary_category in categories
+                ]
 
     dist = [age_in_days(r) for r in results]
     if dist:
         console.log(f"Minimum article age: {min(dist)}")
         console.log(f"Maximum article age: {max(dist)}")
     articles_dict = {ex['title']: ex for ex in articles}
-    most_recent = list(sorted(Path("data/downloads/").glob("*.jsonl")))[-1]
-    old_articles_dict = {ex['title']: ex for ex in srsly.read_jsonl(most_recent)}
+    try:
+        most_recent = list(sorted(Path("data/downloads/").glob("*.jsonl")))[-1]
+        old_articles_dict = {ex['title']: ex for ex in srsly.read_jsonl(most_recent)}
 
-    new_articles = [ex for title, ex in articles_dict.items() if title not in old_articles_dict.keys()]
-    old_articles = [ex for title, ex in articles_dict.items() if title in old_articles_dict.keys()]
+        new_articles = [ex for title, ex in articles_dict.items() if title not in old_articles_dict.keys()]
+        old_articles = [ex for title, ex in articles_dict.items() if title in old_articles_dict.keys()]
+    except IndexError:
+        new_articles = [ex for title, ex in articles_dict.items()]
+        old_articles = []
     if old_articles:
         console.log(f"Found {len(old_articles)} old articles in current batch. Skipping.")
     if new_articles:
