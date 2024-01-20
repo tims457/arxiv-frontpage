@@ -17,3 +17,9 @@ sections:
   - name: "Quantum Field Theory"
     label: "quantum field theory"
     threshold: 0.8
+  - name: "Neural Ordinary Differential Equations"
+    label: "neural ordinary differential equations"
+    threshold: 0.8
+  - name: "Artificial General Intelligence"
+    label: "artificial general intelligence"
+    threshold: 0.8
