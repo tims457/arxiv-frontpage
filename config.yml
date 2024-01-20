@@ -1,37 +1,19 @@
 sections:
-  - name: "New Datasets"
-    instructions: | 
-      This label represents arxiv articles that discuss the release of a new dataset. 
-      When annotating, it's important that the sentence in question clearly confirms,
-      without a doubt, that the article is about a new dataset or corpus. New benchmarks
-      on a existing dataset are not of interest.
-    label: "new-dataset"
-    threshold: 0.7
-  - name: "Data Quality"
-    instructions: |
-      This label represents arxiv articles that discuss data quality issues in existing 
-      datasets. It may also relate to annotation issues.
-    label: "data-quality"
-    threshold: 0.6
-  - name: "Benchmarks"
-    instructions: |
-      This label represents the discussion of a benchmark.
-    label: "benchmark"
-    threshold: 0.6
-  - name: "LLMs"
-    instructions: |
-      This label represents the discussion of a large language models.
-    label: "llms"
-    threshold: 0.6
-  - name: "Developer Research"
-    instructions: |
-      This label represents arxiv articles that discuss research on how to be a developer. 
-      Mainly targeted towards quantitative research.
-    label: "dev-research"
-    threshold: 0.6
-  - name: "Data Annotation Techniques"
-    instructions: |
-      This label represents research related to data annotation. Could be annotator agreement
-      stuff, interfaces, annotations processes ... that stuff!
-    label: "data-annotation"
-    threshold: 0.6
+  - name: "Complex Systems"
+    label: "complex systems, but not computational complexity"
+    threshold: 0.8
+  - name: "Collective Intelligence"
+    label: "collective intelligence"
+    threshold: 0.8
+  - name: "Reinforcement Learning"
+    label: "reinforcement learning"
+    threshold: 0.8
+  - name: "Holograpic Principle"
+    label: "holographic principle"
+    threshold: 0.8
+  - name: "Quantum Gravity"
+    label: "quantum gravity"
+    threshold: 0.8
+  - name: "Quantum Field Theory"
+    label: "quantum field theory"
+    threshold: 0.8

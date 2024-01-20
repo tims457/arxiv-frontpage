@@ -92,3 +92,15 @@ tasks:
     - task: train
     - python -m frontpage build
     - python -m http.server
+
+  download:
+    desc: Downloads new data from the arXiv.
+    cmds:
+      - python -m frontpage download
+    generates:
+      - data/downloads/*.jsonl
+
+  rebuild:
+    desc: Rebuilds the frontpage
+    cmds:
+      - python -m frontpage build --preprocess
