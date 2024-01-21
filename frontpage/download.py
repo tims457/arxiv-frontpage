@@ -41,8 +41,8 @@ def main():
     nlp = spacy.load("en_core_web_sm", disable=["ner", "lemmatizer", "tagger"])
     console.log(f"Starting arxiv search.")
     items = arxiv.Search(
-        query="and",
-        max_results=200,
+        query="the",
+        max_results=300,
         sort_by=arxiv.SortCriterion.SubmittedDate,
     )
 
@@ -70,12 +70,17 @@ def main():
                     
                     "q-fin.RM",
     ]
+    
+    starts_with = ["cs"]
 
     articles = [dict(parse(r, nlp=nlp)) 
                 for r in tqdm.tqdm(results) 
                 # if age_in_days(r) < 2.5 and r.primary_category.startswith("cs")
-                if age_in_days(r) < 3.0 and r.primary_category in categories
-                ]
+                # if age_in_days(r) < 3.0 and r.primary_category in categories
+                if age_in_days(r) < 3.0 and (
+                    any(r.primary_category.startswith(sw) for sw in starts_with) or any(elem in r.categories for elem in categories)
+                )
+    ]
 
     dist = [age_in_days(r) for r in results]
     if dist:

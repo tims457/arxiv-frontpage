@@ -34,11 +34,253 @@
             <h2 class="text-2xl tracking-tight pt-4 font-bold">Collective Intelligence</h2>
           </td>
         </tr><tr>
+          <td class="inline-block">
+            <p class='font-bold text-black px-2 mx-1 text-xs w-24'>2024-01-18</p>
+          </td>
+          <td>
+            <div x-data="{open: false}">
+              <span @click="open = ! open" class="hover:underline cursor-pointer decoration-2 decoration-green-600 text-gray-800 text-sm">
+                Evolutionary Computation in the Era of Large Language Model: Survey and Roadmap
+              </span>
+              <div x-show="open" x-collapse.duration.500ms class="text-sm text-gray-500 pt-2">
+                <div class="text-center pt-2"></div>
+                <p class="pt-2">
+                  <p>Large Language Models (LLMs), built upon Transformer-based architectures with massive pretraining on diverse data, have not only revolutionized natural language processing but also extended their prowess to various domains, marking a significant stride towards artificial general intelligence.The interplay between LLMs and Evolutionary Algorithms (EAs), despite differing in objectives and methodologies, reveals intriguing parallels, especially in their shared optimization nature, black-box characteristics, and proficiency in handling complex problems.Meanwhile, EA can not only provide an optimization framework for LLM's further enhancement under black-box settings but also empower LLM with flexible global search and iterative mechanism in applications.<span class='px-1 mx-1 bg-yellow-200'>On the other hand, LLM's abundant domain knowledge enables EA to perform smarter searches, while its text processing capability assist in deploying EA across various tasks. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.893</span></span>Based on their complementary advantages, this paper presents a comprehensive review and forward-looking roadmap, categorizing their mutual inspiration into LLM-enhanced evolutionary optimization and EA-enhanced LLM.Some integrated synergy methods are further introduced to exemplify the amalgamation of LLMs and EAs in various application scenarios, including neural architecture search, code generation, software engineering, and text generation.As the first comprehensive review specifically focused on the EA research in the era of LLMs, this paper provides a foundational stepping stone for understanding and harnessing the collaborative potential of LLMs and EAs.By presenting a comprehensive review, categorization, and critical analysis, we contribute to the ongoing discourse on the cross-disciplinary study of these two powerful paradigms.The identified challenges and future directions offer guidance to unlock the full potential of this innovative collaboration.</p>
+                </p>
+              <p class="pb-2 pt-2 text-center">
+                <a class="underline decoration-2 text-green-600 text-md pt-2" href='http://arxiv.org/abs/2401.10034v1' target="_blank">
+                  link
+                </a>
+              </p>
+            </div>
+          </div>
+        </td>
+      </tr><tr>
+          <td class="inline-block">
+            <p class='font-bold text-black px-2 mx-1 text-xs w-24'>2024-01-18</p>
+          </td>
+          <td>
+            <div x-data="{open: false}">
+              <span @click="open = ! open" class="hover:underline cursor-pointer decoration-2 decoration-green-600 text-gray-800 text-sm">
+                Beyond Reference-Based Metrics: Analyzing Behaviors of Open LLMs on Data-to-Text Generation
+              </span>
+              <div x-show="open" x-collapse.duration.500ms class="text-sm text-gray-500 pt-2">
+                <div class="text-center pt-2"></div>
+                <p class="pt-2">
+                  <p>We investigate to which extent open large language models (LLMs) can generate coherent and relevant text from structured data.To prevent bias from benchmarks leaked into LLM training data, we collect Quintd-1: an ad-hoc benchmark for five data-to-text (D2T) generation tasks, consisting of structured data records in standard formats gathered from public APIs.<span class='px-1 mx-1 bg-yellow-200'>We leverage reference-free evaluation metrics and LLMs' in-context learning capabilities, allowing us to test the models with no human-written references. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.88</span></span>Our evaluation focuses on annotating semantic accuracy errors on token-level, combining human annotators and a metric based on GPT-4.Our systematic examination of the models' behavior across domains and tasks suggests that state-of-the-art open LLMs with 7B parameters can generate fluent and coherent text from various standard data formats in zero-shot settings.However, we also show that semantic accuracy of the outputs remains a major issue: on our benchmark, 80% of outputs of open LLMs contain a semantic error according to human annotators (91% according to GPT-4).Our code, data, and model outputs are available at https://d2t-llm.github.io.</p>
+                </p>
+              <p class="pb-2 pt-2 text-center">
+                <a class="underline decoration-2 text-green-600 text-md pt-2" href='http://arxiv.org/abs/2401.10186v1' target="_blank">
+                  link
+                </a>
+              </p>
+            </div>
+          </div>
+        </td>
+      </tr><tr>
+          <td class="inline-block">
+            <p class='font-bold text-black px-2 mx-1 text-xs w-24'>2024-01-18</p>
+          </td>
+          <td>
+            <div x-data="{open: false}">
+              <span @click="open = ! open" class="hover:underline cursor-pointer decoration-2 decoration-green-600 text-gray-800 text-sm">
+                The Manga Whisperer: Automatically Generating Transcriptions for Comics
+              </span>
+              <div x-show="open" x-collapse.duration.500ms class="text-sm text-gray-500 pt-2">
+                <div class="text-center pt-2"></div>
+                <p class="pt-2">
+                  <p>In the past few decades, Japanese comics, commonly referred to as Manga, have transcended both cultural and linguistic boundaries to become a true worldwide sensation.Yet, the inherent reliance on visual cues and illustration within manga renders it largely inaccessible to individuals with visual impairments.In this work, we seek to address this substantial barrier, with the aim of ensuring that manga can be appreciated and actively engaged by everyone.Specifically, we tackle the problem of diarisation i.e. generating a transcription of who said what and when, in a fully automatic way.   <span class='px-1 mx-1 bg-yellow-200'>To this end, we make the following contributions: (1) we present a unified model, Magi, that is able to (a) detect panels, text boxes and character boxes, (b) cluster characters by identity (without knowing the number of clusters apriori), and (c) associate dialogues to their speakers; (2) we propose a novel approach that is able to sort the detected text boxes in their reading order and generate a dialogue transcript; (3) we annotate an evaluation benchmark for this task using publicly available [English] manga pages. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.879</span></span>The code, evaluation datasets and the pre-trained model can be found at: https://github.com/ragavsachdeva/magi.</p>
+                </p>
+              <p class="pb-2 pt-2 text-center">
+                <a class="underline decoration-2 text-green-600 text-md pt-2" href='http://arxiv.org/abs/2401.10224v1' target="_blank">
+                  link
+                </a>
+              </p>
+            </div>
+          </div>
+        </td>
+      </tr><tr>
+          <td class="inline-block">
+            <p class='font-bold text-black px-2 mx-1 text-xs w-24'>2024-01-18</p>
+          </td>
+          <td>
+            <div x-data="{open: false}">
+              <span @click="open = ! open" class="hover:underline cursor-pointer decoration-2 decoration-green-600 text-gray-800 text-sm">
+                OMG-Seg: Is One Model Good Enough For All Segmentation?
+              </span>
+              <div x-show="open" x-collapse.duration.500ms class="text-sm text-gray-500 pt-2">
+                <div class="text-center pt-2"></div>
+                <p class="pt-2">
+                  <p>In this work, we address various segmentation tasks, each traditionally tackled by distinct or partially unified models.<span class='px-1 mx-1 bg-yellow-200'>We propose OMG-Seg, One Model that is Good enough to efficiently and effectively handle all the segmentation tasks, including image semantic, instance, and panoptic segmentation, as well as their video counterparts, open vocabulary settings, prompt-driven, interactive segmentation like SAM, and video object segmentation. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.868</span></span>To our knowledge, this is the first model to handle all these tasks in one model and achieve satisfactory performance.We show that OMG-Seg, a transformer-based encoder-decoder architecture with task-specific queries and outputs, can support over ten distinct segmentation tasks and yet significantly reduce computational and parameter overhead across various tasks and datasets.We rigorously evaluate the inter-task influences and correlations during co-training.Code and models are available at https://github.com/lxtGH/OMG-Seg.</p>
+                </p>
+              <p class="pb-2 pt-2 text-center">
+                <a class="underline decoration-2 text-green-600 text-md pt-2" href='http://arxiv.org/abs/2401.10229v1' target="_blank">
+                  link
+                </a>
+              </p>
+            </div>
+          </div>
+        </td>
+      </tr><tr>
           <td></td>
           <td>
             <h2 class="text-2xl tracking-tight pt-4 font-bold">Reinforcement Learning</h2>
           </td>
         </tr><tr>
+          <td class="inline-block">
+            <p class='font-bold text-black px-2 mx-1 text-xs w-24'>2024-01-18</p>
+          </td>
+          <td>
+            <div x-data="{open: false}">
+              <span @click="open = ! open" class="hover:underline cursor-pointer decoration-2 decoration-green-600 text-gray-800 text-sm">
+                CLIP feature-based randomized control using images and text for multiple tasks and robots
+              </span>
+              <div x-show="open" x-collapse.duration.500ms class="text-sm text-gray-500 pt-2">
+                <div class="text-center pt-2"></div>
+                <p class="pt-2">
+                  <p>This study presents a control framework leveraging vision language models (VLMs) for multiple tasks and robots.Notably, existing control methods using VLMs have achieved high performance in various tasks and robots in the training environment.However, these methods incur high costs for learning control policies for tasks and robots other than those in the training environment.Considering the application of industrial and household robots, learning in novel environments where robots are introduced is challenging.To address this issue, we propose a control framework that does not require learning control policies.Our framework combines the vision-language CLIP model with a randomized control.CLIP computes the similarity between images and texts by embedding them in the feature space.This study employs CLIP to compute the similarity between camera images and text representing the target state.<span class='px-1 mx-1 bg-yellow-200'>In our method, the robot is controlled by a randomized controller that simultaneously explores and increases the similarity gradients. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.972</span></span>Moreover, we fine-tune the CLIP to improve the performance of the proposed method.Consequently, we confirm the effectiveness of our approach through a multitask simulation and a real robot experiment using a two-wheeled robot and robot arm.</p>
+                </p>
+              <p class="pb-2 pt-2 text-center">
+                <a class="underline decoration-2 text-green-600 text-md pt-2" href='http://arxiv.org/abs/2401.10085v1' target="_blank">
+                  link
+                </a>
+              </p>
+            </div>
+          </div>
+        </td>
+      </tr><tr>
+          <td class="inline-block">
+            <p class='font-bold text-black px-2 mx-1 text-xs w-24'>2024-01-18</p>
+          </td>
+          <td>
+            <div x-data="{open: false}">
+              <span @click="open = ! open" class="hover:underline cursor-pointer decoration-2 decoration-green-600 text-gray-800 text-sm">
+                Multi-Agent Reinforcement Learning for Maritime Operational Technology Cyber Security
+              </span>
+              <div x-show="open" x-collapse.duration.500ms class="text-sm text-gray-500 pt-2">
+                <div class="text-center pt-2"></div>
+                <p class="pt-2">
+                  <p><span class='px-1 mx-1 bg-yellow-200'>This paper demonstrates the potential for autonomous cyber defence to be applied on industrial control systems and provides a baseline environment to further explore Multi-Agent Reinforcement Learning's (MARL) application to this problem domain. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.961</span></span>It introduces a simulation environment, IPMSRL, of a generic Integrated Platform Management System (IPMS) and explores the use of MARL for autonomous cyber defence decision-making on generic maritime based IPMS Operational Technology (OT).OT cyber defensive actions are less mature than they are for Enterprise IT.This is due to the relatively brittle nature of OT infrastructure originating from the use of legacy systems, design-time engineering assumptions, and lack of full-scale modern security controls.There are many obstacles to be tackled across the cyber landscape due to continually increasing cyber-attack sophistication and the limitations of traditional IT-centric cyber defence solutions.Traditional IT controls are rarely deployed on OT infrastructure, and where they are, some threats aren't fully addressed.In our experiments, a shared critic implementation of Multi Agent Proximal Policy Optimisation (MAPPO) outperformed Independent Proximal Policy Optimisation (IPPO).MAPPO reached an optimal policy (episode outcome mean of 1) after 800K timesteps, whereas IPPO was only able to reach an episode outcome mean of 0.966 after one million timesteps.Hyperparameter tuning greatly improved training performance.Across one million timesteps the tuned hyperparameters reached an optimal policy whereas the default hyperparameters only managed to win sporadically, with most simulations resulting in a draw.We tested a real-world constraint, attack detection alert success, and found that when alert success probability is reduced to 0.75 or 0.9, the MARL defenders were still able to win in over 97.5% or 99.5% of episodes, respectively.</p>
+                </p>
+              <p class="pb-2 pt-2 text-center">
+                <a class="underline decoration-2 text-green-600 text-md pt-2" href='http://arxiv.org/abs/2401.10149v1' target="_blank">
+                  link
+                </a>
+              </p>
+            </div>
+          </div>
+        </td>
+      </tr><tr>
+          <td class="inline-block">
+            <p class='font-bold text-black px-2 mx-1 text-xs w-24'>2024-01-18</p>
+          </td>
+          <td>
+            <div x-data="{open: false}">
+              <span @click="open = ! open" class="hover:underline cursor-pointer decoration-2 decoration-green-600 text-gray-800 text-sm">
+                Model-Assisted Learning for Adaptive Cooperative Perception of Connected Autonomous Vehicles
+              </span>
+              <div x-show="open" x-collapse.duration.500ms class="text-sm text-gray-500 pt-2">
+                <div class="text-center pt-2"></div>
+                <p class="pt-2">
+                  <p>Cooperative perception (CP) is a key technology to facilitate consistent and accurate situational awareness for connected and autonomous vehicles (CAVs).To tackle the network resource inefficiency issue in traditional broadcast-based CP, unicast-based CP has been proposed to associate CAV pairs for cooperative perception via vehicle-to-vehicle transmission.In this paper, we investigate unicast-based CP among CAV pairs.With the consideration of dynamic perception workloads and channel conditions due to vehicle mobility and dynamic radio resource availability, we propose an adaptive cooperative perception scheme for CAV pairs in a mixed-traffic autonomous driving scenario with both CAVs and human-driven vehicles.We aim to determine when to switch between cooperative perception and stand-alone perception for each CAV pair, and allocate communication and computing resources to cooperative CAV pairs for maximizing the computing efficiency gain under perception task delay requirements.<span class='px-1 mx-1 bg-yellow-200'>A model-assisted multi-agent reinforcement learning (MARL) solution is developed, which integrates MARL for an adaptive CAV cooperation decision and an optimization model for communication and computing resource allocation. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.992</span></span>Simulation results demonstrate the effectiveness of the proposed scheme in achieving high computing efficiency gain, as compared with benchmark schemes.</p>
+                </p>
+              <p class="pb-2 pt-2 text-center">
+                <a class="underline decoration-2 text-green-600 text-md pt-2" href='http://arxiv.org/abs/2401.10156v1' target="_blank">
+                  link
+                </a>
+              </p>
+            </div>
+          </div>
+        </td>
+      </tr><tr>
+          <td class="inline-block">
+            <p class='font-bold text-black px-2 mx-1 text-xs w-24'>2024-01-18</p>
+          </td>
+          <td>
+            <div x-data="{open: false}">
+              <span @click="open = ! open" class="hover:underline cursor-pointer decoration-2 decoration-green-600 text-gray-800 text-sm">
+                SHINOBI: Shape and Illumination using Neural Object Decomposition via BRDF Optimization In-the-wild
+              </span>
+              <div x-show="open" x-collapse.duration.500ms class="text-sm text-gray-500 pt-2">
+                <div class="text-center pt-2"></div>
+                <p class="pt-2">
+                  <p>We present SHINOBI, an end-to-end framework for the reconstruction of shape, material, and illumination from object images captured with varying lighting, pose, and background.Inverse rendering of an object based on unconstrained image collections is a long-standing challenge in computer vision and graphics and requires a joint optimization over shape, radiance, and pose.We show that an implicit shape representation based on a multi-resolution hash encoding enables faster and robust shape reconstruction with joint camera alignment optimization that outperforms prior work.<span class='px-1 mx-1 bg-yellow-200'>Further, to enable the editing of illumination and object reflectance (i.e. material) we jointly optimize BRDF and illumination together with the object's shape. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.903</span></span>Our method is class-agnostic and works on in-the-wild image collections of objects to produce relightable 3D assets for several use cases such as AR/VR, movies, games, etc.Project page: https://shinobi.aengelhardt.com Video: https://www.youtube.com/watch?v=iFENQ6AcYd8&feature=youtu.be</p>
+                </p>
+              <p class="pb-2 pt-2 text-center">
+                <a class="underline decoration-2 text-green-600 text-md pt-2" href='http://arxiv.org/abs/2401.10171v1' target="_blank">
+                  link
+                </a>
+              </p>
+            </div>
+          </div>
+        </td>
+      </tr><tr>
+          <td class="inline-block">
+            <p class='font-bold text-black px-2 mx-1 text-xs w-24'>2024-01-18</p>
+          </td>
+          <td>
+            <div x-data="{open: false}">
+              <span @click="open = ! open" class="hover:underline cursor-pointer decoration-2 decoration-green-600 text-gray-800 text-sm">
+                Divide and not forget: Ensemble of selectively trained experts in Continual Learning
+              </span>
+              <div x-show="open" x-collapse.duration.500ms class="text-sm text-gray-500 pt-2">
+                <div class="text-center pt-2"></div>
+                <p class="pt-2">
+                  <p>Class-incremental learning is becoming more popular as it helps models widen their applicability while not forgetting what they already know.<span class='px-1 mx-1 bg-yellow-200'>A trend in this area is to use a mixture-of-expert technique, where different models work together to solve the task. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.955</span></span>However, the experts are usually trained all at once using whole task data, which makes them all prone to forgetting and increasing computational burden.To address this limitation, we introduce a novel approach named SEED.SEED selects only one, the most optimal expert for a considered task, and uses data from this task to fine-tune only this expert.For this purpose, each expert represents each class with a Gaussian distribution, and the optimal expert is selected based on the similarity of those distributions.Consequently, SEED increases diversity and heterogeneity within the experts while maintaining the high stability of this ensemble method.The extensive experiments demonstrate that SEED achieves state-of-the-art performance in exemplar-free settings across various scenarios, showing the potential of expert diversification through data in continual learning.</p>
+                </p>
+              <p class="pb-2 pt-2 text-center">
+                <a class="underline decoration-2 text-green-600 text-md pt-2" href='http://arxiv.org/abs/2401.10191v1' target="_blank">
+                  link
+                </a>
+              </p>
+            </div>
+          </div>
+        </td>
+      </tr><tr>
+          <td class="inline-block">
+            <p class='font-bold text-black px-2 mx-1 text-xs w-24'>2024-01-18</p>
+          </td>
+          <td>
+            <div x-data="{open: false}">
+              <span @click="open = ! open" class="hover:underline cursor-pointer decoration-2 decoration-green-600 text-gray-800 text-sm">
+                RAP-SAM: Towards Real-Time All-Purpose Segment Anything
+              </span>
+              <div x-show="open" x-collapse.duration.500ms class="text-sm text-gray-500 pt-2">
+                <div class="text-center pt-2"></div>
+                <p class="pt-2">
+                  <p>Advanced by transformer architecture, vision foundation models (VFMs) achieve remarkable progress in performance and generalization ability.Segment Anything Model (SAM) is one remarkable model that can achieve generalized segmentation.However, most VFMs cannot run in realtime, which makes it difficult to transfer them into several products.On the other hand, current real-time segmentation mainly has one purpose, such as semantic segmentation on the driving scene.We argue that diverse outputs are needed for real applications.Thus, this work explores a new real-time segmentation setting, named all-purpose segmentation in real-time, to transfer VFMs in real-time deployment.It contains three different tasks, including interactive segmentation, panoptic segmentation, and video segmentation.We aim to use one model to achieve the above tasks in real-time.We first benchmark several strong baselines.Then, we present Real-Time All Purpose SAM (RAP-SAM).<span class='px-1 mx-1 bg-yellow-200'>It contains an efficient encoder and an efficient decoupled decoder to perform prompt-driven decoding. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.902</span></span>Moreover, we further explore different training strategies and tuning methods to boost co-training performance further.Our code and model are available at https://github.com/xushilin1/RAP-SAM/.</p>
+                </p>
+              <p class="pb-2 pt-2 text-center">
+                <a class="underline decoration-2 text-green-600 text-md pt-2" href='http://arxiv.org/abs/2401.10228v1' target="_blank">
+                  link
+                </a>
+              </p>
+            </div>
+          </div>
+        </td>
+      </tr><tr>
+          <td class="inline-block">
+            <p class='font-bold text-black px-2 mx-1 text-xs w-24'>2024-01-18</p>
+          </td>
+          <td>
+            <div x-data="{open: false}">
+              <span @click="open = ! open" class="hover:underline cursor-pointer decoration-2 decoration-green-600 text-gray-800 text-sm">
+                Simultaneous Tactile Estimation and Control for Extrinsic Dexterity
+              </span>
+              <div x-show="open" x-collapse.duration.500ms class="text-sm text-gray-500 pt-2">
+                <div class="text-center pt-2"></div>
+                <p class="pt-2">
+                  <p><span class='px-1 mx-1 bg-yellow-200'>We introduce a novel approach that combines tactile estimation and control for in-hand object manipulation. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.903</span></span><span class='px-1 mx-1 bg-yellow-200'>By integrating measurements from robot kinematics and an image-based tactile sensor, our framework estimates and tracks object pose while simultaneously generating motion plans to control the pose of a grasped object. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.961</span></span>This approach consists of a discrete pose estimator that uses the Viterbi decoding algorithm to find the most likely sequence of object poses in a coarsely discretized grid, and a continuous pose estimator-controller to refine the pose estimate and accurately manipulate the pose of the grasped object.Our method is tested on diverse objects and configurations, achieving desired manipulation objectives and outperforming single-shot methods in estimation accuracy.The proposed approach holds potential for tasks requiring precise manipulation in scenarios where visual perception is limited, laying the foundation for closed-loop behavior applications such as assembly and tool use.Please see supplementary videos for real-world demonstration at https://sites.google.com/view/texterity.</p>
+                </p>
+              <p class="pb-2 pt-2 text-center">
+                <a class="underline decoration-2 text-green-600 text-md pt-2" href='http://arxiv.org/abs/2401.10230v1' target="_blank">
+                  link
+                </a>
+              </p>
+            </div>
+          </div>
+        </td>
+      </tr><tr>
           <td></td>
           <td>
             <h2 class="text-2xl tracking-tight pt-4 font-bold">Neural Ordinary Differential Equations</h2>
@@ -69,6 +311,35 @@
               </p>
             </div>
           </div>
+        </td>
+      </tr><tr>
+          <td class="inline-block">
+            <p class='font-bold text-black px-2 mx-1 text-xs w-24'>2024-01-18</p>
+          </td>
+          <td>
+            <div x-data="{open: false}">
+              <span @click="open = ! open" class="hover:underline cursor-pointer decoration-2 decoration-green-600 text-gray-800 text-sm">
+                Edit One for All: Interactive Batch Image Editing
+              </span>
+              <div x-show="open" x-collapse.duration.500ms class="text-sm text-gray-500 pt-2">
+                <div class="text-center pt-2"></div>
+                <p class="pt-2">
+                  <p>In recent years, image editing has advanced remarkably.With increased human control, it is now possible to edit an image in a plethora of ways; from specifying in text what we want to change, to straight up dragging the contents of the image in an interactive point-based manner.However, most of the focus has remained on editing single images at a time.Whether and how we can simultaneously edit large batches of images has remained understudied.<span class='px-1 mx-1 bg-yellow-200'>With the goal of minimizing human supervision in the editing process, this paper presents a novel method for interactive batch image editing using StyleGAN as the medium. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.888</span></span>Given an edit specified by users in an example image (e.g., make the face frontal), our method can automatically transfer that edit to other test images, so that regardless of their initial state (pose), they all arrive at the same final state (e.g., all facing front).Extensive experiments demonstrate that edits performed using our method have similar visual quality to existing single-image-editing methods, while having more visual consistency and saving significant time and human effort.</p>
+                </p>
+              <p class="pb-2 pt-2 text-center">
+                <a class="underline decoration-2 text-green-600 text-md pt-2" href='http://arxiv.org/abs/2401.10219v1' target="_blank">
+                  link
+                </a>
+              </p>
+            </div>
+          </div>
+        </td>
+      </tr><tr>
+          <td></td>
+          <td>
+            <h2 class="text-2xl tracking-tight pt-4 font-bold">Thermodynamic Computing</h2>
+          </td>
+        </tr></tbody>
         </td>
       </tr><tr>
           <td></td>
