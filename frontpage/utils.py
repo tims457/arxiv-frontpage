@@ -1,3 +1,4 @@
+import tqdm
 from rich.console import Console 
 import itertools as it
 
@@ -71,7 +72,7 @@ def attach_spans(stream, label, min_spans=1, max_spans=1):
 
 def add_predictions(stream, model):
     model = HFModel()
-    for ex in stream:
+    for ex in tqdm.tqdm(stream):
         preds = model.predict(ex['sentences'])
         ex['preds'] = preds
         ex['created'] = ex['created'][:10]

@@ -1,19 +1,19 @@
 sections:
   - name: "Complex Systems"
     label: "complex systems, but not computational complexity"
-    threshold: 0.9
+    threshold: 0.87
   - name: "Collective Intelligence"
     label: "collective intelligence"
-    threshold: 0.9
+    threshold: 0.87
   - name: "Reinforcement Learning"
-    label: "reinforcement learning"
-    threshold: 0.9
+    label: "reinforcement learning or multi-agent reinforcement learning"
+    threshold: 0.87
   - name: "Neural Ordinary Differential Equations"
     label: "neural ordinary differential equations"
-    threshold: 0.9
+    threshold: 0.87
   - name: "Artificial General Intelligence"
     label: "artificial general intelligence"
-    threshold: 0.9
+    threshold: 0.87
   - name: "Thermodynamic Computing"
     label: "thermodynamic computing"
-    threshold: 0.9
+    threshold: 0.87

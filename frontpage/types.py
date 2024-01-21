@@ -16,6 +16,7 @@ class LabelConfig(BaseModel):
     instructions: str = ""
     label: str
     threshold: float = 0.7
+    detail: str = ""
 
 
 class Config(BaseModel):
