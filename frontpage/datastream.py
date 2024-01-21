@@ -11,7 +11,7 @@ from lazylines import LazyLines
 from lunr import lunr
 from lunr.index import Index
 
-from .constants import DATA_LEVELS, INDICES_FOLDER, LABELS, CONFIG, THRESHOLDS, CLEAN_DOWNLOADS_FOLDER, DOWNLOADS_FOLDER, ANNOT_PATH, ACTIVE_LEARN_PATH, SECOND_OPINION_PATH, ANNOT_FOLDER
+from .constants import DATA_LEVELS, INDICES_FOLDER, LABELS, CONFIG, THRESHOLDS, CLEAN_DOWNLOADS_FOLDER, DOWNLOADS_FOLDER, ANNOT_PATH, ACTIVE_LEARN_PATH, SECOND_OPINION_PATH, ANNOT_FOLDER, MAX_PAPERS
 from .modelling import SentenceModel
 from .utils import console, dedup_stream, add_rownum, attach_docs, attach_spans, add_predictions, abstract_annot_to_sent
 import warnings
@@ -72,6 +72,8 @@ class DataStream:
         arranged_glob = list(reversed(sorted(glob)))
         # Make lazy generator for all the items
         stream = it.chain(*list(srsly.read_jsonl(file) for file in arranged_glob))
+        #actually limit the papers since LazyLines head() doesn't work
+        stream = it.islice(stream, MAX_PAPERS)
         return stream
     
     def get_download_stream(self, level:str="sentence"):
@@ -311,13 +313,13 @@ class DataStream:
                     break
 
         console.log("Filtering recent content.")
-        return (
-            LazyLines(self.get_clean_download_stream())
-                # .head(50)
+        
+        pipe = (LazyLines(self.get_clean_download_stream())
                 .pipe(add_predictions, model=model)
                 .pipe(upper_limit)
-                .collect()
-        )
+                .collect())
+        
+        return pipe
     
     def get_site_stream2(self):
         # model = SentenceModel.from_disk()

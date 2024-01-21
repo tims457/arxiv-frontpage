@@ -1,25 +1,19 @@
 sections:
   - name: "Complex Systems"
     label: "complex systems, but not computational complexity"
-    threshold: 0.8
+    threshold: 0.9
   - name: "Collective Intelligence"
     label: "collective intelligence"
-    threshold: 0.8
+    threshold: 0.9
   - name: "Reinforcement Learning"
     label: "reinforcement learning"
-    threshold: 0.8
-  - name: "Holograpic Principle"
-    label: "holographic principle"
-    threshold: 0.8
-  - name: "Quantum Gravity"
-    label: "quantum gravity"
-    threshold: 0.8
-  - name: "Quantum Field Theory"
-    label: "quantum field theory"
-    threshold: 0.8
+    threshold: 0.9
   - name: "Neural Ordinary Differential Equations"
     label: "neural ordinary differential equations"
-    threshold: 0.8
+    threshold: 0.9
   - name: "Artificial General Intelligence"
     label: "artificial general intelligence"
-    threshold: 0.8
+    threshold: 0.9
+  - name: "Thermodynamic Computing"
+    label: "thermodynamic computing"
+    threshold: 0.9
