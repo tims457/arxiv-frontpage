@@ -119,6 +119,7 @@ def stats():
 )
 def build(retrain: bool = False, prep:bool = False):
     """Build a new site"""
+    start_time = dt.datetime.now()
     from .datastream import DataStream
     if prep:
         preprocess_cli()
@@ -130,6 +131,7 @@ def build(retrain: bool = False, prep:bool = False):
     rendered = template.render(sections=sections, today=dt.date.today())
     SITE_PATH.write_text(rendered)
     console.log("Site built.")
+    console.log(f"Build took {dt.datetime.now() - start_time}")
 
 
 @cli.command("artifact",

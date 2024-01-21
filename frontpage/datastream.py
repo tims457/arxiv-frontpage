@@ -291,7 +291,8 @@ class DataStream:
                     aligns="r,r,r,r".split(","))
     
     def get_site_stream(self):
-        model = SentenceModel.from_disk()
+        # model = SentenceModel.from_disk()
+        model = ""
 
         def upper_limit(stream):
             tracker = {lab: 0 for lab in LABELS}
@@ -312,16 +313,45 @@ class DataStream:
         console.log("Filtering recent content.")
         return (
             LazyLines(self.get_clean_download_stream())
-                .head(1000)
+                # .head(50)
                 .pipe(add_predictions, model=model)
                 .pipe(upper_limit)
+                .collect()
+        )
+    
+    def get_site_stream2(self):
+        # model = SentenceModel.from_disk()
+        model = ""
+
+        def upper_limit(stream):
+            tracker = {lab: 0 for lab in LABELS}
+            limit = 50
+            for ex in stream:
+                for preds in ex['preds']:
+                    for name, proba in preds.items():
+                        if name in tracker and proba > THRESHOLDS[name] and tracker[name] < limit:
+                            tracker[name] += 1
+                            if "sections" not in ex:
+                                ex['sections'] = []
+                            ex['sections'].append(name)
+                            ex['sections'] = list(set(ex['sections']))
+                            yield ex
+                if all(v == limit for v in tracker.values()):
+                    break
+
+        console.log("Filtering recent content.")
+        return (
+            LazyLines(self.get_clean_download_stream())
+                .head(10)
+                .pipe(add_predictions, model=model)
+                # .pipe(upper_limit)
                 .collect()
         )
     
     def get_site_content(self):
         site_stream = dedup_stream(self.get_site_stream(), key="abstract")
         sections = {dict(section)['label']: {**dict(section), "content": []} for section in CONFIG.sections}
-
+        console.log("Generating html.")
         def render_html(item, section):
             text = ""
             for sent, pred in zip(item['sentences'], item['preds']):
