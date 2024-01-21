@@ -74,7 +74,7 @@ def main():
     articles = [dict(parse(r, nlp=nlp)) 
                 for r in tqdm.tqdm(results) 
                 # if age_in_days(r) < 2.5 and r.primary_category.startswith("cs")
-                if age_in_days(r) < 2.5 and r.primary_category in categories
+                if age_in_days(r) < 3.0 and r.primary_category in categories
                 ]
 
     dist = [age_in_days(r) for r in results]

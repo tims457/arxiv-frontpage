@@ -4,10 +4,7 @@ from transformers import pipeline
 
 from .constants import DATA_LEVELS, INDICES_FOLDER, LABELS, CONFIG, THRESHOLDS
 
-
 console = Console()
-
-
 
 class HFModel:
     def __init__(self) -> None:
@@ -55,6 +52,27 @@ class HFModel:
             for label, prob in zip(LABELS, probs['scores']):
                 result[i][label] = prob
         return result 
+    
+    def query(self, payload):
+        API_URL = "https://api-inference.huggingface.co/models/facebook/bart-large-mnli"
+        headers = {"Authorization": f"Bearer {API_TOKEN}"}
 
+        response = requests.post(API_URL, headers=headers, json=payload)
+        return response.json()
         
-
+    def predict_api(self, sentences: List[str]):
+        
+        console.log(f"Predicting labels for:\n\t\t{(' ').join(sentences[:3])}")
+        result = [{} for _ in sentences]
+        payload= {
+            "inputs": sentences,
+            "parameters": {
+                "candidate_labels": LABELS,
+                "multi_label": True,
+            },
+        }
+        all_probs = self.query(payload)
+        for i, probs in enumerate(all_probs):
+            for j, label in enumerate(probs['labels']):
+                result[i][label] = probs['scores'][j]
+        return result    

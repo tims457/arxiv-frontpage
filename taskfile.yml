@@ -104,3 +104,11 @@ tasks:
     desc: Rebuilds the frontpage
     cmds:
       - python -m frontpage build --preprocess
+  
+  all:
+    desc: Saves the data and builds the front page
+    cmds:
+      - task: download
+      - task: clean
+      - task: rebuild
+      
