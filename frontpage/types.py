@@ -17,7 +17,7 @@ class LabelConfig(BaseModel):
     label: str
     threshold: float = 0.7
     detail: str = ""
-
+    keywords: List[str] = []
 
 class Config(BaseModel):
     n_per_section: int = 20
