@@ -19,19 +19,14 @@
           <td>
             <h1 class="text-4xl pt-4 font-bold">Tim's Arxiv FrontPage</h1>
             <br>
-            <p>Generated on 2024-01-21.</p><br/>
+            <p>Generated on 2024-01-22.</p><br/>
             <p class="text-sm text-gray-500 pt-2">This frontpage is made by scraping arxiv and by runnig a sentence-model that detects if the abstract describes a paper about a topic of interest. One cool feature: it all pretty much runs via Github Actions. </p>
             <br>
           </td>
         </tr><tr>
           <td></td>
           <td>
-            <h2 class="text-2xl tracking-tight pt-4 font-bold">Complex Systems</h2>
-          </td>
-        </tr><tr>
-          <td></td>
-          <td>
-            <h2 class="text-2xl tracking-tight pt-4 font-bold">Collective Intelligence</h2>
+            <h2 class="text-2xl tracking-tight pt-4 font-bold">Artificial General Intelligence</h2>
           </td>
         </tr><tr>
           <td class="inline-block">
@@ -40,15 +35,15 @@
           <td>
             <div x-data="{open: false}">
               <span @click="open = ! open" class="hover:underline cursor-pointer decoration-2 decoration-green-600 text-gray-800 text-sm">
-                Beyond Reference-Based Metrics: Analyzing Behaviors of Open LLMs on Data-to-Text Generation
+                Evolutionary Computation in the Era of Large Language Model: Survey and Roadmap
               </span>
               <div x-show="open" x-collapse.duration.500ms class="text-sm text-gray-500 pt-2">
                 <div class="text-center pt-2"></div>
                 <p class="pt-2">
-                  <p>We investigate to which extent open large language models (LLMs) can generate coherent and relevant text from structured data.To prevent bias from benchmarks leaked into LLM training data, we collect Quintd-1: an ad-hoc benchmark for five data-to-text (D2T) generation tasks, consisting of structured data records in standard formats gathered from public APIs.<span class='px-1 mx-1 bg-yellow-200'>We leverage reference-free evaluation metrics and LLMs' in-context learning capabilities, allowing us to test the models with no human-written references. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.88</span></span>Our evaluation focuses on annotating semantic accuracy errors on token-level, combining human annotators and a metric based on GPT-4.Our systematic examination of the models' behavior across domains and tasks suggests that state-of-the-art open LLMs with 7B parameters can generate fluent and coherent text from various standard data formats in zero-shot settings.However, we also show that semantic accuracy of the outputs remains a major issue: on our benchmark, 80% of outputs of open LLMs contain a semantic error according to human annotators (91% according to GPT-4).Our code, data, and model outputs are available at https://d2t-llm.github.io.</p>
+                  <p><span class='px-1 mx-1 bg-yellow-200'>Large Language Models (LLMs), built upon Transformer-based architectures with massive pretraining on diverse data, have not only revolutionized natural language processing but also extended their prowess to various domains, marking a significant stride towards artificial general intelligence. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.917</span></span>The interplay between LLMs and Evolutionary Algorithms (EAs), despite differing in objectives and methodologies, reveals intriguing parallels, especially in their shared optimization nature, black-box characteristics, and proficiency in handling complex problems.Meanwhile, EA can not only provide an optimization framework for LLM's further enhancement under black-box settings but also empower LLM with flexible global search and iterative mechanism in applications.On the other hand, LLM's abundant domain knowledge enables EA to perform smarter searches, while its text processing capability assist in deploying EA across various tasks.Based on their complementary advantages, this paper presents a comprehensive review and forward-looking roadmap, categorizing their mutual inspiration into LLM-enhanced evolutionary optimization and EA-enhanced LLM.Some integrated synergy methods are further introduced to exemplify the amalgamation of LLMs and EAs in various application scenarios, including neural architecture search, code generation, software engineering, and text generation.As the first comprehensive review specifically focused on the EA research in the era of LLMs, this paper provides a foundational stepping stone for understanding and harnessing the collaborative potential of LLMs and EAs.By presenting a comprehensive review, categorization, and critical analysis, we contribute to the ongoing discourse on the cross-disciplinary study of these two powerful paradigms.The identified challenges and future directions offer guidance to unlock the full potential of this innovative collaboration.</p>
                 </p>
               <p class="pb-2 pt-2 text-center">
-                <a class="underline decoration-2 text-green-600 text-md pt-2" href='http://arxiv.org/abs/2401.10186v1' target="_blank">
+                <a class="underline decoration-2 text-green-600 text-md pt-2" href='http://arxiv.org/abs/2401.10034v1' target="_blank">
                   link
                 </a>
               </p>
@@ -56,6 +51,11 @@
           </div>
         </td>
       </tr><tr>
+          <td></td>
+          <td>
+            <h2 class="text-2xl tracking-tight pt-4 font-bold">Collective Intelligence</h2>
+          </td>
+        </tr><tr>
           <td class="inline-block">
             <p class='font-bold text-black px-2 mx-1 text-xs w-24'>2024-01-18</p>
           </td>
@@ -102,6 +102,21 @@
       </tr><tr>
           <td></td>
           <td>
+            <h2 class="text-2xl tracking-tight pt-4 font-bold">Complex Systems</h2>
+          </td>
+        </tr><tr>
+          <td></td>
+          <td>
+            <h2 class="text-2xl tracking-tight pt-4 font-bold">Dissipative Adaptation</h2>
+          </td>
+        </tr><tr>
+          <td></td>
+          <td>
+            <h2 class="text-2xl tracking-tight pt-4 font-bold">Neural Ordinary Differential Equations</h2>
+          </td>
+        </tr><tr>
+          <td></td>
+          <td>
             <h2 class="text-2xl tracking-tight pt-4 font-bold">Reinforcement Learning</h2>
           </td>
         </tr><tr>
@@ -142,192 +157,6 @@
                 </p>
               <p class="pb-2 pt-2 text-center">
                 <a class="underline decoration-2 text-green-600 text-md pt-2" href='http://arxiv.org/abs/2401.10156v1' target="_blank">
-                  link
-                </a>
-              </p>
-            </div>
-          </div>
-        </td>
-      </tr><tr>
-          <td class="inline-block">
-            <p class='font-bold text-black px-2 mx-1 text-xs w-24'>2024-01-18</p>
-          </td>
-          <td>
-            <div x-data="{open: false}">
-              <span @click="open = ! open" class="hover:underline cursor-pointer decoration-2 decoration-green-600 text-gray-800 text-sm">
-                SHINOBI: Shape and Illumination using Neural Object Decomposition via BRDF Optimization In-the-wild
-              </span>
-              <div x-show="open" x-collapse.duration.500ms class="text-sm text-gray-500 pt-2">
-                <div class="text-center pt-2"></div>
-                <p class="pt-2">
-                  <p>We present SHINOBI, an end-to-end framework for the reconstruction of shape, material, and illumination from object images captured with varying lighting, pose, and background.Inverse rendering of an object based on unconstrained image collections is a long-standing challenge in computer vision and graphics and requires a joint optimization over shape, radiance, and pose.We show that an implicit shape representation based on a multi-resolution hash encoding enables faster and robust shape reconstruction with joint camera alignment optimization that outperforms prior work.<span class='px-1 mx-1 bg-yellow-200'>Further, to enable the editing of illumination and object reflectance (i.e. material) we jointly optimize BRDF and illumination together with the object's shape. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.903</span></span>Our method is class-agnostic and works on in-the-wild image collections of objects to produce relightable 3D assets for several use cases such as AR/VR, movies, games, etc.Project page: https://shinobi.aengelhardt.com Video: https://www.youtube.com/watch?v=iFENQ6AcYd8&feature=youtu.be</p>
-                </p>
-              <p class="pb-2 pt-2 text-center">
-                <a class="underline decoration-2 text-green-600 text-md pt-2" href='http://arxiv.org/abs/2401.10171v1' target="_blank">
-                  link
-                </a>
-              </p>
-            </div>
-          </div>
-        </td>
-      </tr><tr>
-          <td class="inline-block">
-            <p class='font-bold text-black px-2 mx-1 text-xs w-24'>2024-01-18</p>
-          </td>
-          <td>
-            <div x-data="{open: false}">
-              <span @click="open = ! open" class="hover:underline cursor-pointer decoration-2 decoration-green-600 text-gray-800 text-sm">
-                RAP-SAM: Towards Real-Time All-Purpose Segment Anything
-              </span>
-              <div x-show="open" x-collapse.duration.500ms class="text-sm text-gray-500 pt-2">
-                <div class="text-center pt-2"></div>
-                <p class="pt-2">
-                  <p>Advanced by transformer architecture, vision foundation models (VFMs) achieve remarkable progress in performance and generalization ability.Segment Anything Model (SAM) is one remarkable model that can achieve generalized segmentation.However, most VFMs cannot run in realtime, which makes it difficult to transfer them into several products.On the other hand, current real-time segmentation mainly has one purpose, such as semantic segmentation on the driving scene.We argue that diverse outputs are needed for real applications.Thus, this work explores a new real-time segmentation setting, named all-purpose segmentation in real-time, to transfer VFMs in real-time deployment.It contains three different tasks, including interactive segmentation, panoptic segmentation, and video segmentation.We aim to use one model to achieve the above tasks in real-time.We first benchmark several strong baselines.Then, we present Real-Time All Purpose SAM (RAP-SAM).<span class='px-1 mx-1 bg-yellow-200'>It contains an efficient encoder and an efficient decoupled decoder to perform prompt-driven decoding. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.902</span></span>Moreover, we further explore different training strategies and tuning methods to boost co-training performance further.Our code and model are available at https://github.com/xushilin1/RAP-SAM/.</p>
-                </p>
-              <p class="pb-2 pt-2 text-center">
-                <a class="underline decoration-2 text-green-600 text-md pt-2" href='http://arxiv.org/abs/2401.10228v1' target="_blank">
-                  link
-                </a>
-              </p>
-            </div>
-          </div>
-        </td>
-      </tr><tr>
-          <td class="inline-block">
-            <p class='font-bold text-black px-2 mx-1 text-xs w-24'>2024-01-18</p>
-          </td>
-          <td>
-            <div x-data="{open: false}">
-              <span @click="open = ! open" class="hover:underline cursor-pointer decoration-2 decoration-green-600 text-gray-800 text-sm">
-                Simultaneous Tactile Estimation and Control for Extrinsic Dexterity
-              </span>
-              <div x-show="open" x-collapse.duration.500ms class="text-sm text-gray-500 pt-2">
-                <div class="text-center pt-2"></div>
-                <p class="pt-2">
-                  <p><span class='px-1 mx-1 bg-yellow-200'>We introduce a novel approach that combines tactile estimation and control for in-hand object manipulation. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.903</span></span><span class='px-1 mx-1 bg-yellow-200'>By integrating measurements from robot kinematics and an image-based tactile sensor, our framework estimates and tracks object pose while simultaneously generating motion plans to control the pose of a grasped object. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.961</span></span>This approach consists of a discrete pose estimator that uses the Viterbi decoding algorithm to find the most likely sequence of object poses in a coarsely discretized grid, and a continuous pose estimator-controller to refine the pose estimate and accurately manipulate the pose of the grasped object.Our method is tested on diverse objects and configurations, achieving desired manipulation objectives and outperforming single-shot methods in estimation accuracy.The proposed approach holds potential for tasks requiring precise manipulation in scenarios where visual perception is limited, laying the foundation for closed-loop behavior applications such as assembly and tool use.Please see supplementary videos for real-world demonstration at https://sites.google.com/view/texterity.</p>
-                </p>
-              <p class="pb-2 pt-2 text-center">
-                <a class="underline decoration-2 text-green-600 text-md pt-2" href='http://arxiv.org/abs/2401.10230v1' target="_blank">
-                  link
-                </a>
-              </p>
-            </div>
-          </div>
-        </td>
-      </tr><tr>
-          <td class="inline-block">
-            <p class='font-bold text-black px-2 mx-1 text-xs w-24'>2024-01-18</p>
-          </td>
-          <td>
-            <div x-data="{open: false}">
-              <span @click="open = ! open" class="hover:underline cursor-pointer decoration-2 decoration-green-600 text-gray-800 text-sm">
-                Multi-Agent Reinforcement Learning for Maritime Operational Technology Cyber Security
-              </span>
-              <div x-show="open" x-collapse.duration.500ms class="text-sm text-gray-500 pt-2">
-                <div class="text-center pt-2"></div>
-                <p class="pt-2">
-                  <p><span class='px-1 mx-1 bg-yellow-200'>This paper demonstrates the potential for autonomous cyber defence to be applied on industrial control systems and provides a baseline environment to further explore Multi-Agent Reinforcement Learning's (MARL) application to this problem domain. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.961</span></span>It introduces a simulation environment, IPMSRL, of a generic Integrated Platform Management System (IPMS) and explores the use of MARL for autonomous cyber defence decision-making on generic maritime based IPMS Operational Technology (OT).OT cyber defensive actions are less mature than they are for Enterprise IT.This is due to the relatively brittle nature of OT infrastructure originating from the use of legacy systems, design-time engineering assumptions, and lack of full-scale modern security controls.There are many obstacles to be tackled across the cyber landscape due to continually increasing cyber-attack sophistication and the limitations of traditional IT-centric cyber defence solutions.Traditional IT controls are rarely deployed on OT infrastructure, and where they are, some threats aren't fully addressed.In our experiments, a shared critic implementation of Multi Agent Proximal Policy Optimisation (MAPPO) outperformed Independent Proximal Policy Optimisation (IPPO).MAPPO reached an optimal policy (episode outcome mean of 1) after 800K timesteps, whereas IPPO was only able to reach an episode outcome mean of 0.966 after one million timesteps.Hyperparameter tuning greatly improved training performance.Across one million timesteps the tuned hyperparameters reached an optimal policy whereas the default hyperparameters only managed to win sporadically, with most simulations resulting in a draw.We tested a real-world constraint, attack detection alert success, and found that when alert success probability is reduced to 0.75 or 0.9, the MARL defenders were still able to win in over 97.5% or 99.5% of episodes, respectively.</p>
-                </p>
-              <p class="pb-2 pt-2 text-center">
-                <a class="underline decoration-2 text-green-600 text-md pt-2" href='http://arxiv.org/abs/2401.10149v1' target="_blank">
-                  link
-                </a>
-              </p>
-            </div>
-          </div>
-        </td>
-      </tr><tr>
-          <td class="inline-block">
-            <p class='font-bold text-black px-2 mx-1 text-xs w-24'>2024-01-18</p>
-          </td>
-          <td>
-            <div x-data="{open: false}">
-              <span @click="open = ! open" class="hover:underline cursor-pointer decoration-2 decoration-green-600 text-gray-800 text-sm">
-                Divide and not forget: Ensemble of selectively trained experts in Continual Learning
-              </span>
-              <div x-show="open" x-collapse.duration.500ms class="text-sm text-gray-500 pt-2">
-                <div class="text-center pt-2"></div>
-                <p class="pt-2">
-                  <p>Class-incremental learning is becoming more popular as it helps models widen their applicability while not forgetting what they already know.<span class='px-1 mx-1 bg-yellow-200'>A trend in this area is to use a mixture-of-expert technique, where different models work together to solve the task. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.955</span></span>However, the experts are usually trained all at once using whole task data, which makes them all prone to forgetting and increasing computational burden.To address this limitation, we introduce a novel approach named SEED.SEED selects only one, the most optimal expert for a considered task, and uses data from this task to fine-tune only this expert.For this purpose, each expert represents each class with a Gaussian distribution, and the optimal expert is selected based on the similarity of those distributions.Consequently, SEED increases diversity and heterogeneity within the experts while maintaining the high stability of this ensemble method.The extensive experiments demonstrate that SEED achieves state-of-the-art performance in exemplar-free settings across various scenarios, showing the potential of expert diversification through data in continual learning.</p>
-                </p>
-              <p class="pb-2 pt-2 text-center">
-                <a class="underline decoration-2 text-green-600 text-md pt-2" href='http://arxiv.org/abs/2401.10191v1' target="_blank">
-                  link
-                </a>
-              </p>
-            </div>
-          </div>
-        </td>
-      </tr><tr>
-          <td></td>
-          <td>
-            <h2 class="text-2xl tracking-tight pt-4 font-bold">Neural Ordinary Differential Equations</h2>
-          </td>
-        </tr><tr>
-          <td></td>
-          <td>
-            <h2 class="text-2xl tracking-tight pt-4 font-bold">Artificial General Intelligence</h2>
-          </td>
-        </tr><tr>
-          <td class="inline-block">
-            <p class='font-bold text-black px-2 mx-1 text-xs w-24'>2024-01-18</p>
-          </td>
-          <td>
-            <div x-data="{open: false}">
-              <span @click="open = ! open" class="hover:underline cursor-pointer decoration-2 decoration-green-600 text-gray-800 text-sm">
-                Edit One for All: Interactive Batch Image Editing
-              </span>
-              <div x-show="open" x-collapse.duration.500ms class="text-sm text-gray-500 pt-2">
-                <div class="text-center pt-2"></div>
-                <p class="pt-2">
-                  <p>In recent years, image editing has advanced remarkably.With increased human control, it is now possible to edit an image in a plethora of ways; from specifying in text what we want to change, to straight up dragging the contents of the image in an interactive point-based manner.However, most of the focus has remained on editing single images at a time.Whether and how we can simultaneously edit large batches of images has remained understudied.<span class='px-1 mx-1 bg-yellow-200'>With the goal of minimizing human supervision in the editing process, this paper presents a novel method for interactive batch image editing using StyleGAN as the medium. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.888</span></span>Given an edit specified by users in an example image (e.g., make the face frontal), our method can automatically transfer that edit to other test images, so that regardless of their initial state (pose), they all arrive at the same final state (e.g., all facing front).Extensive experiments demonstrate that edits performed using our method have similar visual quality to existing single-image-editing methods, while having more visual consistency and saving significant time and human effort.</p>
-                </p>
-              <p class="pb-2 pt-2 text-center">
-                <a class="underline decoration-2 text-green-600 text-md pt-2" href='http://arxiv.org/abs/2401.10219v1' target="_blank">
-                  link
-                </a>
-              </p>
-            </div>
-          </div>
-        </td>
-      </tr><tr>
-          <td class="inline-block">
-            <p class='font-bold text-black px-2 mx-1 text-xs w-24'>2024-01-18</p>
-          </td>
-          <td>
-            <div x-data="{open: false}">
-              <span @click="open = ! open" class="hover:underline cursor-pointer decoration-2 decoration-green-600 text-gray-800 text-sm">
-                AutoFT: Robust Fine-Tuning by Optimizing Hyperparameters on OOD Data
-              </span>
-              <div x-show="open" x-collapse.duration.500ms class="text-sm text-gray-500 pt-2">
-                <div class="text-center pt-2"></div>
-                <p class="pt-2">
-                  <p>Foundation models encode rich representations that can be adapted to a desired task by fine-tuning on task-specific data.However, fine-tuning a model on one particular data distribution often compromises the model's original performance on other distributions.Current methods for robust fine-tuning utilize hand-crafted regularization techniques to constrain the fine-tuning process towards the base foundation model.Yet, it is hard to precisely specify what characteristics of the foundation model to retain during fine-tuning, as this depends on how the pre-training, fine-tuning, and evaluation data distributions relate to each other.We propose AutoFT, a data-driven approach for guiding foundation model fine-tuning.AutoFT optimizes fine-tuning hyperparameters to maximize performance on a small out-of-distribution (OOD) validation set.To guide fine-tuning in a granular way, AutoFT searches a highly expressive hyperparameter space that includes weight coefficients for many different losses, in addition to learning rate and weight decay values.We evaluate AutoFT on nine natural distribution shifts which include domain shifts and subpopulation shifts.<span class='px-1 mx-1 bg-yellow-200'>Our experiments show that AutoFT significantly improves generalization to new OOD data, outperforming existing robust fine-tuning methods. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.882</span></span>Notably, AutoFT achieves new state-of-the-art performance on the WILDS-iWildCam and WILDS-FMoW benchmarks, outperforming the previous best methods by $6.0\%$ and $1.5\%$, respectively.</p>
-                </p>
-              <p class="pb-2 pt-2 text-center">
-                <a class="underline decoration-2 text-green-600 text-md pt-2" href='http://arxiv.org/abs/2401.10220v1' target="_blank">
-                  link
-                </a>
-              </p>
-            </div>
-          </div>
-        </td>
-      </tr><tr>
-          <td class="inline-block">
-            <p class='font-bold text-black px-2 mx-1 text-xs w-24'>2024-01-18</p>
-          </td>
-          <td>
-            <div x-data="{open: false}">
-              <span @click="open = ! open" class="hover:underline cursor-pointer decoration-2 decoration-green-600 text-gray-800 text-sm">
-                Evolutionary Computation in the Era of Large Language Model: Survey and Roadmap
-              </span>
-              <div x-show="open" x-collapse.duration.500ms class="text-sm text-gray-500 pt-2">
-                <div class="text-center pt-2"></div>
-                <p class="pt-2">
-                  <p><span class='px-1 mx-1 bg-yellow-200'>Large Language Models (LLMs), built upon Transformer-based architectures with massive pretraining on diverse data, have not only revolutionized natural language processing but also extended their prowess to various domains, marking a significant stride towards artificial general intelligence. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.917</span></span>The interplay between LLMs and Evolutionary Algorithms (EAs), despite differing in objectives and methodologies, reveals intriguing parallels, especially in their shared optimization nature, black-box characteristics, and proficiency in handling complex problems.Meanwhile, EA can not only provide an optimization framework for LLM's further enhancement under black-box settings but also empower LLM with flexible global search and iterative mechanism in applications.On the other hand, LLM's abundant domain knowledge enables EA to perform smarter searches, while its text processing capability assist in deploying EA across various tasks.Based on their complementary advantages, this paper presents a comprehensive review and forward-looking roadmap, categorizing their mutual inspiration into LLM-enhanced evolutionary optimization and EA-enhanced LLM.Some integrated synergy methods are further introduced to exemplify the amalgamation of LLMs and EAs in various application scenarios, including neural architecture search, code generation, software engineering, and text generation.As the first comprehensive review specifically focused on the EA research in the era of LLMs, this paper provides a foundational stepping stone for understanding and harnessing the collaborative potential of LLMs and EAs.By presenting a comprehensive review, categorization, and critical analysis, we contribute to the ongoing discourse on the cross-disciplinary study of these two powerful paradigms.The identified challenges and future directions offer guidance to unlock the full potential of this innovative collaboration.</p>
-                </p>
-              <p class="pb-2 pt-2 text-center">
-                <a class="underline decoration-2 text-green-600 text-md pt-2" href='http://arxiv.org/abs/2401.10034v1' target="_blank">
                   link
                 </a>
               </p>
