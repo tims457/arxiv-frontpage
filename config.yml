@@ -1,19 +1,60 @@
 sections:
-  - name: "Complex Systems"
-    label: "complex systems, but not computational complexity"
-    threshold: 0.87
-  - name: "Collective Intelligence"
-    label: "collective intelligence"
-    threshold: 0.87
-  - name: "Reinforcement Learning"
-    label: "reinforcement learning or multi-agent reinforcement learning"
-    threshold: 0.87
-  - name: "Neural Ordinary Differential Equations"
-    label: "neural ordinary differential equations"
-    threshold: 0.87
   - name: "Artificial General Intelligence"
     label: "artificial general intelligence"
     threshold: 0.87
+    keywords:
+      - "artificial general intelligence"
+      - "agi"
+      - "general intelligence"
+      - "general ai"
+      - "general artificial intelligence"
+  - name: "Collective Intelligence"
+    label: "collective intelligence"
+    threshold: 0.87
+    keywords:
+      - "collective intelligence"
+      - "collective"
+  - name: "Complex Systems"
+    label: "complex systems, but not computational complexity"
+    threshold: 0.87
+    keywords:
+      - "complex systems"
+      - "complexity"
+      - "complex"
+  - name: "Dissipative Adaptation"
+    label: "dissipative adaptation"
+    threshold: 0.87
+    keywords:
+      - "dissipative adaptation"
+      - "dissipative"
+      - "dissipative systems"
+      - "dissipative adaptation"
+  - name: "Neural Ordinary Differential Equations"
+    label: "neural ordinary differential equations"
+    threshold: 0.87
+    keywords: 
+      - "neural ordinary differential equations"
+      - "neural differential equations"
+      - "neural differential"
+      - "neural ode"
+      - "neural odes" 
+  - name: "Reinforcement Learning"
+    label: "reinforcement learning or multi-agent reinforcement learning"
+    threshold: 0.87
+    keywords:
+      - "reinforcement learning"
+      - "multi-agent reinforcement learning"
+      - "multi-agent"
   - name: "Thermodynamic Computing"
     label: "thermodynamic computing"
     threshold: 0.87
+    keywords:
+      - "thermodynamic computing"
+      - "thermodynamic"
+      - "thermodynamics"
+      - "thermodynamic systems"
+      - "thermodynamic system"
+      - "thermodynamic computation"
+      - "thermodynamic computations"
+      - "thermodynamic computer"
+      - "thermodynamic computers"

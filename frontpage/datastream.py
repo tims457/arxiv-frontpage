@@ -294,8 +294,9 @@ class DataStream:
     
     def get_site_stream(self):
         # model = SentenceModel.from_disk()
-        model = ""
-
+        model = "" #TODO REMOVE
+        keywords = list(it.chain(*[s.keywords for s in CONFIG.sections]))
+        
         def upper_limit(stream):
             tracker = {lab: 0 for lab in LABELS}
             limit = 50
@@ -311,10 +312,16 @@ class DataStream:
                             yield ex
                 if all(v == limit for v in tracker.values()):
                     break
+        
+        def keyword_filter(stream):
+            for ex in stream:
+                if any(kw in ex['abstract'] for kw in keywords):
+                    yield ex      
 
         console.log("Filtering recent content.")
         
         pipe = (LazyLines(self.get_clean_download_stream())
+                .pipe(keyword_filter)
                 .pipe(add_predictions, model=model)
                 .pipe(upper_limit)
                 .collect())
