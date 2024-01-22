@@ -29,70 +29,26 @@
             <h2 class="text-2xl tracking-tight pt-4 font-bold">Artificial General Intelligence</h2>
           </td>
         </tr><tr>
-          <td class="inline-block">
-            <p class='font-bold text-black px-2 mx-1 text-xs w-24'>2024-01-18</p>
-          </td>
-          <td>
-            <div x-data="{open: false}">
-              <span @click="open = ! open" class="hover:underline cursor-pointer decoration-2 decoration-green-600 text-gray-800 text-sm">
-                Evolutionary Computation in the Era of Large Language Model: Survey and Roadmap
-              </span>
-              <div x-show="open" x-collapse.duration.500ms class="text-sm text-gray-500 pt-2">
-                <div class="text-center pt-2"></div>
-                <p class="pt-2">
-                  <p><span class='px-1 mx-1 bg-yellow-200'>Large Language Models (LLMs), built upon Transformer-based architectures with massive pretraining on diverse data, have not only revolutionized natural language processing but also extended their prowess to various domains, marking a significant stride towards artificial general intelligence. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.917</span></span>The interplay between LLMs and Evolutionary Algorithms (EAs), despite differing in objectives and methodologies, reveals intriguing parallels, especially in their shared optimization nature, black-box characteristics, and proficiency in handling complex problems.Meanwhile, EA can not only provide an optimization framework for LLM's further enhancement under black-box settings but also empower LLM with flexible global search and iterative mechanism in applications.On the other hand, LLM's abundant domain knowledge enables EA to perform smarter searches, while its text processing capability assist in deploying EA across various tasks.Based on their complementary advantages, this paper presents a comprehensive review and forward-looking roadmap, categorizing their mutual inspiration into LLM-enhanced evolutionary optimization and EA-enhanced LLM.Some integrated synergy methods are further introduced to exemplify the amalgamation of LLMs and EAs in various application scenarios, including neural architecture search, code generation, software engineering, and text generation.As the first comprehensive review specifically focused on the EA research in the era of LLMs, this paper provides a foundational stepping stone for understanding and harnessing the collaborative potential of LLMs and EAs.By presenting a comprehensive review, categorization, and critical analysis, we contribute to the ongoing discourse on the cross-disciplinary study of these two powerful paradigms.The identified challenges and future directions offer guidance to unlock the full potential of this innovative collaboration.</p>
-                </p>
-              <p class="pb-2 pt-2 text-center">
-                <a class="underline decoration-2 text-green-600 text-md pt-2" href='http://arxiv.org/abs/2401.10034v1' target="_blank">
-                  link
-                </a>
-              </p>
-            </div>
-          </div>
-        </td>
-      </tr><tr>
           <td></td>
           <td>
             <h2 class="text-2xl tracking-tight pt-4 font-bold">Collective Intelligence</h2>
           </td>
         </tr><tr>
           <td class="inline-block">
-            <p class='font-bold text-black px-2 mx-1 text-xs w-24'>2024-01-18</p>
+            <p class='font-bold text-black px-2 mx-1 text-xs w-24'>2024-01-19</p>
           </td>
           <td>
             <div x-data="{open: false}">
               <span @click="open = ! open" class="hover:underline cursor-pointer decoration-2 decoration-green-600 text-gray-800 text-sm">
-                The Manga Whisperer: Automatically Generating Transcriptions for Comics
+                Medusa: Simple LLM Inference Acceleration Framework with Multiple Decoding Heads
               </span>
               <div x-show="open" x-collapse.duration.500ms class="text-sm text-gray-500 pt-2">
                 <div class="text-center pt-2"></div>
                 <p class="pt-2">
-                  <p>In the past few decades, Japanese comics, commonly referred to as Manga, have transcended both cultural and linguistic boundaries to become a true worldwide sensation.Yet, the inherent reliance on visual cues and illustration within manga renders it largely inaccessible to individuals with visual impairments.In this work, we seek to address this substantial barrier, with the aim of ensuring that manga can be appreciated and actively engaged by everyone.Specifically, we tackle the problem of diarisation i.e. generating a transcription of who said what and when, in a fully automatic way.   <span class='px-1 mx-1 bg-yellow-200'>To this end, we make the following contributions: (1) we present a unified model, Magi, that is able to (a) detect panels, text boxes and character boxes, (b) cluster characters by identity (without knowing the number of clusters apriori), and (c) associate dialogues to their speakers; (2) we propose a novel approach that is able to sort the detected text boxes in their reading order and generate a dialogue transcript; (3) we annotate an evaluation benchmark for this task using publicly available [English] manga pages. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.879</span></span>The code, evaluation datasets and the pre-trained model can be found at: https://github.com/ragavsachdeva/magi.</p>
+                  <p>The inference process in Large Language Models (LLMs) is often limited due to the absence of parallelism in the auto-regressive decoding process, resulting in most operations being restricted by the memory bandwidth of accelerators.While methods such as speculative decoding have been suggested to address this issue, their implementation is impeded by the challenges associated with acquiring and maintaining a separate draft model.In this paper, we present Medusa, an efficient method that augments LLM inference by adding extra decoding heads to predict multiple subsequent tokens in parallel.Using a tree-based attention mechanism, Medusa constructs multiple candidate continuations and verifies them simultaneously in each decoding step.By leveraging parallel processing, Medusa introduces only minimal overhead in terms of single-step latency while substantially reducing the number of decoding steps required.   We present two levels of fine-tuning procedures for Medusa to meet the needs of different use cases: Medusa-1:Medusa is directly fine-tuned on top of a frozen backbone LLM, enabling lossless inference acceleration.Medusa-2:Medusa is fine-tuned together with the backbone LLM, enabling better prediction accuracy of Medusa heads and higher speedup but needing a special training recipe that preserves the backbone model's capabilities.   Moreover, we propose several extensions that improve or expand the utility of Medusa, including a self-distillation to handle situations where no training data is available and a typical acceptance scheme to boost the acceptance rate while maintaining generation quality.We evaluate Medusa on models of various sizes and training procedures.<span class='px-1 mx-1 bg-yellow-200'>Our experiments demonstrate that Medusa-1 can achieve over 2.2x speedup without compromising generation quality, while Medusa-2 further improves the speedup to 2.3-3.6x. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.883</span></span></p>
                 </p>
               <p class="pb-2 pt-2 text-center">
-                <a class="underline decoration-2 text-green-600 text-md pt-2" href='http://arxiv.org/abs/2401.10224v1' target="_blank">
-                  link
-                </a>
-              </p>
-            </div>
-          </div>
-        </td>
-      </tr><tr>
-          <td class="inline-block">
-            <p class='font-bold text-black px-2 mx-1 text-xs w-24'>2024-01-18</p>
-          </td>
-          <td>
-            <div x-data="{open: false}">
-              <span @click="open = ! open" class="hover:underline cursor-pointer decoration-2 decoration-green-600 text-gray-800 text-sm">
-                Evolutionary Computation in the Era of Large Language Model: Survey and Roadmap
-              </span>
-              <div x-show="open" x-collapse.duration.500ms class="text-sm text-gray-500 pt-2">
-                <div class="text-center pt-2"></div>
-                <p class="pt-2">
-                  <p>Large Language Models (LLMs), built upon Transformer-based architectures with massive pretraining on diverse data, have not only revolutionized natural language processing but also extended their prowess to various domains, marking a significant stride towards artificial general intelligence.The interplay between LLMs and Evolutionary Algorithms (EAs), despite differing in objectives and methodologies, reveals intriguing parallels, especially in their shared optimization nature, black-box characteristics, and proficiency in handling complex problems.Meanwhile, EA can not only provide an optimization framework for LLM's further enhancement under black-box settings but also empower LLM with flexible global search and iterative mechanism in applications.<span class='px-1 mx-1 bg-yellow-200'>On the other hand, LLM's abundant domain knowledge enables EA to perform smarter searches, while its text processing capability assist in deploying EA across various tasks. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.893</span></span>Based on their complementary advantages, this paper presents a comprehensive review and forward-looking roadmap, categorizing their mutual inspiration into LLM-enhanced evolutionary optimization and EA-enhanced LLM.Some integrated synergy methods are further introduced to exemplify the amalgamation of LLMs and EAs in various application scenarios, including neural architecture search, code generation, software engineering, and text generation.As the first comprehensive review specifically focused on the EA research in the era of LLMs, this paper provides a foundational stepping stone for understanding and harnessing the collaborative potential of LLMs and EAs.By presenting a comprehensive review, categorization, and critical analysis, we contribute to the ongoing discourse on the cross-disciplinary study of these two powerful paradigms.The identified challenges and future directions offer guidance to unlock the full potential of this innovative collaboration.</p>
-                </p>
-              <p class="pb-2 pt-2 text-center">
-                <a class="underline decoration-2 text-green-600 text-md pt-2" href='http://arxiv.org/abs/2401.10034v1' target="_blank">
+                <a class="underline decoration-2 text-green-600 text-md pt-2" href='http://arxiv.org/abs/2401.10774v1' target="_blank">
                   link
                 </a>
               </p>
@@ -121,20 +77,20 @@
           </td>
         </tr><tr>
           <td class="inline-block">
-            <p class='font-bold text-black px-2 mx-1 text-xs w-24'>2024-01-18</p>
+            <p class='font-bold text-black px-2 mx-1 text-xs w-24'>2024-01-19</p>
           </td>
           <td>
             <div x-data="{open: false}">
               <span @click="open = ! open" class="hover:underline cursor-pointer decoration-2 decoration-green-600 text-gray-800 text-sm">
-                CLIP feature-based randomized control using images and text for multiple tasks and robots
+                Q&A Prompts: Discovering Rich Visual Clues through Mining Question-Answer Prompts for VQA requiring Diverse World Knowledge
               </span>
               <div x-show="open" x-collapse.duration.500ms class="text-sm text-gray-500 pt-2">
                 <div class="text-center pt-2"></div>
                 <p class="pt-2">
-                  <p>This study presents a control framework leveraging vision language models (VLMs) for multiple tasks and robots.Notably, existing control methods using VLMs have achieved high performance in various tasks and robots in the training environment.However, these methods incur high costs for learning control policies for tasks and robots other than those in the training environment.Considering the application of industrial and household robots, learning in novel environments where robots are introduced is challenging.To address this issue, we propose a control framework that does not require learning control policies.Our framework combines the vision-language CLIP model with a randomized control.CLIP computes the similarity between images and texts by embedding them in the feature space.This study employs CLIP to compute the similarity between camera images and text representing the target state.<span class='px-1 mx-1 bg-yellow-200'>In our method, the robot is controlled by a randomized controller that simultaneously explores and increases the similarity gradients. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.972</span></span>Moreover, we fine-tune the CLIP to improve the performance of the proposed method.Consequently, we confirm the effectiveness of our approach through a multitask simulation and a real robot experiment using a two-wheeled robot and robot arm.</p>
+                  <p>With the breakthrough of multi-modal large language models, answering complex visual questions that demand advanced reasoning abilities and world knowledge has become a much more important testbed for developing AI models than ever.However, equipping AI models with robust cross-modality reasoning ability remains challenging since the cognition scheme of humans has not been understood systematically.In this paper, we believe that if we can collect visual clues in the given image as much as possible, we will recognize the image more accurately, understand the question better, recall relevant knowledge more easily, and finally reason out the answer.<span class='px-1 mx-1 bg-yellow-200'>We discover these rich visual clues by mining question-answer pairs in images and sending them into multi-modal large language models as prompts. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.885</span></span>We call the proposed method Q&A Prompts.Specifically, we first use the image-answer pairs and the corresponding questions in the training set as inputs and outputs to train a visual question generation model.Then, we use an image tagging model to identify various instances and send packaged image-tag pairs into the visual question generation model to generate relevant questions with the extracted image tags as answers.<span class='px-1 mx-1 bg-yellow-200'>Finally, we encode these generated question-answer pairs as prompts with a visual-aware prompting module and send them into pre-trained multi-modal large language models to reason out the final answers. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.894</span></span>Experimental results show that, compared with state-of-the-art methods, our Q&A Prompts achieves substantial improvements on the challenging visual question answering datasets requiring reasoning over diverse world knowledge, such as OK-VQA and A-OKVQA.</p>
                 </p>
               <p class="pb-2 pt-2 text-center">
-                <a class="underline decoration-2 text-green-600 text-md pt-2" href='http://arxiv.org/abs/2401.10085v1' target="_blank">
+                <a class="underline decoration-2 text-green-600 text-md pt-2" href='http://arxiv.org/abs/2401.10712v1' target="_blank">
                   link
                 </a>
               </p>
@@ -143,20 +99,86 @@
         </td>
       </tr><tr>
           <td class="inline-block">
-            <p class='font-bold text-black px-2 mx-1 text-xs w-24'>2024-01-18</p>
+            <p class='font-bold text-black px-2 mx-1 text-xs w-24'>2024-01-19</p>
           </td>
           <td>
             <div x-data="{open: false}">
               <span @click="open = ! open" class="hover:underline cursor-pointer decoration-2 decoration-green-600 text-gray-800 text-sm">
-                Model-Assisted Learning for Adaptive Cooperative Perception of Connected Autonomous Vehicles
+                A Systematic Evaluation of Euclidean Alignment with Deep Learning for EEG Decoding
               </span>
               <div x-show="open" x-collapse.duration.500ms class="text-sm text-gray-500 pt-2">
                 <div class="text-center pt-2"></div>
                 <p class="pt-2">
-                  <p>Cooperative perception (CP) is a key technology to facilitate consistent and accurate situational awareness for connected and autonomous vehicles (CAVs).To tackle the network resource inefficiency issue in traditional broadcast-based CP, unicast-based CP has been proposed to associate CAV pairs for cooperative perception via vehicle-to-vehicle transmission.In this paper, we investigate unicast-based CP among CAV pairs.With the consideration of dynamic perception workloads and channel conditions due to vehicle mobility and dynamic radio resource availability, we propose an adaptive cooperative perception scheme for CAV pairs in a mixed-traffic autonomous driving scenario with both CAVs and human-driven vehicles.We aim to determine when to switch between cooperative perception and stand-alone perception for each CAV pair, and allocate communication and computing resources to cooperative CAV pairs for maximizing the computing efficiency gain under perception task delay requirements.<span class='px-1 mx-1 bg-yellow-200'>A model-assisted multi-agent reinforcement learning (MARL) solution is developed, which integrates MARL for an adaptive CAV cooperation decision and an optimization model for communication and computing resource allocation. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.992</span></span>Simulation results demonstrate the effectiveness of the proposed scheme in achieving high computing efficiency gain, as compared with benchmark schemes.</p>
+                  <p>Electroencephalography (EEG) signals are frequently used for various Brain-Computer Interface (BCI) tasks.While Deep Learning (DL) techniques have shown promising results, they are hindered by the substantial data requirements.By leveraging data from multiple subjects, transfer learning enables more effective training of DL models.A technique that is gaining popularity is Euclidean Alignment (EA) due to its ease of use, low computational complexity, and compatibility with Deep Learning models.However, few studies evaluate its impact on the training performance of shared and individual DL models.In this work, we systematically evaluate the effect of EA combined with DL for decoding BCI signals.We used EA to train shared models with data from multiple subjects and evaluated its transferability to new subjects.Our experimental results show that it improves decoding in the target subject by 4.33% and decreases convergence time by more than 70%.<span class='px-1 mx-1 bg-yellow-200'>We also trained individual models for each subject to use as a majority-voting ensemble classifier. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.892</span></span>In this scenario, using EA improved the 3-model ensemble accuracy by 3.7%.However, when compared to the shared model with EA, the ensemble accuracy was 3.62% lower.</p>
                 </p>
               <p class="pb-2 pt-2 text-center">
-                <a class="underline decoration-2 text-green-600 text-md pt-2" href='http://arxiv.org/abs/2401.10156v1' target="_blank">
+                <a class="underline decoration-2 text-green-600 text-md pt-2" href='http://arxiv.org/abs/2401.10746v1' target="_blank">
+                  link
+                </a>
+              </p>
+            </div>
+          </div>
+        </td>
+      </tr><tr>
+          <td class="inline-block">
+            <p class='font-bold text-black px-2 mx-1 text-xs w-24'>2024-01-19</p>
+          </td>
+          <td>
+            <div x-data="{open: false}">
+              <span @click="open = ! open" class="hover:underline cursor-pointer decoration-2 decoration-green-600 text-gray-800 text-sm">
+                Reinforcement learning for question answering in programming domain using public community scoring as a human feedback
+              </span>
+              <div x-show="open" x-collapse.duration.500ms class="text-sm text-gray-500 pt-2">
+                <div class="text-center pt-2"></div>
+                <p class="pt-2">
+                  <p><span class='px-1 mx-1 bg-yellow-200'>In this study, we investigate the enhancement of the GPT Neo 125M performance in Community Question Answering (CQA) with a focus on programming, through the integration of Reinforcement Learning from Human Feedback (RLHF) and the utilization of scores from Stack Overflow. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.924</span></span>Two distinct reward model training strategies are employed for fine-tuning with Proximal Policy Optimization (PPO).Notably, the improvements in performance achieved through this method are comparable to those of GPT Neo 2.7B parameter variant.Additionally, an auxiliary scoring mechanism is introduced, which demonstrates the limitations of conventional linguistic metrics in evaluating responses in the programming domain.Through accurate analysis, this paper looks at the divergence between traditional linguistic metrics and our human-preferences-based reward model, underscoring the imperative for domain-specific evaluation methods.By elucidating the complexities involved in applying RLHF to programming CQA and accentuating the significance of context-aware evaluation, this study contributes to the ongoing efforts in refining Large Language Models through focused human feedback.</p>
+                </p>
+              <p class="pb-2 pt-2 text-center">
+                <a class="underline decoration-2 text-green-600 text-md pt-2" href='http://arxiv.org/abs/2401.10882v1' target="_blank">
+                  link
+                </a>
+              </p>
+            </div>
+          </div>
+        </td>
+      </tr><tr>
+          <td class="inline-block">
+            <p class='font-bold text-black px-2 mx-1 text-xs w-24'>2024-01-19</p>
+          </td>
+          <td>
+            <div x-data="{open: false}">
+              <span @click="open = ! open" class="hover:underline cursor-pointer decoration-2 decoration-green-600 text-gray-800 text-sm">
+                Synthesizing Moving People with 3D Control
+              </span>
+              <div x-show="open" x-collapse.duration.500ms class="text-sm text-gray-500 pt-2">
+                <div class="text-center pt-2"></div>
+                <p class="pt-2">
+                  <p>In this paper, we present a diffusion model-based framework for animating people from a single image for a given target 3D motion sequence.<span class='px-1 mx-1 bg-yellow-200'>Our approach has two core components: a) learning priors about invisible parts of the human body and clothing, and b) rendering novel body poses with proper clothing and texture. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.873</span></span>For the first part, we learn an in-filling diffusion model to hallucinate unseen parts of a person given a single image.We train this model on texture map space, which makes it more sample-efficient since it is invariant to pose and viewpoint.Second, we develop a diffusion-based rendering pipeline, which is controlled by 3D human poses.This produces realistic renderings of novel poses of the person, including clothing, hair, and plausible in-filling of unseen regions.This disentangled approach allows our method to generate a sequence of images that are faithful to the target motion in the 3D pose and, to the input image in terms of visual similarity.In addition to that, the 3D control allows various synthetic camera trajectories to render a person.Our experiments show that our method is resilient in generating prolonged motions and varied challenging and complex poses compared to prior methods.Please check our website for more details: https://boyiliee.github.io/3DHM.github.io/.</p>
+                </p>
+              <p class="pb-2 pt-2 text-center">
+                <a class="underline decoration-2 text-green-600 text-md pt-2" href='http://arxiv.org/abs/2401.10889v1' target="_blank">
+                  link
+                </a>
+              </p>
+            </div>
+          </div>
+        </td>
+      </tr><tr>
+          <td class="inline-block">
+            <p class='font-bold text-black px-2 mx-1 text-xs w-24'>2024-01-19</p>
+          </td>
+          <td>
+            <div x-data="{open: false}">
+              <span @click="open = ! open" class="hover:underline cursor-pointer decoration-2 decoration-green-600 text-gray-800 text-sm">
+                Depth Anything: Unleashing the Power of Large-Scale Unlabeled Data
+              </span>
+              <div x-show="open" x-collapse.duration.500ms class="text-sm text-gray-500 pt-2">
+                <div class="text-center pt-2"></div>
+                <p class="pt-2">
+                  <p>This work presents Depth Anything, a highly practical solution for robust monocular depth estimation.Without pursuing novel technical modules, we aim to build a simple yet powerful foundation model dealing with any images under any circumstances.To this end, we scale up the dataset by designing a data engine to collect and automatically annotate large-scale unlabeled data (~62M), which significantly enlarges the data coverage and thus is able to reduce the generalization error.We investigate two simple yet effective strategies that make data scaling-up promising.First, a more challenging optimization target is created by leveraging data augmentation tools.<span class='px-1 mx-1 bg-yellow-200'>It compels the model to actively seek extra visual knowledge and acquire robust representations. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.881</span></span>Second, an auxiliary supervision is developed to enforce the model to inherit rich semantic priors from pre-trained encoders.We evaluate its zero-shot capabilities extensively, including six public datasets and randomly captured photos.It demonstrates impressive generalization ability.Further, through fine-tuning it with metric depth information from NYUv2 and KITTI, new SOTAs are set.Our better depth model also results in a better depth-conditioned ControlNet.Our models are released at https://github.com/LiheYoung/Depth-Anything.</p>
+                </p>
+              <p class="pb-2 pt-2 text-center">
+                <a class="underline decoration-2 text-green-600 text-md pt-2" href='http://arxiv.org/abs/2401.10891v1' target="_blank">
                   link
                 </a>
               </p>
