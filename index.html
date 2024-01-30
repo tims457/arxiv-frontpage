@@ -19,7 +19,7 @@
           <td>
             <h1 class="text-4xl pt-4 font-bold">Tim's Arxiv FrontPage</h1>
             <br>
-            <p>Generated on 2024-01-29.</p><br/>
+            <p>Generated on 2024-01-30.</p><br/>
             <p class="text-sm text-gray-500 pt-2">This frontpage is made by scraping arxiv and by runnig a sentence-model that detects if the abstract describes a paper about a topic of interest. One cool feature: it all pretty much runs via Github Actions. </p>
             <br>
           </td>
@@ -30,20 +30,42 @@
           </td>
         </tr><tr>
           <td class="inline-block">
-            <p class='font-bold text-black px-2 mx-1 text-xs w-24'>2024-01-26</p>
+            <p class='font-bold text-black px-2 mx-1 text-xs w-24'>2024-01-29</p>
           </td>
           <td>
             <div x-data="{open: false}">
               <span @click="open = ! open" class="hover:underline cursor-pointer decoration-2 decoration-green-600 text-gray-800 text-sm">
-                Macro Graph Neural Networks for Online Billion-Scale Recommender Systems
+                GAPS: Geometry-Aware Problem Solver
               </span>
               <div x-show="open" x-collapse.duration.500ms class="text-sm text-gray-500 pt-2">
                 <div class="text-center pt-2"></div>
                 <p class="pt-2">
-                  <p>Predicting Click-Through Rate (CTR) in billion-scale recommender systems poses a long-standing challenge for Graph Neural Networks (GNNs) due to the overwhelming computational complexity involved in aggregating billions of neighbors.To tackle this, GNN-based CTR models usually sample hundreds of neighbors out of the billions to facilitate efficient online recommendations.However, sampling only a small portion of neighbors results in a severe sampling bias and the failure to encompass the full spectrum of user or item behavioral patterns.To address this challenge, we name the conventional user-item recommendation graph as "micro recommendation graph" and introduce a more suitable MAcro Recommendation Graph (MAG) for billion-scale recommendations.MAG resolves the computational complexity problems in the infrastructure by reducing the node count from billions to hundreds.Specifically, MAG groups micro nodes (users and items) with similar behavior patterns to form macro nodes.Subsequently, we introduce tailored Macro Graph Neural Networks (MacGNN) to aggregate information on a macro level and revise the embeddings of macro nodes.<span class='px-1 mx-1 bg-yellow-200'>MacGNN has already served Taobao's homepage feed for two months, providing recommendations for over one billion users. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.972</span></span>Extensive offline experiments on three public benchmark datasets and an industrial dataset present that MacGNN significantly outperforms twelve CTR baselines while remaining computationally efficient.Besides, online A/B tests confirm MacGNN's superiority in billion-scale recommender systems.</p>
+                  <p>Geometry problem solving presents a formidable challenge within the NLP community.Existing approaches often rely on models designed for solving math word problems, neglecting the unique characteristics of geometry math problems.Additionally, the current research predominantly focuses on geometry calculation problems, while overlooking other essential aspects like proving.In this study, we address these limitations by proposing the Geometry-Aware Problem Solver (GAPS) model.GAPS is specifically designed to generate solution programs for geometry math problems of various types with the help of its unique problem-type classifier.To achieve this, GAPS treats the solution program as a composition of operators and operands, segregating their generation processes.<span class='px-1 mx-1 bg-yellow-200'>Furthermore, we introduce the geometry elements enhancement method, which enhances the ability of GAPS to recognize geometry elements accurately. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.938</span></span>By leveraging these improvements, GAPS showcases remarkable performance in resolving geometry math problems.Our experiments conducted on the UniGeo dataset demonstrate the superiority of GAPS over the state-of-the-art model, Geoformer.<span class='px-1 mx-1 bg-yellow-200'>Specifically, GAPS achieves an accuracy improvement of more than 5.3% for calculation tasks and an impressive 41.1% for proving tasks. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.949</span></span>Notably, GAPS achieves an impressive accuracy of 97.5% on proving problems, representing a significant advancement in solving geometry proving tasks.</p>
                 </p>
               <p class="pb-2 pt-2 text-center">
-                <a class="underline decoration-2 text-green-600 text-md pt-2" href='http://arxiv.org/abs/2401.14939v1' target="_blank">
+                <a class="underline decoration-2 text-green-600 text-md pt-2" href='http://arxiv.org/abs/2401.16287v1' target="_blank">
+                  link
+                </a>
+              </p>
+            </div>
+          </div>
+        </td>
+      </tr><tr>
+          <td class="inline-block">
+            <p class='font-bold text-black px-2 mx-1 text-xs w-24'>2024-01-29</p>
+          </td>
+          <td>
+            <div x-data="{open: false}">
+              <span @click="open = ! open" class="hover:underline cursor-pointer decoration-2 decoration-green-600 text-gray-800 text-sm">
+                MachineLearnAthon: An Action-Oriented Machine Learning Didactic Concept
+              </span>
+              <div x-show="open" x-collapse.duration.500ms class="text-sm text-gray-500 pt-2">
+                <div class="text-center pt-2"></div>
+                <p class="pt-2">
+                  <p>Machine Learning (ML) techniques are encountered nowadays across disciplines, from social sciences, through natural sciences to engineering.The broad application of ML and the accelerated pace of its evolution lead to an increasing need for dedicated teaching concepts aimed at making the application of this technology more reliable and responsible.<span class='px-1 mx-1 bg-yellow-200'>However, teaching ML is a daunting task. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.961</span></span>Aside from the methodological complexity of ML algorithms, both with respect to theory and implementation, the interdisciplinary and empirical nature of the field need to be taken into consideration.This paper introduces the MachineLearnAthon format, an innovative didactic concept designed to be inclusive for students of different disciplines with heterogeneous levels of mathematics, programming and domain expertise.At the heart of the concept lie ML challenges, which make use of industrial data sets to solve real-world problems.These cover the entire ML pipeline, promoting data literacy and practical skills, from data preparation, through deployment, to evaluation.</p>
+                </p>
+              <p class="pb-2 pt-2 text-center">
+                <a class="underline decoration-2 text-green-600 text-md pt-2" href='http://arxiv.org/abs/2401.16291v1' target="_blank">
                   link
                 </a>
               </p>
@@ -56,94 +78,6 @@
             <h2 class="text-2xl tracking-tight pt-4 font-bold">Collective Intelligence</h2>
           </td>
         </tr><tr>
-          <td class="inline-block">
-            <p class='font-bold text-black px-2 mx-1 text-xs w-24'>2024-01-26</p>
-          </td>
-          <td>
-            <div x-data="{open: false}">
-              <span @click="open = ! open" class="hover:underline cursor-pointer decoration-2 decoration-green-600 text-gray-800 text-sm">
-                Energy Flexibility Potential in the Brewery Sector: A Multi-agent Based Simulation of 239 Danish Breweries
-              </span>
-              <div x-show="open" x-collapse.duration.500ms class="text-sm text-gray-500 pt-2">
-                <div class="text-center pt-2"></div>
-                <p class="pt-2">
-                  <p>The beverage industry is a typical food processing industry, accounts for significant energy consumption, and has flexible demands.However, the deployment of energy flexibility in the beverage industry is complex and challenging.<span class='px-1 mx-1 bg-yellow-200'>Furthermore, activation of energy flexibility from the whole brewery industry is necessary to ensure grid stability. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.901</span></span>Therefore, this paper assesses the energy flexibility potential of Denmark's brewery sector based on a multi-agent-based simulation.239 individual brewery facilities are simulated, and each facility, as an agent, can interact with the energy system market and make decisions based on its underlying parameters and operational restrictions.The results show that the Danish breweries could save 1.56 % of electricity costs annually while maintaining operational security and reducing approximately 1745 tonnes of CO2 emissions.Furthermore, medium-size breweries could obtain higher relative benefits by providing energy flexibility, especially those producing lager and ale.The result also shows that the breweries' relative saving potential is electricity market-dependent.</p>
-                </p>
-              <p class="pb-2 pt-2 text-center">
-                <a class="underline decoration-2 text-green-600 text-md pt-2" href='http://arxiv.org/abs/2401.14903v1' target="_blank">
-                  link
-                </a>
-              </p>
-            </div>
-          </div>
-        </td>
-      </tr><tr>
-          <td class="inline-block">
-            <p class='font-bold text-black px-2 mx-1 text-xs w-24'>2024-01-26</p>
-          </td>
-          <td>
-            <div x-data="{open: false}">
-              <span @click="open = ! open" class="hover:underline cursor-pointer decoration-2 decoration-green-600 text-gray-800 text-sm">
-                Macro Graph Neural Networks for Online Billion-Scale Recommender Systems
-              </span>
-              <div x-show="open" x-collapse.duration.500ms class="text-sm text-gray-500 pt-2">
-                <div class="text-center pt-2"></div>
-                <p class="pt-2">
-                  <p>Predicting Click-Through Rate (CTR) in billion-scale recommender systems poses a long-standing challenge for Graph Neural Networks (GNNs) due to the overwhelming computational complexity involved in aggregating billions of neighbors.To tackle this, GNN-based CTR models usually sample hundreds of neighbors out of the billions to facilitate efficient online recommendations.However, sampling only a small portion of neighbors results in a severe sampling bias and the failure to encompass the full spectrum of user or item behavioral patterns.To address this challenge, we name the conventional user-item recommendation graph as "micro recommendation graph" and introduce a more suitable MAcro Recommendation Graph (MAG) for billion-scale recommendations.MAG resolves the computational complexity problems in the infrastructure by reducing the node count from billions to hundreds.Specifically, MAG groups micro nodes (users and items) with similar behavior patterns to form macro nodes.Subsequently, we introduce tailored Macro Graph Neural Networks (MacGNN) to aggregate information on a macro level and revise the embeddings of macro nodes.<span class='px-1 mx-1 bg-yellow-200'>MacGNN has already served Taobao's homepage feed for two months, providing recommendations for over one billion users. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.968</span></span>Extensive offline experiments on three public benchmark datasets and an industrial dataset present that MacGNN significantly outperforms twelve CTR baselines while remaining computationally efficient.Besides, online A/B tests confirm MacGNN's superiority in billion-scale recommender systems.</p>
-                </p>
-              <p class="pb-2 pt-2 text-center">
-                <a class="underline decoration-2 text-green-600 text-md pt-2" href='http://arxiv.org/abs/2401.14939v1' target="_blank">
-                  link
-                </a>
-              </p>
-            </div>
-          </div>
-        </td>
-      </tr><tr>
-          <td class="inline-block">
-            <p class='font-bold text-black px-2 mx-1 text-xs w-24'>2024-01-26</p>
-          </td>
-          <td>
-            <div x-data="{open: false}">
-              <span @click="open = ! open" class="hover:underline cursor-pointer decoration-2 decoration-green-600 text-gray-800 text-sm">
-                The causal role of the Reddit collective action on the GameStop short squeeze
-              </span>
-              <div x-show="open" x-collapse.duration.500ms class="text-sm text-gray-500 pt-2">
-                <div class="text-center pt-2"></div>
-                <p class="pt-2">
-                  <p>In early 2021, the stock prices of GameStop, AMC, Nokia, and BlackBerry experienced dramatic increases, triggered by short squeeze operations that have been largely attributed to Reddit's retail investors.These events showcased, for the first time, the potential of online social networks to catalyze financial collective action.How, when and to what extent Reddit users played a causal role in driving up these prices, however, remains unclear.To address these questions, we employ causal inference techniques, leveraging data capturing activity on Reddit and Twitter, and trading volume with a high temporal resolution.<span class='px-1 mx-1 bg-yellow-200'>We find that Reddit discussions foreshadowed trading volume before the GameStop short squeeze, with their predictive power being particularly strong on hourly time scales. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.973</span></span>This effect emerged abruptly and became prominent a few weeks before the event, but waned once the community of investors gained widespread visibility through Twitter.<span class='px-1 mx-1 bg-yellow-200'>As the causal link unfolded, the collective investment of the Reddit community, quantified through each user's financial position on GameStop, closely mirrored the market capitalization of the stock. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.938</span></span><span class='px-1 mx-1 bg-yellow-200'>The evidence from our study suggests that Reddit users fueled the GameStop short squeeze, and thereby Reddit served as a coordination hub for a shared financial strategy. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.884</span></span><span class='px-1 mx-1 bg-yellow-200'>Towards the end of January, users talking about GameStop contributed to raise the popularity of BlackBerry, AMC and Nokia, which emerged as the most popular stocks as the community gained global recognition. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.911</span></span>Overall, our results shed light on the dynamics behind the first large-scale financial collective action driven by social media users.</p>
-                </p>
-              <p class="pb-2 pt-2 text-center">
-                <a class="underline decoration-2 text-green-600 text-md pt-2" href='http://arxiv.org/abs/2401.14999v1' target="_blank">
-                  link
-                </a>
-              </p>
-            </div>
-          </div>
-        </td>
-      </tr><tr>
-          <td class="inline-block">
-            <p class='font-bold text-black px-2 mx-1 text-xs w-24'>2024-01-26</p>
-          </td>
-          <td>
-            <div x-data="{open: false}">
-              <span @click="open = ! open" class="hover:underline cursor-pointer decoration-2 decoration-green-600 text-gray-800 text-sm">
-                Color Maker: a Mixed-Initiative Approach to Creating Accessible Color Maps
-              </span>
-              <div x-show="open" x-collapse.duration.500ms class="text-sm text-gray-500 pt-2">
-                <div class="text-center pt-2"></div>
-                <p class="pt-2">
-                  <p>Quantitative data is frequently represented using color, yet designing effective color mappings is a challenging task, requiring one to balance perceptual standards with personal color preference.Current design tools either overwhelm novices with complexity or offer limited customization options.We present ColorMaker, a mixed-initiative approach for creating colormaps.<span class='px-1 mx-1 bg-yellow-200'>ColorMaker combines fluid user interaction with real-time optimization to generate smooth, continuous color ramps. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.884</span></span>Users specify their loose color preferences while leaving the algorithm to generate precise color sequences, meeting both designer needs and established guidelines.ColorMaker can create new colormaps, including designs accessible for people with color-vision deficiencies, starting from scratch or with only partial input, thus supporting ideation and iterative refinement.We show that our approach can generate designs with similar or superior perceptual characteristics to standard colormaps.A user study demonstrates how designers of varying skill levels can use this tool to create custom, high-quality colormaps.ColorMaker is available at https://colormaker.org</p>
-                </p>
-              <p class="pb-2 pt-2 text-center">
-                <a class="underline decoration-2 text-green-600 text-md pt-2" href='http://arxiv.org/abs/2401.15032v1' target="_blank">
-                  link
-                </a>
-              </p>
-            </div>
-          </div>
-        </td>
-      </tr><tr>
           <td></td>
           <td>
             <h2 class="text-2xl tracking-tight pt-4 font-bold">Complex Systems</h2>
@@ -165,20 +99,20 @@
           </td>
         </tr><tr>
           <td class="inline-block">
-            <p class='font-bold text-black px-2 mx-1 text-xs w-24'>2024-01-26</p>
+            <p class='font-bold text-black px-2 mx-1 text-xs w-24'>2024-01-29</p>
           </td>
           <td>
             <div x-data="{open: false}">
               <span @click="open = ! open" class="hover:underline cursor-pointer decoration-2 decoration-green-600 text-gray-800 text-sm">
-                Reinforcement Learning Interventions on Boundedly Rational Human Agents in Frictionful Tasks
+                Prepare Non-classical Collective Spin State by Reinforcement Learning
               </span>
               <div x-show="open" x-collapse.duration.500ms class="text-sm text-gray-500 pt-2">
                 <div class="text-center pt-2"></div>
                 <p class="pt-2">
-                  <p>Many important behavior changes are frictionful; they require individuals to expend effort over a long period with little immediate gratification.<span class='px-1 mx-1 bg-yellow-200'>Here, an artificial intelligence (AI) agent can provide personalized interventions to help individuals stick to their goals. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.901</span></span>In these settings, the AI agent must personalize rapidly (before the individual disengages) and interpretably, to help us understand the behavioral interventions.In this paper, we introduce Behavior Model Reinforcement Learning (BMRL), a framework in which an AI agent intervenes on the parameters of a Markov Decision Process (MDP) belonging to a boundedly rational human agent.Our formulation of the human decision-maker as a planning agent allows us to attribute undesirable human policies (ones that do not lead to the goal) to their maladapted MDP parameters, such as an extremely low discount factor.Furthermore, we propose a class of tractable human models that captures fundamental behaviors in frictionful tasks.Introducing a notion of MDP equivalence specific to BMRL, we theoretically and empirically show that AI planning with our human models can lead to helpful policies on a wide range of more complex, ground-truth humans.</p>
+                  <p>We propose a scheme leveraging reinforcement learning to engineer control fields for generating non-classical states.It is exemplified by the application to prepare spin squeezed state for an open collective spin model where a linear control term is designed to govern the dynamics.<span class='px-1 mx-1 bg-yellow-200'>The reinforcement learning agent determines the temporal sequence of control pulses, commencing from coherent spin state in an environment characterized by dissipation and dephasing. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.937</span></span>When compared to constant control scenarios, this approach provides various control sequences maintaining collective spin squeezing and entanglement.It is observed that denser application of the control pulses enhances the performance of the outcomes.Furthermore, there is a minor enhancement in the performance by adding control actions.<span class='px-1 mx-1 bg-yellow-200'>The proposed strategy demonstrates increased effectiveness for larger systems. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.899</span></span>And thermal excitations of the reservoir are detrimental to the control outcomes.It should be confirmed that this is an open-loop strategy by closed-loop simulation, circumventing collapse of quantum state induced by measurements.Thanks to the flexible replaceability of the optimization modules and the controlled system, this research paves the way for its application in manipulating other quantum systems.</p>
                 </p>
               <p class="pb-2 pt-2 text-center">
-                <a class="underline decoration-2 text-green-600 text-md pt-2" href='http://arxiv.org/abs/2401.14923v1' target="_blank">
+                <a class="underline decoration-2 text-green-600 text-md pt-2" href='http://arxiv.org/abs/2401.16320v1' target="_blank">
                   link
                 </a>
               </p>
@@ -187,64 +121,20 @@
         </td>
       </tr><tr>
           <td class="inline-block">
-            <p class='font-bold text-black px-2 mx-1 text-xs w-24'>2024-01-26</p>
+            <p class='font-bold text-black px-2 mx-1 text-xs w-24'>2024-01-29</p>
           </td>
           <td>
             <div x-data="{open: false}">
               <span @click="open = ! open" class="hover:underline cursor-pointer decoration-2 decoration-green-600 text-gray-800 text-sm">
-                Discovering group dynamics in synchronous time series via hierarchical recurrent switching-state models
+                Curriculum-Based Reinforcement Learning for Quadrupedal Jumping: A Reference-free Design
               </span>
               <div x-show="open" x-collapse.duration.500ms class="text-sm text-gray-500 pt-2">
                 <div class="text-center pt-2"></div>
                 <p class="pt-2">
-                  <p>We seek to model a collection of time series arising from multiple entities interacting over the same time period.Recent work focused on modeling individual time series is inadequate for our intended applications, where collective system-level behavior influences the trajectories of individual entities.To address such problems, we present a new hierarchical switching-state model that can be trained in an unsupervised fashion to simultaneously explain both system-level and individual-level dynamics.We employ a latent system-level discrete state Markov chain that drives latent entity-level chains which in turn govern the dynamics of each observed time series.<span class='px-1 mx-1 bg-yellow-200'>Feedback from the observations to the chains at both the entity and system levels improves flexibility via context-dependent state transitions. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.888</span></span>Our hierarchical switching recurrent dynamical models can be learned via closed-form variational coordinate ascent updates to all latent chains that scale linearly in the number of individual time series.This is asymptotically no more costly than fitting separate models for each entity.Experiments on synthetic and real datasets show that our model can produce better forecasts of future entity behavior than existing methods.Moreover, the availability of latent state chains at both the entity and system level enables interpretation of group dynamics.</p>
+                  <p>Deep reinforcement learning (DRL) has emerged as a promising solution to mastering explosive and versatile quadrupedal jumping skills.However, current DRL-based frameworks usually rely on well-defined reference trajectories, which are obtained by capturing animal motions or transferring experience from existing controllers.This work explores the possibility of learning dynamic jumping without imitating a reference trajectory.To this end, we incorporate a curriculum design into DRL so as to accomplish challenging tasks progressively.<span class='px-1 mx-1 bg-yellow-200'>Starting from a vertical in-place jump, we then generalize the learned policy to forward and diagonal jumps and, finally, learn to jump across obstacles. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.962</span></span>Conditioned on the desired landing location, orientation, and obstacle dimensions, the proposed approach contributes to a wide range of jumping motions, including omnidirectional jumping and robust jumping, alleviating the effort to extract references in advance.Particularly, without constraints from the reference motion, a 90cm forward jump is achieved, exceeding previous records for similar robots reported in the existing literature.Additionally, continuous jumping on the soft grassy floor is accomplished, even when it is not encountered in the training stage.A supplementary video showing our results can be found at https://youtu.be/nRaMCrwU5X8 .</p>
                 </p>
               <p class="pb-2 pt-2 text-center">
-                <a class="underline decoration-2 text-green-600 text-md pt-2" href='http://arxiv.org/abs/2401.14973v1' target="_blank">
-                  link
-                </a>
-              </p>
-            </div>
-          </div>
-        </td>
-      </tr><tr>
-          <td class="inline-block">
-            <p class='font-bold text-black px-2 mx-1 text-xs w-24'>2024-01-26</p>
-          </td>
-          <td>
-            <div x-data="{open: false}">
-              <span @click="open = ! open" class="hover:underline cursor-pointer decoration-2 decoration-green-600 text-gray-800 text-sm">
-                Deep learning-based approach for tomato classification in complex scenes
-              </span>
-              <div x-show="open" x-collapse.duration.500ms class="text-sm text-gray-500 pt-2">
-                <div class="text-center pt-2"></div>
-                <p class="pt-2">
-                  <p>Tracking ripening tomatoes is time consuming and labor intensive.Artificial intelligence technologies combined with those of computer vision can help users optimize the process of monitoring the ripening status of plants.To this end, we have proposed a tomato ripening monitoring approach based on deep learning in complex scenes.The objective is to detect mature tomatoes and harvest them in a timely manner.The proposed approach is declined in two parts.Firstly, the images of the scene are transmitted to the pre-processing layer.<span class='px-1 mx-1 bg-yellow-200'>This process allows the detection of areas of interest (area of the image containing tomatoes). <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.906</span></span>Then, these images are used as input to the maturity detection layer.This layer, based on a deep neural network learning algorithm, classifies the tomato thumbnails provided to it in one of the following five categories: green, brittle, pink, pale red, mature red.The experiments are based on images collected from the internet gathered through searches using tomato state across diverse languages including English, German, French, and Spanish.The experimental results of the maturity detection layer on a dataset composed of images of tomatoes taken under the extreme conditions, gave a good classification rate.</p>
-                </p>
-              <p class="pb-2 pt-2 text-center">
-                <a class="underline decoration-2 text-green-600 text-md pt-2" href='http://arxiv.org/abs/2401.15055v1' target="_blank">
-                  link
-                </a>
-              </p>
-            </div>
-          </div>
-        </td>
-      </tr><tr>
-          <td class="inline-block">
-            <p class='font-bold text-black px-2 mx-1 text-xs w-24'>2024-01-26</p>
-          </td>
-          <td>
-            <div x-data="{open: false}">
-              <span @click="open = ! open" class="hover:underline cursor-pointer decoration-2 decoration-green-600 text-gray-800 text-sm">
-                Fully Independent Communication in Multi-Agent Reinforcement Learning
-              </span>
-              <div x-show="open" x-collapse.duration.500ms class="text-sm text-gray-500 pt-2">
-                <div class="text-center pt-2"></div>
-                <p class="pt-2">
-                  <p><span class='px-1 mx-1 bg-yellow-200'>Multi-Agent Reinforcement Learning (MARL) comprises a broad area of research within the field of multi-agent systems. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.981</span></span>Several recent works have focused specifically on the study of communication approaches in MARL.While multiple communication methods have been proposed, these might still be too complex and not easily transferable to more practical contexts.One of the reasons for that is due to the use of the famous parameter sharing trick.In this paper, we investigate how independent learners in MARL that do not share parameters can communicate.We demonstrate that this setting might incur into some problems, to which we propose a new learning scheme as a solution.Our results show that, despite the challenges, independent agents can still learn communication strategies following our method.Additionally, we use this method to investigate how communication in MARL is affected by different network capacities, both for sharing and not sharing parameters.We observe that communication may not always be needed and that the chosen agent network sizes need to be considered when used together with communication in order to achieve efficient learning.</p>
-                </p>
-              <p class="pb-2 pt-2 text-center">
-                <a class="underline decoration-2 text-green-600 text-md pt-2" href='http://arxiv.org/abs/2401.15059v1' target="_blank">
+                <a class="underline decoration-2 text-green-600 text-md pt-2" href='http://arxiv.org/abs/2401.16337v1' target="_blank">
                   link
                 </a>
               </p>
