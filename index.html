@@ -19,7 +19,7 @@
           <td>
             <h1 class="text-4xl pt-4 font-bold">Tim's Arxiv FrontPage</h1>
             <br>
-            <p>Generated on 2024-01-31.</p><br/>
+            <p>Generated on 2024-02-01.</p><br/>
             <p class="text-sm text-gray-500 pt-2">This frontpage is made by scraping arxiv and by runnig a sentence-model that detects if the abstract describes a paper about a topic of interest. One cool feature: it all pretty much runs via Github Actions. </p>
             <br>
           </td>
@@ -30,20 +30,42 @@
           </td>
         </tr><tr>
           <td class="inline-block">
-            <p class='font-bold text-black px-2 mx-1 text-xs w-24'>2024-01-30</p>
+            <p class='font-bold text-black px-2 mx-1 text-xs w-24'>2024-01-31</p>
           </td>
           <td>
             <div x-data="{open: false}">
               <span @click="open = ! open" class="hover:underline cursor-pointer decoration-2 decoration-green-600 text-gray-800 text-sm">
-                GAISSALabel: A tool for energy labeling of ML models
+                Hi-SAM: Marrying Segment Anything Model for Hierarchical Text Segmentation
               </span>
               <div x-show="open" x-collapse.duration.500ms class="text-sm text-gray-500 pt-2">
                 <div class="text-center pt-2"></div>
                 <p class="pt-2">
-                  <p>Background: The increasing environmental impact of Information Technologies, particularly in Machine Learning (ML), highlights the need for sustainable practices in software engineering.<span class='px-1 mx-1 bg-yellow-200'>The escalating complexity and energy consumption of ML models need tools for assessing and improving their energy efficiency. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.887</span></span>Goal:<span class='px-1 mx-1 bg-yellow-200'>This paper introduces GAISSALabel, a web-based tool designed to evaluate and label the energy efficiency of ML models. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.885</span></span>Method: GAISSALabel is a technology transfer development from a former research on energy efficiency classification of ML, consisting of a holistic tool for assessing both the training and inference phases of ML models, considering various metrics such as power draw, model size efficiency, CO2e emissions and more.Results: GAISSALabel offers a labeling system for energy efficiency, akin to labels on consumer appliances, making it accessible to ML stakeholders of varying backgrounds.The tool's adaptability allows for customization in the proposed labeling system, ensuring its relevance in the rapidly evolving ML field.<span class='px-1 mx-1 bg-yellow-200'>Conclusions: GAISSALabel represents a significant step forward in sustainable software engineering, offering a solution for balancing high-performance ML models with environmental impacts. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.893</span></span>The tool's effectiveness and market relevance will be further assessed through planned evaluations using the Technology Acceptance Model.</p>
+                  <p>The Segment Anything Model (SAM), a profound vision foundation model pre-trained on a large-scale dataset, breaks the boundaries of general segmentation and sparks various downstream applications.This paper introduces Hi-SAM, a unified model leveraging SAM for hierarchical text segmentation.Hi-SAM excels in text segmentation across four hierarchies, including stroke, word, text-line, and paragraph, while realizing layout analysis as well.Specifically, we first turn SAM into a high-quality text stroke segmentation (TSS) model through a parameter-efficient fine-tuning approach.We use this TSS model to iteratively generate the text stroke labels in a semi-automatical manner, unifying labels across the four text hierarchies in the HierText dataset.Subsequently, with these complete labels, we launch the end-to-end trainable Hi-SAM based on the TSS architecture with a customized hierarchical mask decoder.During inference, Hi-SAM offers both automatic mask generation (AMG) mode and promptable segmentation mode.<span class='px-1 mx-1 bg-yellow-200'>In terms of the AMG mode, Hi-SAM segments text stroke foreground masks initially, then samples foreground points for hierarchical text mask generation and achieves layout analysis in passing. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.938</span></span>As for the promptable mode, Hi-SAM provides word, text-line, and paragraph masks with a single point click.Experimental results show the state-of-the-art performance of our TSS model: 84.86% fgIOU on Total-Text and 88.96% fgIOU on TextSeg for text stroke segmentation.Moreover, compared to the previous specialist for joint hierarchical detection and layout analysis on HierText, Hi-SAM achieves significant improvements: 4.73% PQ and 5.39% F1 on the text-line level, 5.49% PQ and 7.39% F1 on the paragraph level layout analysis, requiring 20x fewer training epochs.The code is available at https://github.com/ymy-k/Hi-SAM.</p>
                 </p>
               <p class="pb-2 pt-2 text-center">
-                <a class="underline decoration-2 text-green-600 text-md pt-2" href='http://arxiv.org/abs/2401.17150v1' target="_blank">
+                <a class="underline decoration-2 text-green-600 text-md pt-2" href='http://arxiv.org/abs/2401.17904v1' target="_blank">
+                  link
+                </a>
+              </p>
+            </div>
+          </div>
+        </td>
+      </tr><tr>
+          <td class="inline-block">
+            <p class='font-bold text-black px-2 mx-1 text-xs w-24'>2024-01-31</p>
+          </td>
+          <td>
+            <div x-data="{open: false}">
+              <span @click="open = ! open" class="hover:underline cursor-pointer decoration-2 decoration-green-600 text-gray-800 text-sm">
+                CARFF: Conditional Auto-encoded Radiance Field for 3D Scene Forecasting
+              </span>
+              <div x-show="open" x-collapse.duration.500ms class="text-sm text-gray-500 pt-2">
+                <div class="text-center pt-2"></div>
+                <p class="pt-2">
+                  <p><span class='px-1 mx-1 bg-yellow-200'>We propose CARFF: <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.884</span></span>Conditional Auto-encoded Radiance Field for 3D Scene Forecasting, a method for predicting future 3D scenes given past observations, such as 2D ego-centric images.Our method maps an image to a distribution over plausible 3D latent scene configurations using a probabilistic encoder, and predicts the evolution of the hypothesized scenes through time.Our latent scene representation conditions a global Neural Radiance Field (NeRF) to represent a 3D scene model, which enables explainable predictions and straightforward downstream applications.This approach extends beyond previous neural rendering work by considering complex scenarios of uncertainty in environmental states and dynamics.We employ a two-stage training of Pose-Conditional-VAE and NeRF to learn 3D representations.Additionally, we auto-regressively predict latent scene representations as a partially observable Markov decision process, utilizing a mixture density network.We demonstrate the utility of our method in realistic scenarios using the CARLA driving simulator, where CARFF can be used to enable efficient trajectory and contingency planning in complex multi-agent autonomous driving scenarios involving visual occlusions.</p>
+                </p>
+              <p class="pb-2 pt-2 text-center">
+                <a class="underline decoration-2 text-green-600 text-md pt-2" href='http://arxiv.org/abs/2401.18075v1' target="_blank">
                   link
                 </a>
               </p>
@@ -56,6 +78,72 @@
             <h2 class="text-2xl tracking-tight pt-4 font-bold">Collective Intelligence</h2>
           </td>
         </tr><tr>
+          <td class="inline-block">
+            <p class='font-bold text-black px-2 mx-1 text-xs w-24'>2024-01-31</p>
+          </td>
+          <td>
+            <div x-data="{open: false}">
+              <span @click="open = ! open" class="hover:underline cursor-pointer decoration-2 decoration-green-600 text-gray-800 text-sm">
+                Graph Attention-based Reinforcement Learning for Trajectory Design and Resource Assignment in Multi-UAV Assisted Communication
+              </span>
+              <div x-show="open" x-collapse.duration.500ms class="text-sm text-gray-500 pt-2">
+                <div class="text-center pt-2"></div>
+                <p class="pt-2">
+                  <p>In the multiple unmanned aerial vehicle (UAV)- assisted downlink communication, it is challenging for UAV base stations (UAV BSs) to realize trajectory design and resource assignment in unknown environments.The cooperation and competition between UAV BSs in the communication network leads to a Markov game problem.Multi-agent reinforcement learning is a significant solution for the above decision-making.However, there are still many common issues, such as the instability of the system and low utilization of historical data, that limit its application.In this paper, a novel graph-attention multi-agent trust region (GA-MATR) reinforcement learning framework is proposed to solve the multi-UAV assisted communication problem.Graph recurrent network is introduced to process and analyze complex topology of the communication network, so as to extract useful information and patterns from observational information.The attention mechanism provides additional weighting for conveyed information, so that the critic network can accurately evaluate the value of behavior for UAV BSs.This provides more reliable feedback signals and helps the actor network update the strategy more effectively.Ablation simulations indicate that the proposed approach attains improved convergence over the baselines.<span class='px-1 mx-1 bg-yellow-200'>UAV BSs learn the optimal communication strategies to achieve their maximum cumulative rewards. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.872</span></span>Additionally, multi-agent trust region method with monotonic convergence provides an estimated Nash equilibrium for the multi-UAV assisted communication Markov game.</p>
+                </p>
+              <p class="pb-2 pt-2 text-center">
+                <a class="underline decoration-2 text-green-600 text-md pt-2" href='http://arxiv.org/abs/2401.17880v1' target="_blank">
+                  link
+                </a>
+              </p>
+            </div>
+          </div>
+        </td>
+      </tr><tr>
+          <td class="inline-block">
+            <p class='font-bold text-black px-2 mx-1 text-xs w-24'>2024-01-31</p>
+          </td>
+          <td>
+            <div x-data="{open: false}">
+              <span @click="open = ! open" class="hover:underline cursor-pointer decoration-2 decoration-green-600 text-gray-800 text-sm">
+                Hi-SAM: Marrying Segment Anything Model for Hierarchical Text Segmentation
+              </span>
+              <div x-show="open" x-collapse.duration.500ms class="text-sm text-gray-500 pt-2">
+                <div class="text-center pt-2"></div>
+                <p class="pt-2">
+                  <p>The Segment Anything Model (SAM), a profound vision foundation model pre-trained on a large-scale dataset, breaks the boundaries of general segmentation and sparks various downstream applications.This paper introduces Hi-SAM, a unified model leveraging SAM for hierarchical text segmentation.<span class='px-1 mx-1 bg-yellow-200'>Hi-SAM excels in text segmentation across four hierarchies, including stroke, word, text-line, and paragraph, while realizing layout analysis as well. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.902</span></span>Specifically, we first turn SAM into a high-quality text stroke segmentation (TSS) model through a parameter-efficient fine-tuning approach.We use this TSS model to iteratively generate the text stroke labels in a semi-automatical manner, unifying labels across the four text hierarchies in the HierText dataset.Subsequently, with these complete labels, we launch the end-to-end trainable Hi-SAM based on the TSS architecture with a customized hierarchical mask decoder.During inference, Hi-SAM offers both automatic mask generation (AMG) mode and promptable segmentation mode.In terms of the AMG mode, Hi-SAM segments text stroke foreground masks initially, then samples foreground points for hierarchical text mask generation and achieves layout analysis in passing.As for the promptable mode, Hi-SAM provides word, text-line, and paragraph masks with a single point click.Experimental results show the state-of-the-art performance of our TSS model: 84.86% fgIOU on Total-Text and 88.96% fgIOU on TextSeg for text stroke segmentation.Moreover, compared to the previous specialist for joint hierarchical detection and layout analysis on HierText, Hi-SAM achieves significant improvements: 4.73% PQ and 5.39% F1 on the text-line level, 5.49% PQ and 7.39% F1 on the paragraph level layout analysis, requiring 20x fewer training epochs.The code is available at https://github.com/ymy-k/Hi-SAM.</p>
+                </p>
+              <p class="pb-2 pt-2 text-center">
+                <a class="underline decoration-2 text-green-600 text-md pt-2" href='http://arxiv.org/abs/2401.17904v1' target="_blank">
+                  link
+                </a>
+              </p>
+            </div>
+          </div>
+        </td>
+      </tr><tr>
+          <td class="inline-block">
+            <p class='font-bold text-black px-2 mx-1 text-xs w-24'>2024-01-31</p>
+          </td>
+          <td>
+            <div x-data="{open: false}">
+              <span @click="open = ! open" class="hover:underline cursor-pointer decoration-2 decoration-green-600 text-gray-800 text-sm">
+                CARFF: Conditional Auto-encoded Radiance Field for 3D Scene Forecasting
+              </span>
+              <div x-show="open" x-collapse.duration.500ms class="text-sm text-gray-500 pt-2">
+                <div class="text-center pt-2"></div>
+                <p class="pt-2">
+                  <p><span class='px-1 mx-1 bg-yellow-200'>We propose CARFF: <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.96</span></span>Conditional Auto-encoded Radiance Field for 3D Scene Forecasting, a method for predicting future 3D scenes given past observations, such as 2D ego-centric images.Our method maps an image to a distribution over plausible 3D latent scene configurations using a probabilistic encoder, and predicts the evolution of the hypothesized scenes through time.Our latent scene representation conditions a global Neural Radiance Field (NeRF) to represent a 3D scene model, which enables explainable predictions and straightforward downstream applications.This approach extends beyond previous neural rendering work by considering complex scenarios of uncertainty in environmental states and dynamics.We employ a two-stage training of Pose-Conditional-VAE and NeRF to learn 3D representations.Additionally, we auto-regressively predict latent scene representations as a partially observable Markov decision process, utilizing a mixture density network.We demonstrate the utility of our method in realistic scenarios using the CARLA driving simulator, where CARFF can be used to enable efficient trajectory and contingency planning in complex multi-agent autonomous driving scenarios involving visual occlusions.</p>
+                </p>
+              <p class="pb-2 pt-2 text-center">
+                <a class="underline decoration-2 text-green-600 text-md pt-2" href='http://arxiv.org/abs/2401.18075v1' target="_blank">
+                  link
+                </a>
+              </p>
+            </div>
+          </div>
+        </td>
+      </tr><tr>
           <td></td>
           <td>
             <h2 class="text-2xl tracking-tight pt-4 font-bold">Complex Systems</h2>
@@ -77,20 +165,86 @@
           </td>
         </tr><tr>
           <td class="inline-block">
-            <p class='font-bold text-black px-2 mx-1 text-xs w-24'>2024-01-30</p>
+            <p class='font-bold text-black px-2 mx-1 text-xs w-24'>2024-01-31</p>
           </td>
           <td>
             <div x-data="{open: false}">
               <span @click="open = ! open" class="hover:underline cursor-pointer decoration-2 decoration-green-600 text-gray-800 text-sm">
-                Semantic Belief Behavior Graph: Enabling Autonomous Robot Inspection in Unknown Environments
+                Graph Attention-based Reinforcement Learning for Trajectory Design and Resource Assignment in Multi-UAV Assisted Communication
               </span>
               <div x-show="open" x-collapse.duration.500ms class="text-sm text-gray-500 pt-2">
                 <div class="text-center pt-2"></div>
                 <p class="pt-2">
-                  <p>This paper addresses the problem of autonomous robotic inspection in complex and unknown environments.This capability is crucial for efficient and precise inspections in various real-world scenarios, even when faced with perceptual uncertainty and lack of prior knowledge of the environment.Existing methods for real-world autonomous inspections typically rely on predefined targets and waypoints and often fail to adapt to dynamic or unknown settings.In this work, we introduce the Semantic Belief Behavior Graph (SB2G) framework as a novel approach to semantic-aware autonomous robot inspection.SB2G generates a control policy for the robot, featuring behavior nodes that encapsulate various semantic-based policies designed for inspecting different classes of objects.<span class='px-1 mx-1 bg-yellow-200'>We design an active semantic search behavior to guide the robot in locating objects for inspection while reducing semantic information uncertainty. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.878</span></span>The edges in the SB2G encode transitions between these behaviors.We validate our approach through simulation and real-world urban inspections using a legged robotic platform.Our results show that SB2G enables a more efficient inspection policy, exhibiting performance comparable to human-operated inspections.</p>
+                  <p>In the multiple unmanned aerial vehicle (UAV)- assisted downlink communication, it is challenging for UAV base stations (UAV BSs) to realize trajectory design and resource assignment in unknown environments.The cooperation and competition between UAV BSs in the communication network leads to a Markov game problem.<span class='px-1 mx-1 bg-yellow-200'>Multi-agent reinforcement learning is a significant solution for the above decision-making. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.993</span></span>However, there are still many common issues, such as the instability of the system and low utilization of historical data, that limit its application.<span class='px-1 mx-1 bg-yellow-200'>In this paper, a novel graph-attention multi-agent trust region (GA-MATR) reinforcement learning framework is proposed to solve the multi-UAV assisted communication problem. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.98</span></span>Graph recurrent network is introduced to process and analyze complex topology of the communication network, so as to extract useful information and patterns from observational information.The attention mechanism provides additional weighting for conveyed information, so that the critic network can accurately evaluate the value of behavior for UAV BSs.<span class='px-1 mx-1 bg-yellow-200'>This provides more reliable feedback signals and helps the actor network update the strategy more effectively. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.896</span></span>Ablation simulations indicate that the proposed approach attains improved convergence over the baselines.<span class='px-1 mx-1 bg-yellow-200'>UAV BSs learn the optimal communication strategies to achieve their maximum cumulative rewards. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.968</span></span>Additionally, multi-agent trust region method with monotonic convergence provides an estimated Nash equilibrium for the multi-UAV assisted communication Markov game.</p>
                 </p>
               <p class="pb-2 pt-2 text-center">
-                <a class="underline decoration-2 text-green-600 text-md pt-2" href='http://arxiv.org/abs/2401.17191v1' target="_blank">
+                <a class="underline decoration-2 text-green-600 text-md pt-2" href='http://arxiv.org/abs/2401.17880v1' target="_blank">
+                  link
+                </a>
+              </p>
+            </div>
+          </div>
+        </td>
+      </tr><tr>
+          <td class="inline-block">
+            <p class='font-bold text-black px-2 mx-1 text-xs w-24'>2024-01-31</p>
+          </td>
+          <td>
+            <div x-data="{open: false}">
+              <span @click="open = ! open" class="hover:underline cursor-pointer decoration-2 decoration-green-600 text-gray-800 text-sm">
+                Attention Graph for Multi-Robot Social Navigation with Deep Reinforcement Learning
+              </span>
+              <div x-show="open" x-collapse.duration.500ms class="text-sm text-gray-500 pt-2">
+                <div class="text-center pt-2"></div>
+                <p class="pt-2">
+                  <p><span class='px-1 mx-1 bg-yellow-200'>Learning robot navigation strategies among pedestrian is crucial for domain based applications. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.878</span></span>Combining perception, planning and prediction allows us to model the interactions between robots and pedestrians, resulting in impressive outcomes especially with recent approaches based on deep reinforcement learning (RL).However, these works do not consider multi-robot scenarios.In this paper, we present MultiSoc, a new method for learning multi-agent socially aware navigation strategies using RL.Inspired by recent works on multi-agent deep RL, our method leverages graph-based representation of agent interactions, combining the positions and fields of view of entities (pedestrians and agents).<span class='px-1 mx-1 bg-yellow-200'>Each agent uses a model based on two Graph Neural Network combined with attention mechanisms. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.948</span></span>First an edge-selector produces a sparse graph, then a crowd coordinator applies node attention to produce a graph representing the influence of each entity on the others.This is incorporated into a model-free RL framework to learn multi-agent policies.We evaluate our approach on simulation and provide a series of experiments in a set of various conditions (number of agents / pedestrians).Empirical results show that our method learns faster than social navigation deep RL mono-agent techniques, and enables efficient multi-agent implicit coordination in challenging crowd navigation with multiple heterogeneous humans.Furthermore, by incorporating customizable meta-parameters, we can adjust the neighborhood density to take into account in our navigation strategy.</p>
+                </p>
+              <p class="pb-2 pt-2 text-center">
+                <a class="underline decoration-2 text-green-600 text-md pt-2" href='http://arxiv.org/abs/2401.17914v1' target="_blank">
+                  link
+                </a>
+              </p>
+            </div>
+          </div>
+        </td>
+      </tr><tr>
+          <td class="inline-block">
+            <p class='font-bold text-black px-2 mx-1 text-xs w-24'>2024-01-31</p>
+          </td>
+          <td>
+            <div x-data="{open: false}">
+              <span @click="open = ! open" class="hover:underline cursor-pointer decoration-2 decoration-green-600 text-gray-800 text-sm">
+                Intrinsic correlations for statistical ensembles of Dirac-like structures
+              </span>
+              <div x-show="open" x-collapse.duration.500ms class="text-sm text-gray-500 pt-2">
+                <div class="text-center pt-2"></div>
+                <p class="pt-2">
+                  <p>The Weyl-Wigner formalism for evaluating the intrinsic information of Dirac bispinors as correlated qubits (localized) in a magnetic field is investigated in the extension to statistical ensembles.The confining external field quantizes the quantum correlation measures implied by the spin-parity qubit structure of the Dirac equation in 3+1 dimensions, which simplifies the computation of the entanglement quantifier for mixed states in relativistic Landau levels.This allows for the evaluation of quantum and classical correlations in terms of entropy measures for Dirac structures that are eventually mixed.<span class='px-1 mx-1 bg-yellow-200'>Our results are twofold. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.872</span></span>First, a family of mixed Gaussian states is obtained in phase space, and its intrinsic correlation structure is computed in closed form.Second, the partition function for the low-dimensional Dirac equation in a magnetic field is derived through complex integration techniques.It describes the low-temperature regime in terms of analytically continued Zeta functions and the high temperature limit as a polynomial on the temperature variable.The connection with lower dimensional systems is further elicited by mapping the spin-parity qubits to valley-sublattice bispinors of the low-energy effective Hamiltonian of graphene.</p>
+                </p>
+              <p class="pb-2 pt-2 text-center">
+                <a class="underline decoration-2 text-green-600 text-md pt-2" href='http://arxiv.org/abs/2401.17926v1' target="_blank">
+                  link
+                </a>
+              </p>
+            </div>
+          </div>
+        </td>
+      </tr><tr>
+          <td class="inline-block">
+            <p class='font-bold text-black px-2 mx-1 text-xs w-24'>2024-01-31</p>
+          </td>
+          <td>
+            <div x-data="{open: false}">
+              <span @click="open = ! open" class="hover:underline cursor-pointer decoration-2 decoration-green-600 text-gray-800 text-sm">
+                Motion Guidance: Diffusion-Based Image Editing with Differentiable Motion Estimators
+              </span>
+              <div x-show="open" x-collapse.duration.500ms class="text-sm text-gray-500 pt-2">
+                <div class="text-center pt-2"></div>
+                <p class="pt-2">
+                  <p>Diffusion models are capable of generating impressive images conditioned on text descriptions, and extensions of these models allow users to edit images at a relatively coarse scale.However, the ability to precisely edit the layout, position, pose, and shape of objects in images with diffusion models is still difficult.To this end, we propose motion guidance, a zero-shot technique that allows a user to specify dense, complex motion fields that indicate where each pixel in an image should move.Motion guidance works by steering the diffusion sampling process with the gradients through an off-the-shelf optical flow network.Specifically, we design a guidance loss that encourages the sample to have the desired motion, as estimated by a flow network, while also being visually similar to the source image.<span class='px-1 mx-1 bg-yellow-200'>By simultaneously sampling from a diffusion model and guiding the sample to have low guidance loss, we can obtain a motion-edited image. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.885</span></span>We demonstrate that our technique works on complex motions and produces high quality edits of real and generated images.</p>
+                </p>
+              <p class="pb-2 pt-2 text-center">
+                <a class="underline decoration-2 text-green-600 text-md pt-2" href='http://arxiv.org/abs/2401.18085v1' target="_blank">
                   link
                 </a>
               </p>
