@@ -19,36 +19,283 @@
           <td>
             <h1 class="text-4xl pt-4 font-bold">Tim's Arxiv FrontPage</h1>
             <br>
-            <p>Generated on 2024-01-21.</p><br/>
+            <p>Generated on 2024-02-03.</p><br/>
             <p class="text-sm text-gray-500 pt-2">This frontpage is made by scraping arxiv and by runnig a sentence-model that detects if the abstract describes a paper about a topic of interest. One cool feature: it all pretty much runs via Github Actions. </p>
             <br>
           </td>
         </tr><tr>
           <td></td>
           <td>
+            <h2 class="text-2xl tracking-tight pt-4 font-bold">Artificial General Intelligence</h2>
+          </td>
+        </tr><tr>
+          <td class="inline-block">
+            <p class='font-bold text-black px-2 mx-1 text-xs w-24'>2024-02-01</p>
+          </td>
+          <td>
+            <div x-data="{open: false}">
+              <span @click="open = ! open" class="hover:underline cursor-pointer decoration-2 decoration-green-600 text-gray-800 text-sm">
+                Hidding the Ghostwriters: An Adversarial Evaluation of AI-Generated Student Essay Detection
+              </span>
+              <div x-show="open" x-collapse.duration.500ms class="text-sm text-gray-500 pt-2">
+                <div class="text-center pt-2"></div>
+                <p class="pt-2">
+                  <p>Large language models (LLMs) have exhibited remarkable capabilities in text generation tasks.However, the utilization of these models carries inherent risks, including but not limited to plagiarism, the dissemination of fake news, and issues in educational exercises.Although several detectors have been proposed to address these concerns, their effectiveness against adversarial perturbations, specifically in the context of student essay writing, remains largely unexplored.<span class='px-1 mx-1 bg-yellow-200'>This paper aims to bridge this gap by constructing AIG-ASAP, an AI-generated student essay dataset, employing a range of text perturbation methods that are expected to generate high-quality essays while evading detection. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.831</span></span>Through empirical experiments, we assess the performance of current AIGC detectors on the AIG-ASAP dataset.The results reveal that the existing detectors can be easily circumvented using straightforward automatic adversarial attacks.Specifically, we explore word substitution and sentence substitution perturbation methods that effectively evade detection while maintaining the quality of the generated essays.<span class='px-1 mx-1 bg-yellow-200'>This highlights the urgent need for more accurate and robust methods to detect AI-generated student essays in the education domain. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.828</span></span></p>
+                </p>
+              <p class="pb-2 pt-2 text-center">
+                <a class="underline decoration-2 text-green-600 text-md pt-2" href='http://arxiv.org/abs/2402.00412v1' target="_blank">
+                  link
+                </a>
+              </p>
+            </div>
+          </div>
+        </td>
+      </tr><tr>
+          <td class="inline-block">
+            <p class='font-bold text-black px-2 mx-1 text-xs w-24'>2024-02-01</p>
+          </td>
+          <td>
+            <div x-data="{open: false}">
+              <span @click="open = ! open" class="hover:underline cursor-pointer decoration-2 decoration-green-600 text-gray-800 text-sm">
+                Improving Dialog Safety using Socially Aware Contrastive Learning
+              </span>
+              <div x-show="open" x-collapse.duration.500ms class="text-sm text-gray-500 pt-2">
+                <div class="text-center pt-2"></div>
+                <p class="pt-2">
+                  <p><span class='px-1 mx-1 bg-yellow-200'>State-of-the-art conversational AI systems raise concerns due to their potential risks of generating unsafe, toxic, unethical, or dangerous content. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.86</span></span>Previous works have developed datasets to teach conversational agents the appropriate social paradigms to respond effectively to specifically designed hazardous content.However, models trained on these adversarial datasets still struggle to recognize subtle unsafe situations that appear naturally in conversations or introduce an inappropriate response in a casual context.To understand the extent of this problem, we study prosociality in both adversarial and casual dialog contexts and audit the response quality of general-purpose language models in terms of propensity to produce unsafe content.We propose a dual-step fine-tuning process to address these issues using a socially aware n-pair contrastive loss.Subsequently, we train a base model that integrates prosocial behavior by leveraging datasets like Moral Integrity Corpus (MIC) and ProsocialDialog.Experimental results on several dialog datasets demonstrate the effectiveness of our approach in generating socially appropriate responses.</p>
+                </p>
+              <p class="pb-2 pt-2 text-center">
+                <a class="underline decoration-2 text-green-600 text-md pt-2" href='http://arxiv.org/abs/2402.00446v1' target="_blank">
+                  link
+                </a>
+              </p>
+            </div>
+          </div>
+        </td>
+      </tr><tr>
+          <td class="inline-block">
+            <p class='font-bold text-black px-2 mx-1 text-xs w-24'>2024-02-01</p>
+          </td>
+          <td>
+            <div x-data="{open: false}">
+              <span @click="open = ! open" class="hover:underline cursor-pointer decoration-2 decoration-green-600 text-gray-800 text-sm">
+                Efficient Training Spiking Neural Networks with Parallel Spiking Unit
+              </span>
+              <div x-show="open" x-collapse.duration.500ms class="text-sm text-gray-500 pt-2">
+                <div class="text-center pt-2"></div>
+                <p class="pt-2">
+                  <p><span class='px-1 mx-1 bg-yellow-200'>Efficient parallel computing has become a pivotal element in advancing artificial intelligence. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.843</span></span>Yet, the deployment of Spiking Neural Networks (SNNs) in this domain is hampered by their inherent sequential computational dependency.This constraint arises from the need for each time step's processing to rely on the preceding step's outcomes, significantly impeding the adaptability of SNN models to massively parallel computing environments.Addressing this challenge, our paper introduces the innovative Parallel Spiking Unit (PSU) and its two derivatives, the Input-aware PSU (IPSU) and Reset-aware PSU (RPSU).These variants skillfully decouple the leaky integration and firing mechanisms in spiking neurons while probabilistically managing the reset process.By preserving the fundamental computational attributes of the spiking neuron model, our approach enables the concurrent computation of all membrane potential instances within the SNN, facilitating parallel spike output generation and substantially enhancing computational efficiency.Comprehensive testing across various datasets, including static and sequential images, Dynamic Vision Sensor (DVS) data, and speech datasets, demonstrates that the PSU and its variants not only significantly boost performance and simulation speed but also augment the energy efficiency of SNNs through enhanced sparsity in neural activity.These advancements underscore the potential of our method in revolutionizing SNN deployment for high-performance parallel computing applications.</p>
+                </p>
+              <p class="pb-2 pt-2 text-center">
+                <a class="underline decoration-2 text-green-600 text-md pt-2" href='http://arxiv.org/abs/2402.00449v1' target="_blank">
+                  link
+                </a>
+              </p>
+            </div>
+          </div>
+        </td>
+      </tr><tr>
+          <td class="inline-block">
+            <p class='font-bold text-black px-2 mx-1 text-xs w-24'>2024-02-01</p>
+          </td>
+          <td>
+            <div x-data="{open: false}">
+              <span @click="open = ! open" class="hover:underline cursor-pointer decoration-2 decoration-green-600 text-gray-800 text-sm">
+                A Personalized Framework for Consumer and Producer Group Fairness Optimization in Recommender Systems
+              </span>
+              <div x-show="open" x-collapse.duration.500ms class="text-sm text-gray-500 pt-2">
+                <div class="text-center pt-2"></div>
+                <p class="pt-2">
+                  <p><span class='px-1 mx-1 bg-yellow-200'>In recent years, there has been an increasing recognition that when machine learning (ML) algorithms are used to automate decisions, they may mistreat individuals or groups, with legal, ethical, or economic implications. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.822</span></span>Recommender systems are prominent examples of these machine learning (ML) systems that aid users in making decisions.The majority of past literature research on RS fairness treats user and item fairness concerns independently, ignoring the fact that recommender systems function in a two-sided marketplace.In this paper, we propose CP-FairRank, an optimization-based re-ranking algorithm that seamlessly integrates fairness constraints from both the consumer and producer side in a joint objective framework.The framework is generalizable and may take into account varied fairness settings based on group segmentation, recommendation model selection, and domain, which is one of its key characteristics.For instance, we demonstrate that the system may jointly increase consumer and producer fairness when (un)protected consumer groups are defined on the basis of their activity level and main-streamness, while producer groups are defined according to their popularity level.For empirical validation, through large-scale on eight datasets and four mainstream collaborative filtering (CF) recommendation models, we demonstrate that our proposed strategy is able to improve both consumer and producer fairness without compromising or very little overall recommendation quality, demonstrating the role algorithms may play in avoiding data biases.</p>
+                </p>
+              <p class="pb-2 pt-2 text-center">
+                <a class="underline decoration-2 text-green-600 text-md pt-2" href='http://arxiv.org/abs/2402.00485v1' target="_blank">
+                  link
+                </a>
+              </p>
+            </div>
+          </div>
+        </td>
+      </tr><tr>
+          <td class="inline-block">
+            <p class='font-bold text-black px-2 mx-1 text-xs w-24'>2024-02-01</p>
+          </td>
+          <td>
+            <div x-data="{open: false}">
+              <span @click="open = ! open" class="hover:underline cursor-pointer decoration-2 decoration-green-600 text-gray-800 text-sm">
+                Improving Weak-to-Strong Generalization with Scalable Oversight and Ensemble Learning
+              </span>
+              <div x-show="open" x-collapse.duration.500ms class="text-sm text-gray-500 pt-2">
+                <div class="text-center pt-2"></div>
+                <p class="pt-2">
+                  <p>This paper presents a follow-up study to OpenAI's recent superalignment work on Weak-to-Strong Generalization (W2SG).<span class='px-1 mx-1 bg-yellow-200'>Superalignment focuses on ensuring that high-level AI systems remain consistent with human values and intentions when dealing with complex, high-risk tasks. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.834</span></span>The W2SG framework has opened new possibilities for empirical research in this evolving field.<span class='px-1 mx-1 bg-yellow-200'>Our study simulates two phases of superalignment under the W2SG framework: the development of general superhuman models and the progression towards superintelligence. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.835</span></span>In the first phase, based on human supervision, the quality of weak supervision is enhanced through a combination of scalable oversight and ensemble learning, reducing the capability gap between weak teachers and strong students.In the second phase, an automatic alignment evaluator is employed as the weak supervisor.By recursively updating this auto aligner, the capabilities of the weak teacher models are synchronously enhanced, achieving weak-to-strong supervision over stronger student models.We also provide an initial validation of the proposed approach for the first phase.Using the SciQ task as example, we explore ensemble learning for weak teacher models through bagging and boosting.Scalable oversight is explored through two auxiliary settings: human-AI interaction and AI-AI debate.Additionally, the paper discusses the impact of improved weak supervision on enhancing weak-to-strong generalization based on in-context learning.Experiment code and dataset will be released at https://github.com/ADaM-BJTU/W2SG.</p>
+                </p>
+              <p class="pb-2 pt-2 text-center">
+                <a class="underline decoration-2 text-green-600 text-md pt-2" href='http://arxiv.org/abs/2402.00667v1' target="_blank">
+                  link
+                </a>
+              </p>
+            </div>
+          </div>
+        </td>
+      </tr><tr>
+          <td class="inline-block">
+            <p class='font-bold text-black px-2 mx-1 text-xs w-24'>2024-02-01</p>
+          </td>
+          <td>
+            <div x-data="{open: false}">
+              <span @click="open = ! open" class="hover:underline cursor-pointer decoration-2 decoration-green-600 text-gray-800 text-sm">
+                Deep Robot Sketching: An application of Deep Q-Learning Networks for human-like sketching
+              </span>
+              <div x-show="open" x-collapse.duration.500ms class="text-sm text-gray-500 pt-2">
+                <div class="text-center pt-2"></div>
+                <p class="pt-2">
+                  <p><span class='px-1 mx-1 bg-yellow-200'>The current success of Reinforcement Learning algorithms for its performance in complex environments has inspired many recent theoretical approaches to cognitive science. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.831</span></span>Artistic environments are studied within the cognitive science community as rich, natural, multi-sensory, multi-cultural environments.<span class='px-1 mx-1 bg-yellow-200'>In this work, we propose the introduction of Reinforcement Learning for improving the control of artistic robot applications. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.832</span></span>Deep Q-learning Neural Networks (DQN) is one of the most successful algorithms for the implementation of Reinforcement Learning in robotics.DQN methods generate complex control policies for the execution of complex robot applications in a wide set of environments.Current art painting robot applications use simple control laws that limits the adaptability of the frameworks to a set of simple environments.In this work, the introduction of DQN within an art painting robot application is proposed.<span class='px-1 mx-1 bg-yellow-200'>The goal is to study how the introduction of a complex control policy impacts the performance of a basic art painting robot application. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.821</span></span>The main expected contribution of this work is to serve as a first baseline for future works introducing DQN methods for complex art painting robot frameworks.Experiments consist of real world executions of human drawn sketches using the DQN generated policy and TEO, the humanoid robot.Results are compared in terms of similarity and obtained reward with respect to the reference inputs</p>
+                </p>
+              <p class="pb-2 pt-2 text-center">
+                <a class="underline decoration-2 text-green-600 text-md pt-2" href='http://arxiv.org/abs/2402.00676v1' target="_blank">
+                  link
+                </a>
+              </p>
+            </div>
+          </div>
+        </td>
+      </tr><tr>
+          <td class="inline-block">
+            <p class='font-bold text-black px-2 mx-1 text-xs w-24'>2024-02-01</p>
+          </td>
+          <td>
+            <div x-data="{open: false}">
+              <span @click="open = ! open" class="hover:underline cursor-pointer decoration-2 decoration-green-600 text-gray-800 text-sm">
+                Real Evaluations Tractability using Continuous Goal-Directed Actions in Smart City Applications
+              </span>
+              <div x-show="open" x-collapse.duration.500ms class="text-sm text-gray-500 pt-2">
+                <div class="text-center pt-2"></div>
+                <p class="pt-2">
+                  <p>One of the most important challenges of Smart City Applications is to adapt the system to interact with non-expert users.<span class='px-1 mx-1 bg-yellow-200'>Robot imitation frameworks aim to simplify and reduce times of robot programming by allowing users to program directly through demonstrations. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.823</span></span>In classical frameworks, actions are modeled using joint or Cartesian space trajectories.Other features, such as visual ones, are not always well represented with these pure geometrical approaches.Continuous Goal-Directed Actions (CGDA) is an alternative to these methods, as it encodes actions as changes of any feature that can be extracted from the environment.As a consequence of this, the robot joint trajectories for execution must be fully computed to comply with this feature-agnostic encoding.This is achieved using Evolutionary Algorithms (EA), which usually requires too many evaluations to perform this evolution step in the actual robot.Current strategies involve performing evaluations in a simulation, transferring the final joint trajectory to the actual robot.Smart City applications involve working in highly dynamic and complex environments, where having a precise model is not always achievable.Our goal is to study the tractability of performing these evaluations directly in a real-world scenario.Two different approaches to reduce the number of evaluations using EA, are proposed and compared.In the first approach, Particle Swarm Optimization (PSO)-based methods have been studied and compared within CGDA: naive PSO, Fitness Inheritance PSO (FI-PSO), and Adaptive Fuzzy Fitness Granulation with PSO (AFFG-PSO).The second approach studied the introduction of geometrical and velocity constraints within CGDA.The effects of both approaches were analyzed and compared in the wax and paint actions, two CGDA commonly studied use cases.Results from this paper depict an important reduction in the number of evaluations.</p>
+                </p>
+              <p class="pb-2 pt-2 text-center">
+                <a class="underline decoration-2 text-green-600 text-md pt-2" href='http://arxiv.org/abs/2402.00678v1' target="_blank">
+                  link
+                </a>
+              </p>
+            </div>
+          </div>
+        </td>
+      </tr><tr>
+          <td class="inline-block">
+            <p class='font-bold text-black px-2 mx-1 text-xs w-24'>2024-02-01</p>
+          </td>
+          <td>
+            <div x-data="{open: false}">
+              <span @click="open = ! open" class="hover:underline cursor-pointer decoration-2 decoration-green-600 text-gray-800 text-sm">
+                To Search or To Gen? Exploring the Synergy between Generative AI and Web Search in Programming
+              </span>
+              <div x-show="open" x-collapse.duration.500ms class="text-sm text-gray-500 pt-2">
+                <div class="text-center pt-2"></div>
+                <p class="pt-2">
+                  <p><span class='px-1 mx-1 bg-yellow-200'>The convergence of generative AI and web search is reshaping problem-solving for programmers. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.837</span></span>However, the lack of understanding regarding their interplay in the information-seeking process often leads programmers to perceive them as alternatives rather than complementary tools.To analyze this interaction and explore their synergy, we conducted an interview study with eight experienced programmers.Drawing from the results and literature, we have identified three major challenges and proposed three decision-making stages, each with its own relevant factors.Additionally, we present a comprehensive process model that captures programmers' interaction patterns.This model encompasses decision-making stages, the information-foraging loop, and cognitive activities during system interaction, offering a holistic framework to comprehend and optimize the use of these convergent tools in programming.</p>
+                </p>
+              <p class="pb-2 pt-2 text-center">
+                <a class="underline decoration-2 text-green-600 text-md pt-2" href='http://arxiv.org/abs/2402.00764v1' target="_blank">
+                  link
+                </a>
+              </p>
+            </div>
+          </div>
+        </td>
+      </tr><tr>
+          <td class="inline-block">
+            <p class='font-bold text-black px-2 mx-1 text-xs w-24'>2024-02-01</p>
+          </td>
+          <td>
+            <div x-data="{open: false}">
+              <span @click="open = ! open" class="hover:underline cursor-pointer decoration-2 decoration-green-600 text-gray-800 text-sm">
+                Formal-LLM: Integrating Formal Language and Natural Language for Controllable LLM-based Agents
+              </span>
+              <div x-show="open" x-collapse.duration.500ms class="text-sm text-gray-500 pt-2">
+                <div class="text-center pt-2"></div>
+                <p class="pt-2">
+                  <p><span class='px-1 mx-1 bg-yellow-200'>Recent advancements on Large Language Models (LLMs) enable AI Agents to automatically generate and execute multi-step plans to solve complex tasks. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.83</span></span>However, since LLM's content generation process is hardly controllable, current LLM-based agents frequently generate invalid or non-executable plans, which jeopardizes the performance of the generated plans and corrupts users' trust in LLM-based agents.In response, this paper proposes a novel ``Formal-LLM'' framework for LLM-based agents by integrating the expressiveness of natural language and the precision of formal language.Specifically, the framework allows human users to express their requirements or constraints for the planning process as an automaton.A stack-based LLM plan generation process is then conducted under the supervision of the automaton to ensure that the generated plan satisfies the constraints, making the planning process controllable.We conduct experiments on both benchmark tasks and practical real-life tasks, and our framework achieves over 50% overall performance increase, which validates the feasibility and effectiveness of employing Formal-LLM to guide the plan generation of agents, preventing the agents from generating invalid and unsuccessful plans.Further, more controllable LLM-based agents can facilitate the broader utilization of LLM in application scenarios where high validity of planning is essential.The work is open-sourced at https://github.com/agiresearch/Formal-LLM.</p>
+                </p>
+              <p class="pb-2 pt-2 text-center">
+                <a class="underline decoration-2 text-green-600 text-md pt-2" href='http://arxiv.org/abs/2402.00798v1' target="_blank">
+                  link
+                </a>
+              </p>
+            </div>
+          </div>
+        </td>
+      </tr><tr>
+          <td class="inline-block">
+            <p class='font-bold text-black px-2 mx-1 text-xs w-24'>2024-02-01</p>
+          </td>
+          <td>
+            <div x-data="{open: false}">
+              <span @click="open = ! open" class="hover:underline cursor-pointer decoration-2 decoration-green-600 text-gray-800 text-sm">
+                SymbolicAI: A framework for logic-based approaches combining generative models and solvers
+              </span>
+              <div x-show="open" x-collapse.duration.500ms class="text-sm text-gray-500 pt-2">
+                <div class="text-center pt-2"></div>
+                <p class="pt-2">
+                  <p><span class='px-1 mx-1 bg-yellow-200'>We introduce SymbolicAI, a versatile and modular framework employing a logic-based approach to concept learning and flow management in generative processes. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.841</span></span><span class='px-1 mx-1 bg-yellow-200'>SymbolicAI enables the seamless integration of generative models with a diverse range of solvers by treating large language models (LLMs) as semantic parsers that execute tasks based on both natural and formal language instructions, thus bridging the gap between symbolic reasoning and generative AI. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.821</span></span>We leverage probabilistic programming principles to tackle complex tasks, and utilize differentiable and classical programming paradigms with their respective strengths.The framework introduces a set of polymorphic, compositional, and self-referential operations for data stream manipulation, aligning LLM outputs with user objectives.As a result, we can transition between the capabilities of various foundation models endowed with zero- and few-shot learning capabilities and specialized, fine-tuned models or solvers proficient in addressing specific problems.In turn, the framework facilitates the creation and evaluation of explainable computational graphs.We conclude by introducing a quality measure and its empirical score for evaluating these computational graphs, and propose a benchmark that compares various state-of-the-art LLMs across a set of complex workflows.We refer to the empirical score as the "Vector Embedding for Relational Trajectory Evaluation through Cross-similarity", or VERTEX score for short.The framework codebase and benchmark are linked below.</p>
+                </p>
+              <p class="pb-2 pt-2 text-center">
+                <a class="underline decoration-2 text-green-600 text-md pt-2" href='http://arxiv.org/abs/2402.00854v1' target="_blank">
+                  link
+                </a>
+              </p>
+            </div>
+          </div>
+        </td>
+      </tr><tr>
+          <td></td>
+          <td>
             <h2 class="text-2xl tracking-tight pt-4 font-bold">Complex Systems</h2>
           </td>
         </tr><tr>
+          <td class="inline-block">
+            <p class='font-bold text-black px-2 mx-1 text-xs w-24'>2024-02-01</p>
+          </td>
+          <td>
+            <div x-data="{open: false}">
+              <span @click="open = ! open" class="hover:underline cursor-pointer decoration-2 decoration-green-600 text-gray-800 text-sm">
+                LLMs learn governing principles of dynamical systems, revealing an in-context neural scaling law
+              </span>
+              <div x-show="open" x-collapse.duration.500ms class="text-sm text-gray-500 pt-2">
+                <div class="text-center pt-2"></div>
+                <p class="pt-2">
+                  <p>Pretrained large language models (LLMs) are surprisingly effective at performing zero-shot tasks, including time-series forecasting.<span class='px-1 mx-1 bg-yellow-200'>However, understanding the mechanisms behind such capabilities remains highly challenging due to the complexity of the models. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.841</span></span>In this paper, we study LLMs' ability to extrapolate the behavior of dynamical systems whose evolution is governed by principles of physical interest.Our results show that LLaMA 2, a language model trained primarily on texts, achieves accurate predictions of dynamical system time series without fine-tuning or prompt engineering.Moreover, the accuracy of the learned physical rules increases with the length of the input context window, revealing an in-context version of neural scaling law.Along the way, we present a flexible and efficient algorithm for extracting probability density functions of multi-digit numbers directly from LLMs.</p>
+                </p>
+              <p class="pb-2 pt-2 text-center">
+                <a class="underline decoration-2 text-green-600 text-md pt-2" href='http://arxiv.org/abs/2402.00795v1' target="_blank">
+                  link
+                </a>
+              </p>
+            </div>
+          </div>
+        </td>
+      </tr><tr>
           <td></td>
           <td>
-            <h2 class="text-2xl tracking-tight pt-4 font-bold">Collective Intelligence</h2>
+            <h2 class="text-2xl tracking-tight pt-4 font-bold">Decision Making Under Uncertainty</h2>
           </td>
         </tr><tr>
           <td class="inline-block">
-            <p class='font-bold text-black px-2 mx-1 text-xs w-24'>2024-01-18</p>
+            <p class='font-bold text-black px-2 mx-1 text-xs w-24'>2024-02-01</p>
           </td>
           <td>
             <div x-data="{open: false}">
               <span @click="open = ! open" class="hover:underline cursor-pointer decoration-2 decoration-green-600 text-gray-800 text-sm">
-                Evolutionary Computation in the Era of Large Language Model: Survey and Roadmap
+                Efficient Exploration for LLMs
               </span>
               <div x-show="open" x-collapse.duration.500ms class="text-sm text-gray-500 pt-2">
                 <div class="text-center pt-2"></div>
                 <p class="pt-2">
-                  <p>Large Language Models (LLMs), built upon Transformer-based architectures with massive pretraining on diverse data, have not only revolutionized natural language processing but also extended their prowess to various domains, marking a significant stride towards artificial general intelligence.The interplay between LLMs and Evolutionary Algorithms (EAs), despite differing in objectives and methodologies, reveals intriguing parallels, especially in their shared optimization nature, black-box characteristics, and proficiency in handling complex problems.Meanwhile, EA can not only provide an optimization framework for LLM's further enhancement under black-box settings but also empower LLM with flexible global search and iterative mechanism in applications.<span class='px-1 mx-1 bg-yellow-200'>On the other hand, LLM's abundant domain knowledge enables EA to perform smarter searches, while its text processing capability assist in deploying EA across various tasks. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.893</span></span>Based on their complementary advantages, this paper presents a comprehensive review and forward-looking roadmap, categorizing their mutual inspiration into LLM-enhanced evolutionary optimization and EA-enhanced LLM.Some integrated synergy methods are further introduced to exemplify the amalgamation of LLMs and EAs in various application scenarios, including neural architecture search, code generation, software engineering, and text generation.As the first comprehensive review specifically focused on the EA research in the era of LLMs, this paper provides a foundational stepping stone for understanding and harnessing the collaborative potential of LLMs and EAs.By presenting a comprehensive review, categorization, and critical analysis, we contribute to the ongoing discourse on the cross-disciplinary study of these two powerful paradigms.The identified challenges and future directions offer guidance to unlock the full potential of this innovative collaboration.</p>
+                  <p>We present evidence of substantial benefit from efficient exploration in gathering human feedback to improve large language models.In our experiments, an agent sequentially generates queries while fitting a reward model to the feedback received.Our best-performing agent generates queries using double Thompson sampling, with uncertainty represented by an epistemic neural network.Our results demonstrate that efficient exploration enables high levels of performance with far fewer queries.<span class='px-1 mx-1 bg-yellow-200'>Further, both uncertainty estimation and the choice of exploration scheme play critical roles. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.821</span></span></p>
                 </p>
               <p class="pb-2 pt-2 text-center">
-                <a class="underline decoration-2 text-green-600 text-md pt-2" href='http://arxiv.org/abs/2401.10034v1' target="_blank">
+                <a class="underline decoration-2 text-green-600 text-md pt-2" href='http://arxiv.org/abs/2402.00396v1' target="_blank">
                   link
                 </a>
               </p>
@@ -57,20 +304,20 @@
         </td>
       </tr><tr>
           <td class="inline-block">
-            <p class='font-bold text-black px-2 mx-1 text-xs w-24'>2024-01-18</p>
+            <p class='font-bold text-black px-2 mx-1 text-xs w-24'>2024-02-01</p>
           </td>
           <td>
             <div x-data="{open: false}">
               <span @click="open = ! open" class="hover:underline cursor-pointer decoration-2 decoration-green-600 text-gray-800 text-sm">
-                Beyond Reference-Based Metrics: Analyzing Behaviors of Open LLMs on Data-to-Text Generation
+                To Search or To Gen? Exploring the Synergy between Generative AI and Web Search in Programming
               </span>
               <div x-show="open" x-collapse.duration.500ms class="text-sm text-gray-500 pt-2">
                 <div class="text-center pt-2"></div>
                 <p class="pt-2">
-                  <p>We investigate to which extent open large language models (LLMs) can generate coherent and relevant text from structured data.To prevent bias from benchmarks leaked into LLM training data, we collect Quintd-1: an ad-hoc benchmark for five data-to-text (D2T) generation tasks, consisting of structured data records in standard formats gathered from public APIs.<span class='px-1 mx-1 bg-yellow-200'>We leverage reference-free evaluation metrics and LLMs' in-context learning capabilities, allowing us to test the models with no human-written references. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.88</span></span>Our evaluation focuses on annotating semantic accuracy errors on token-level, combining human annotators and a metric based on GPT-4.Our systematic examination of the models' behavior across domains and tasks suggests that state-of-the-art open LLMs with 7B parameters can generate fluent and coherent text from various standard data formats in zero-shot settings.However, we also show that semantic accuracy of the outputs remains a major issue: on our benchmark, 80% of outputs of open LLMs contain a semantic error according to human annotators (91% according to GPT-4).Our code, data, and model outputs are available at https://d2t-llm.github.io.</p>
+                  <p>The convergence of generative AI and web search is reshaping problem-solving for programmers.However, the lack of understanding regarding their interplay in the information-seeking process often leads programmers to perceive them as alternatives rather than complementary tools.To analyze this interaction and explore their synergy, we conducted an interview study with eight experienced programmers.<span class='px-1 mx-1 bg-yellow-200'>Drawing from the results and literature, we have identified three major challenges and proposed three decision-making stages, each with its own relevant factors. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.822</span></span>Additionally, we present a comprehensive process model that captures programmers' interaction patterns.This model encompasses decision-making stages, the information-foraging loop, and cognitive activities during system interaction, offering a holistic framework to comprehend and optimize the use of these convergent tools in programming.</p>
                 </p>
               <p class="pb-2 pt-2 text-center">
-                <a class="underline decoration-2 text-green-600 text-md pt-2" href='http://arxiv.org/abs/2401.10186v1' target="_blank">
+                <a class="underline decoration-2 text-green-600 text-md pt-2" href='http://arxiv.org/abs/2402.00764v1' target="_blank">
                   link
                 </a>
               </p>
@@ -79,20 +326,47 @@
         </td>
       </tr><tr>
           <td class="inline-block">
-            <p class='font-bold text-black px-2 mx-1 text-xs w-24'>2024-01-18</p>
+            <p class='font-bold text-black px-2 mx-1 text-xs w-24'>2024-02-01</p>
           </td>
           <td>
             <div x-data="{open: false}">
               <span @click="open = ! open" class="hover:underline cursor-pointer decoration-2 decoration-green-600 text-gray-800 text-sm">
-                The Manga Whisperer: Automatically Generating Transcriptions for Comics
+                WiOpen: A Robust Wi-Fi-based Open-set Gesture Recognition Framework
               </span>
               <div x-show="open" x-collapse.duration.500ms class="text-sm text-gray-500 pt-2">
                 <div class="text-center pt-2"></div>
                 <p class="pt-2">
-                  <p>In the past few decades, Japanese comics, commonly referred to as Manga, have transcended both cultural and linguistic boundaries to become a true worldwide sensation.Yet, the inherent reliance on visual cues and illustration within manga renders it largely inaccessible to individuals with visual impairments.In this work, we seek to address this substantial barrier, with the aim of ensuring that manga can be appreciated and actively engaged by everyone.Specifically, we tackle the problem of diarisation i.e. generating a transcription of who said what and when, in a fully automatic way.   <span class='px-1 mx-1 bg-yellow-200'>To this end, we make the following contributions: (1) we present a unified model, Magi, that is able to (a) detect panels, text boxes and character boxes, (b) cluster characters by identity (without knowing the number of clusters apriori), and (c) associate dialogues to their speakers; (2) we propose a novel approach that is able to sort the detected text boxes in their reading order and generate a dialogue transcript; (3) we annotate an evaluation benchmark for this task using publicly available [English] manga pages. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.879</span></span>The code, evaluation datasets and the pre-trained model can be found at: https://github.com/ragavsachdeva/magi.</p>
+                  <p>Recent years have witnessed a growing interest in Wi-Fi-based gesture recognition.However, existing works have predominantly focused on closed-set paradigms, where all testing gestures are predefined during training.This poses a significant challenge in real-world applications, as unseen gestures might be misclassified as known classes during testing.To address this issue, we propose WiOpen, a robust Wi-Fi-based Open-Set Gesture Recognition (OSGR) framework.Implementing OSGR requires addressing challenges caused by the unique uncertainty in Wi-Fi sensing.This uncertainty, resulting from noise and domains, leads to widely scattered and irregular data distributions in collected Wi-Fi sensing data.<span class='px-1 mx-1 bg-yellow-200'>Consequently, data ambiguity between classes and challenges in defining appropriate decision boundaries to identify unknowns arise. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.839</span></span>To tackle these challenges, WiOpen adopts a two-fold approach to eliminate uncertainty and define precise decision boundaries.Initially, it addresses uncertainty induced by noise during data preprocessing by utilizing the CSI ratio.Next, it designs the OSGR network based on an uncertainty quantification method.Throughout the learning process, this network effectively mitigates uncertainty stemming from domains.Ultimately, the network leverages relationships among samples' neighbors to dynamically define open-set decision boundaries, successfully realizing OSGR.Comprehensive experiments on publicly accessible datasets confirm WiOpen's effectiveness.Notably, WiOpen also demonstrates superiority in cross-domain tasks when compared to state-of-the-art approaches.</p>
                 </p>
               <p class="pb-2 pt-2 text-center">
-                <a class="underline decoration-2 text-green-600 text-md pt-2" href='http://arxiv.org/abs/2401.10224v1' target="_blank">
+                <a class="underline decoration-2 text-green-600 text-md pt-2" href='http://arxiv.org/abs/2402.00822v1' target="_blank">
+                  link
+                </a>
+              </p>
+            </div>
+          </div>
+        </td>
+      </tr><tr>
+          <td></td>
+          <td>
+            <h2 class="text-2xl tracking-tight pt-4 font-bold">Neural Ordinary Differential Equations</h2>
+          </td>
+        </tr><tr>
+          <td class="inline-block">
+            <p class='font-bold text-black px-2 mx-1 text-xs w-24'>2024-02-01</p>
+          </td>
+          <td>
+            <div x-data="{open: false}">
+              <span @click="open = ! open" class="hover:underline cursor-pointer decoration-2 decoration-green-600 text-gray-800 text-sm">
+                A practical existence theorem for reduced order models based on convolutional autoencoders
+              </span>
+              <div x-show="open" x-collapse.duration.500ms class="text-sm text-gray-500 pt-2">
+                <div class="text-center pt-2"></div>
+                <p class="pt-2">
+                  <p><span class='px-1 mx-1 bg-yellow-200'>In recent years, deep learning has gained increasing popularity in the fields of Partial Differential Equations (PDEs) and Reduced Order Modeling (ROM), providing domain practitioners with new powerful data-driven techniques such as Physics-Informed Neural Networks (PINNs), Neural Operators, Deep Operator Networks (DeepONets) and Deep-Learning based ROMs (DL-ROMs). <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.85</span></span>In this context, deep autoencoders based on Convolutional Neural Networks (CNNs) have proven extremely effective, outperforming established techniques, such as the reduced basis method, when dealing with complex nonlinear problems.However, despite the empirical success of CNN-based autoencoders, there are only a few theoretical results supporting these architectures, usually stated in the form of universal approximation theorems.In particular, although the existing literature provides users with guidelines for designing convolutional autoencoders, the subsequent challenge of learning the latent features has been barely investigated.Furthermore, many practical questions remain unanswered, e.g., the number of snapshots needed for convergence or the neural network training strategy.In this work, using recent techniques from sparse high-dimensional function approximation, we fill some of these gaps by providing a new practical existence theorem for CNN-based autoencoders when the parameter-to-solution map is holomorphic.This regularity assumption arises in many relevant classes of parametric PDEs, such as the parametric diffusion equation, for which we discuss an explicit application of our general theory.</p>
+                </p>
+              <p class="pb-2 pt-2 text-center">
+                <a class="underline decoration-2 text-green-600 text-md pt-2" href='http://arxiv.org/abs/2402.00435v1' target="_blank">
                   link
                 </a>
               </p>
@@ -101,20 +375,20 @@
         </td>
       </tr><tr>
           <td class="inline-block">
-            <p class='font-bold text-black px-2 mx-1 text-xs w-24'>2024-01-18</p>
+            <p class='font-bold text-black px-2 mx-1 text-xs w-24'>2024-02-01</p>
           </td>
           <td>
             <div x-data="{open: false}">
               <span @click="open = ! open" class="hover:underline cursor-pointer decoration-2 decoration-green-600 text-gray-800 text-sm">
-                OMG-Seg: Is One Model Good Enough For All Segmentation?
+                Control-Theoretic Techniques for Online Adaptation of Deep Neural Networks in Dynamical Systems
               </span>
               <div x-show="open" x-collapse.duration.500ms class="text-sm text-gray-500 pt-2">
                 <div class="text-center pt-2"></div>
                 <p class="pt-2">
-                  <p>In this work, we address various segmentation tasks, each traditionally tackled by distinct or partially unified models.<span class='px-1 mx-1 bg-yellow-200'>We propose OMG-Seg, One Model that is Good enough to efficiently and effectively handle all the segmentation tasks, including image semantic, instance, and panoptic segmentation, as well as their video counterparts, open vocabulary settings, prompt-driven, interactive segmentation like SAM, and video object segmentation. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.868</span></span>To our knowledge, this is the first model to handle all these tasks in one model and achieve satisfactory performance.We show that OMG-Seg, a transformer-based encoder-decoder architecture with task-specific queries and outputs, can support over ten distinct segmentation tasks and yet significantly reduce computational and parameter overhead across various tasks and datasets.We rigorously evaluate the inter-task influences and correlations during co-training.Code and models are available at https://github.com/lxtGH/OMG-Seg.</p>
+                  <p><span class='px-1 mx-1 bg-yellow-200'>Deep neural networks (DNNs), trained with gradient-based optimization and backpropagation, are currently the primary tool in modern artificial intelligence, machine learning, and data science. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.828</span></span>In many applications, DNNs are trained offline, through supervised learning or reinforcement learning, and deployed online for inference.However, training DNNs with standard backpropagation and gradient-based optimization gives no intrinsic performance guarantees or bounds on the DNN, which is essential for applications such as controls.Additionally, many offline-training and online-inference problems, such as sim2real transfer of reinforcement learning policies, experience domain shift from the training distribution to the real-world distribution.To address these stability and transfer learning issues, we propose using techniques from control theory to update DNN parameters online.We formulate the fully-connected feedforward DNN as a continuous-time dynamical system, and we propose novel last-layer update laws that guarantee desirable error convergence under various conditions on the time derivative of the DNN input vector.We further show that training the DNN under spectral normalization controls the upper bound of the error trajectories of the online DNN predictions, which is desirable when numerically differentiated quantities or noisy state measurements are input to the DNN.The proposed online DNN adaptation laws are validated in simulation to learn the dynamics of the Van der Pol system under domain shift, where parameters are varied in inference from the training dataset.The simulations demonstrate the effectiveness of using control-theoretic techniques to derive performance improvements and guarantees in DNN-based learning systems.</p>
                 </p>
               <p class="pb-2 pt-2 text-center">
-                <a class="underline decoration-2 text-green-600 text-md pt-2" href='http://arxiv.org/abs/2401.10229v1' target="_blank">
+                <a class="underline decoration-2 text-green-600 text-md pt-2" href='http://arxiv.org/abs/2402.00761v1' target="_blank">
                   link
                 </a>
               </p>
@@ -128,20 +402,20 @@
           </td>
         </tr><tr>
           <td class="inline-block">
-            <p class='font-bold text-black px-2 mx-1 text-xs w-24'>2024-01-18</p>
+            <p class='font-bold text-black px-2 mx-1 text-xs w-24'>2024-02-01</p>
           </td>
           <td>
             <div x-data="{open: false}">
               <span @click="open = ! open" class="hover:underline cursor-pointer decoration-2 decoration-green-600 text-gray-800 text-sm">
-                CLIP feature-based randomized control using images and text for multiple tasks and robots
+                Efficient Exploration for LLMs
               </span>
               <div x-show="open" x-collapse.duration.500ms class="text-sm text-gray-500 pt-2">
                 <div class="text-center pt-2"></div>
                 <p class="pt-2">
-                  <p>This study presents a control framework leveraging vision language models (VLMs) for multiple tasks and robots.Notably, existing control methods using VLMs have achieved high performance in various tasks and robots in the training environment.However, these methods incur high costs for learning control policies for tasks and robots other than those in the training environment.Considering the application of industrial and household robots, learning in novel environments where robots are introduced is challenging.To address this issue, we propose a control framework that does not require learning control policies.Our framework combines the vision-language CLIP model with a randomized control.CLIP computes the similarity between images and texts by embedding them in the feature space.This study employs CLIP to compute the similarity between camera images and text representing the target state.<span class='px-1 mx-1 bg-yellow-200'>In our method, the robot is controlled by a randomized controller that simultaneously explores and increases the similarity gradients. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.972</span></span>Moreover, we fine-tune the CLIP to improve the performance of the proposed method.Consequently, we confirm the effectiveness of our approach through a multitask simulation and a real robot experiment using a two-wheeled robot and robot arm.</p>
+                  <p>We present evidence of substantial benefit from efficient exploration in gathering human feedback to improve large language models.<span class='px-1 mx-1 bg-yellow-200'>In our experiments, an agent sequentially generates queries while fitting a reward model to the feedback received. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.821</span></span>Our best-performing agent generates queries using double Thompson sampling, with uncertainty represented by an epistemic neural network.Our results demonstrate that efficient exploration enables high levels of performance with far fewer queries.Further, both uncertainty estimation and the choice of exploration scheme play critical roles.</p>
                 </p>
               <p class="pb-2 pt-2 text-center">
-                <a class="underline decoration-2 text-green-600 text-md pt-2" href='http://arxiv.org/abs/2401.10085v1' target="_blank">
+                <a class="underline decoration-2 text-green-600 text-md pt-2" href='http://arxiv.org/abs/2402.00396v1' target="_blank">
                   link
                 </a>
               </p>
@@ -150,20 +424,20 @@
         </td>
       </tr><tr>
           <td class="inline-block">
-            <p class='font-bold text-black px-2 mx-1 text-xs w-24'>2024-01-18</p>
+            <p class='font-bold text-black px-2 mx-1 text-xs w-24'>2024-02-01</p>
           </td>
           <td>
             <div x-data="{open: false}">
               <span @click="open = ! open" class="hover:underline cursor-pointer decoration-2 decoration-green-600 text-gray-800 text-sm">
-                Multi-Agent Reinforcement Learning for Maritime Operational Technology Cyber Security
+                RadDQN: a Deep Q Learning-based Architecture for Finding Time-efficient Minimum Radiation Exposure Pathway
               </span>
               <div x-show="open" x-collapse.duration.500ms class="text-sm text-gray-500 pt-2">
                 <div class="text-center pt-2"></div>
                 <p class="pt-2">
-                  <p><span class='px-1 mx-1 bg-yellow-200'>This paper demonstrates the potential for autonomous cyber defence to be applied on industrial control systems and provides a baseline environment to further explore Multi-Agent Reinforcement Learning's (MARL) application to this problem domain. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.961</span></span>It introduces a simulation environment, IPMSRL, of a generic Integrated Platform Management System (IPMS) and explores the use of MARL for autonomous cyber defence decision-making on generic maritime based IPMS Operational Technology (OT).OT cyber defensive actions are less mature than they are for Enterprise IT.This is due to the relatively brittle nature of OT infrastructure originating from the use of legacy systems, design-time engineering assumptions, and lack of full-scale modern security controls.There are many obstacles to be tackled across the cyber landscape due to continually increasing cyber-attack sophistication and the limitations of traditional IT-centric cyber defence solutions.Traditional IT controls are rarely deployed on OT infrastructure, and where they are, some threats aren't fully addressed.In our experiments, a shared critic implementation of Multi Agent Proximal Policy Optimisation (MAPPO) outperformed Independent Proximal Policy Optimisation (IPPO).MAPPO reached an optimal policy (episode outcome mean of 1) after 800K timesteps, whereas IPPO was only able to reach an episode outcome mean of 0.966 after one million timesteps.Hyperparameter tuning greatly improved training performance.Across one million timesteps the tuned hyperparameters reached an optimal policy whereas the default hyperparameters only managed to win sporadically, with most simulations resulting in a draw.We tested a real-world constraint, attack detection alert success, and found that when alert success probability is reduced to 0.75 or 0.9, the MARL defenders were still able to win in over 97.5% or 99.5% of episodes, respectively.</p>
+                  <p><span class='px-1 mx-1 bg-yellow-200'>Recent advancements in deep reinforcement learning (DRL) techniques have sparked its multifaceted applications in the automation sector. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.843</span></span>Managing complex decision-making problems with DRL encourages its use in the nuclear industry for tasks such as optimizing radiation exposure to the personnel during normal operating conditions and potential accidental scenarios.However, the lack of efficient reward function and effective exploration strategy thwarted its implementation in the development of radiation-aware autonomous unmanned aerial vehicle (UAV) for achieving maximum radiation protection.Here, in this article, we address these intriguing issues and introduce a deep Q-learning based architecture (RadDQN) that operates on a radiation-aware reward function to provide time-efficient minimum radiation-exposure pathway in a radiation zone.We propose a set of unique exploration strategies that fine-tune the extent of exploration and exploitation based on the state-wise variation in radiation exposure during training.Further, we benchmark the predicted path with grid-based deterministic method.We demonstrate that the formulated reward function in conjugation with adequate exploration strategy is effective in handling several scenarios with drastically different radiation field distributions.When compared to vanilla DQN, our model achieves a superior convergence rate and higher training stability.</p>
                 </p>
               <p class="pb-2 pt-2 text-center">
-                <a class="underline decoration-2 text-green-600 text-md pt-2" href='http://arxiv.org/abs/2401.10149v1' target="_blank">
+                <a class="underline decoration-2 text-green-600 text-md pt-2" href='http://arxiv.org/abs/2402.00468v1' target="_blank">
                   link
                 </a>
               </p>
@@ -172,20 +446,20 @@
         </td>
       </tr><tr>
           <td class="inline-block">
-            <p class='font-bold text-black px-2 mx-1 text-xs w-24'>2024-01-18</p>
+            <p class='font-bold text-black px-2 mx-1 text-xs w-24'>2024-02-01</p>
           </td>
           <td>
             <div x-data="{open: false}">
               <span @click="open = ! open" class="hover:underline cursor-pointer decoration-2 decoration-green-600 text-gray-800 text-sm">
-                Model-Assisted Learning for Adaptive Cooperative Perception of Connected Autonomous Vehicles
+                A Personalized Framework for Consumer and Producer Group Fairness Optimization in Recommender Systems
               </span>
               <div x-show="open" x-collapse.duration.500ms class="text-sm text-gray-500 pt-2">
                 <div class="text-center pt-2"></div>
                 <p class="pt-2">
-                  <p>Cooperative perception (CP) is a key technology to facilitate consistent and accurate situational awareness for connected and autonomous vehicles (CAVs).To tackle the network resource inefficiency issue in traditional broadcast-based CP, unicast-based CP has been proposed to associate CAV pairs for cooperative perception via vehicle-to-vehicle transmission.In this paper, we investigate unicast-based CP among CAV pairs.With the consideration of dynamic perception workloads and channel conditions due to vehicle mobility and dynamic radio resource availability, we propose an adaptive cooperative perception scheme for CAV pairs in a mixed-traffic autonomous driving scenario with both CAVs and human-driven vehicles.We aim to determine when to switch between cooperative perception and stand-alone perception for each CAV pair, and allocate communication and computing resources to cooperative CAV pairs for maximizing the computing efficiency gain under perception task delay requirements.<span class='px-1 mx-1 bg-yellow-200'>A model-assisted multi-agent reinforcement learning (MARL) solution is developed, which integrates MARL for an adaptive CAV cooperation decision and an optimization model for communication and computing resource allocation. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.992</span></span>Simulation results demonstrate the effectiveness of the proposed scheme in achieving high computing efficiency gain, as compared with benchmark schemes.</p>
+                  <p>In recent years, there has been an increasing recognition that when machine learning (ML) algorithms are used to automate decisions, they may mistreat individuals or groups, with legal, ethical, or economic implications.<span class='px-1 mx-1 bg-yellow-200'>Recommender systems are prominent examples of these machine learning (ML) systems that aid users in making decisions. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.823</span></span>The majority of past literature research on RS fairness treats user and item fairness concerns independently, ignoring the fact that recommender systems function in a two-sided marketplace.In this paper, we propose CP-FairRank, an optimization-based re-ranking algorithm that seamlessly integrates fairness constraints from both the consumer and producer side in a joint objective framework.The framework is generalizable and may take into account varied fairness settings based on group segmentation, recommendation model selection, and domain, which is one of its key characteristics.For instance, we demonstrate that the system may jointly increase consumer and producer fairness when (un)protected consumer groups are defined on the basis of their activity level and main-streamness, while producer groups are defined according to their popularity level.For empirical validation, through large-scale on eight datasets and four mainstream collaborative filtering (CF) recommendation models, we demonstrate that our proposed strategy is able to improve both consumer and producer fairness without compromising or very little overall recommendation quality, demonstrating the role algorithms may play in avoiding data biases.</p>
                 </p>
               <p class="pb-2 pt-2 text-center">
-                <a class="underline decoration-2 text-green-600 text-md pt-2" href='http://arxiv.org/abs/2401.10156v1' target="_blank">
+                <a class="underline decoration-2 text-green-600 text-md pt-2" href='http://arxiv.org/abs/2402.00485v1' target="_blank">
                   link
                 </a>
               </p>
@@ -194,20 +468,20 @@
         </td>
       </tr><tr>
           <td class="inline-block">
-            <p class='font-bold text-black px-2 mx-1 text-xs w-24'>2024-01-18</p>
+            <p class='font-bold text-black px-2 mx-1 text-xs w-24'>2024-02-01</p>
           </td>
           <td>
             <div x-data="{open: false}">
               <span @click="open = ! open" class="hover:underline cursor-pointer decoration-2 decoration-green-600 text-gray-800 text-sm">
-                SHINOBI: Shape and Illumination using Neural Object Decomposition via BRDF Optimization In-the-wild
+                Deep Robot Sketching: An application of Deep Q-Learning Networks for human-like sketching
               </span>
               <div x-show="open" x-collapse.duration.500ms class="text-sm text-gray-500 pt-2">
                 <div class="text-center pt-2"></div>
                 <p class="pt-2">
-                  <p>We present SHINOBI, an end-to-end framework for the reconstruction of shape, material, and illumination from object images captured with varying lighting, pose, and background.Inverse rendering of an object based on unconstrained image collections is a long-standing challenge in computer vision and graphics and requires a joint optimization over shape, radiance, and pose.We show that an implicit shape representation based on a multi-resolution hash encoding enables faster and robust shape reconstruction with joint camera alignment optimization that outperforms prior work.<span class='px-1 mx-1 bg-yellow-200'>Further, to enable the editing of illumination and object reflectance (i.e. material) we jointly optimize BRDF and illumination together with the object's shape. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.903</span></span>Our method is class-agnostic and works on in-the-wild image collections of objects to produce relightable 3D assets for several use cases such as AR/VR, movies, games, etc.Project page: https://shinobi.aengelhardt.com Video: https://www.youtube.com/watch?v=iFENQ6AcYd8&feature=youtu.be</p>
+                  <p><span class='px-1 mx-1 bg-yellow-200'>The current success of Reinforcement Learning algorithms for its performance in complex environments has inspired many recent theoretical approaches to cognitive science. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.868</span></span>Artistic environments are studied within the cognitive science community as rich, natural, multi-sensory, multi-cultural environments.<span class='px-1 mx-1 bg-yellow-200'>In this work, we propose the introduction of Reinforcement Learning for improving the control of artistic robot applications. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.847</span></span><span class='px-1 mx-1 bg-yellow-200'>Deep Q-learning Neural Networks (DQN) is one of the most successful algorithms for the implementation of Reinforcement Learning in robotics. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.851</span></span>DQN methods generate complex control policies for the execution of complex robot applications in a wide set of environments.Current art painting robot applications use simple control laws that limits the adaptability of the frameworks to a set of simple environments.In this work, the introduction of DQN within an art painting robot application is proposed.The goal is to study how the introduction of a complex control policy impacts the performance of a basic art painting robot application.The main expected contribution of this work is to serve as a first baseline for future works introducing DQN methods for complex art painting robot frameworks.Experiments consist of real world executions of human drawn sketches using the DQN generated policy and TEO, the humanoid robot.Results are compared in terms of similarity and obtained reward with respect to the reference inputs</p>
                 </p>
               <p class="pb-2 pt-2 text-center">
-                <a class="underline decoration-2 text-green-600 text-md pt-2" href='http://arxiv.org/abs/2401.10171v1' target="_blank">
+                <a class="underline decoration-2 text-green-600 text-md pt-2" href='http://arxiv.org/abs/2402.00676v1' target="_blank">
                   link
                 </a>
               </p>
@@ -216,20 +490,20 @@
         </td>
       </tr><tr>
           <td class="inline-block">
-            <p class='font-bold text-black px-2 mx-1 text-xs w-24'>2024-01-18</p>
+            <p class='font-bold text-black px-2 mx-1 text-xs w-24'>2024-02-01</p>
           </td>
           <td>
             <div x-data="{open: false}">
               <span @click="open = ! open" class="hover:underline cursor-pointer decoration-2 decoration-green-600 text-gray-800 text-sm">
-                Divide and not forget: Ensemble of selectively trained experts in Continual Learning
+                FM3Q: Factorized Multi-Agent MiniMax Q-Learning for Two-Team Zero-Sum Markov Game
               </span>
               <div x-show="open" x-collapse.duration.500ms class="text-sm text-gray-500 pt-2">
                 <div class="text-center pt-2"></div>
                 <p class="pt-2">
-                  <p>Class-incremental learning is becoming more popular as it helps models widen their applicability while not forgetting what they already know.<span class='px-1 mx-1 bg-yellow-200'>A trend in this area is to use a mixture-of-expert technique, where different models work together to solve the task. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.955</span></span>However, the experts are usually trained all at once using whole task data, which makes them all prone to forgetting and increasing computational burden.To address this limitation, we introduce a novel approach named SEED.SEED selects only one, the most optimal expert for a considered task, and uses data from this task to fine-tune only this expert.For this purpose, each expert represents each class with a Gaussian distribution, and the optimal expert is selected based on the similarity of those distributions.Consequently, SEED increases diversity and heterogeneity within the experts while maintaining the high stability of this ensemble method.The extensive experiments demonstrate that SEED achieves state-of-the-art performance in exemplar-free settings across various scenarios, showing the potential of expert diversification through data in continual learning.</p>
+                  <p>Many real-world applications involve some agents that fall into two teams, with payoffs that are equal within the same team but of opposite sign across the opponent team.<span class='px-1 mx-1 bg-yellow-200'>The so-called two-team zero-sum Markov games (2t0sMGs) can be resolved with reinforcement learning in recent years. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.824</span></span>However, existing methods are thus inefficient in light of insufficient consideration of intra-team credit assignment, data utilization and computational intractability.In this paper, we propose the individual-global-minimax (IGMM) principle to ensure the coherence between two-team minimax behaviors and the individual greedy behaviors through Q functions in 2t0sMGs.Based on it, we present a novel multi-agent reinforcement learning framework, Factorized Multi-Agent MiniMax Q-Learning (FM3Q), which can factorize the joint minimax Q function into individual ones and iteratively solve for the IGMM-satisfied minimax Q functions for 2t0sMGs.Moreover, an online learning algorithm with neural networks is proposed to implement FM3Q and obtain the deterministic and decentralized minimax policies for two-team players.A theoretical analysis is provided to prove the convergence of FM3Q. Empirically, we use three environments to evaluate the learning efficiency and final performance of FM3Q and show its superiority on 2t0sMGs.</p>
                 </p>
               <p class="pb-2 pt-2 text-center">
-                <a class="underline decoration-2 text-green-600 text-md pt-2" href='http://arxiv.org/abs/2401.10191v1' target="_blank">
+                <a class="underline decoration-2 text-green-600 text-md pt-2" href='http://arxiv.org/abs/2402.00738v1' target="_blank">
                   link
                 </a>
               </p>
@@ -238,20 +512,20 @@
         </td>
       </tr><tr>
           <td class="inline-block">
-            <p class='font-bold text-black px-2 mx-1 text-xs w-24'>2024-01-18</p>
+            <p class='font-bold text-black px-2 mx-1 text-xs w-24'>2024-02-01</p>
           </td>
           <td>
             <div x-data="{open: false}">
               <span @click="open = ! open" class="hover:underline cursor-pointer decoration-2 decoration-green-600 text-gray-800 text-sm">
-                RAP-SAM: Towards Real-Time All-Purpose Segment Anything
+                Dense Reward for Free in Reinforcement Learning from Human Feedback
               </span>
               <div x-show="open" x-collapse.duration.500ms class="text-sm text-gray-500 pt-2">
                 <div class="text-center pt-2"></div>
                 <p class="pt-2">
-                  <p>Advanced by transformer architecture, vision foundation models (VFMs) achieve remarkable progress in performance and generalization ability.Segment Anything Model (SAM) is one remarkable model that can achieve generalized segmentation.However, most VFMs cannot run in realtime, which makes it difficult to transfer them into several products.On the other hand, current real-time segmentation mainly has one purpose, such as semantic segmentation on the driving scene.We argue that diverse outputs are needed for real applications.Thus, this work explores a new real-time segmentation setting, named all-purpose segmentation in real-time, to transfer VFMs in real-time deployment.It contains three different tasks, including interactive segmentation, panoptic segmentation, and video segmentation.We aim to use one model to achieve the above tasks in real-time.We first benchmark several strong baselines.Then, we present Real-Time All Purpose SAM (RAP-SAM).<span class='px-1 mx-1 bg-yellow-200'>It contains an efficient encoder and an efficient decoupled decoder to perform prompt-driven decoding. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.902</span></span>Moreover, we further explore different training strategies and tuning methods to boost co-training performance further.Our code and model are available at https://github.com/xushilin1/RAP-SAM/.</p>
+                  <p><span class='px-1 mx-1 bg-yellow-200'>Reinforcement Learning from Human Feedback (RLHF) has been credited as the key advance that has allowed Large Language Models (LLMs) to effectively follow instructions and produce useful assistance. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.842</span></span>Classically, this involves generating completions from the LLM in response to a query before using a separate reward model to assign a score to the full completion.<span class='px-1 mx-1 bg-yellow-200'>As an auto-regressive process, the LLM has to take many "actions" (selecting individual tokens) and only receives a single, sparse reward at the end of an episode, a setup that is known to be difficult to optimise in traditional reinforcement learning. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.828</span></span>In this work we leverage the fact that the reward model contains more information than just its scalar output, in particular, it calculates an attention map over tokens as part of the transformer architecture.We use these attention weights to redistribute the reward along the whole completion, effectively densifying the signal and highlighting the most important tokens, all without incurring extra computational cost or requiring any additional modelling.We demonstrate that, theoretically, this approach is equivalent to potential-based reward shaping, ensuring that the optimal policy remains unchanged.Empirically, we show that it stabilises training, accelerates the rate of learning, and, in practical cases, may lead to better local optima.</p>
                 </p>
               <p class="pb-2 pt-2 text-center">
-                <a class="underline decoration-2 text-green-600 text-md pt-2" href='http://arxiv.org/abs/2401.10228v1' target="_blank">
+                <a class="underline decoration-2 text-green-600 text-md pt-2" href='http://arxiv.org/abs/2402.00782v1' target="_blank">
                   link
                 </a>
               </p>
@@ -260,20 +534,86 @@
         </td>
       </tr><tr>
           <td class="inline-block">
-            <p class='font-bold text-black px-2 mx-1 text-xs w-24'>2024-01-18</p>
+            <p class='font-bold text-black px-2 mx-1 text-xs w-24'>2024-02-01</p>
           </td>
           <td>
             <div x-data="{open: false}">
               <span @click="open = ! open" class="hover:underline cursor-pointer decoration-2 decoration-green-600 text-gray-800 text-sm">
-                Simultaneous Tactile Estimation and Control for Extrinsic Dexterity
+                Learning and Calibrating Heterogeneous Bounded Rational Market Behaviour with Multi-Agent Reinforcement Learning
               </span>
               <div x-show="open" x-collapse.duration.500ms class="text-sm text-gray-500 pt-2">
                 <div class="text-center pt-2"></div>
                 <p class="pt-2">
-                  <p><span class='px-1 mx-1 bg-yellow-200'>We introduce a novel approach that combines tactile estimation and control for in-hand object manipulation. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.903</span></span><span class='px-1 mx-1 bg-yellow-200'>By integrating measurements from robot kinematics and an image-based tactile sensor, our framework estimates and tracks object pose while simultaneously generating motion plans to control the pose of a grasped object. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.961</span></span>This approach consists of a discrete pose estimator that uses the Viterbi decoding algorithm to find the most likely sequence of object poses in a coarsely discretized grid, and a continuous pose estimator-controller to refine the pose estimate and accurately manipulate the pose of the grasped object.Our method is tested on diverse objects and configurations, achieving desired manipulation objectives and outperforming single-shot methods in estimation accuracy.The proposed approach holds potential for tasks requiring precise manipulation in scenarios where visual perception is limited, laying the foundation for closed-loop behavior applications such as assembly and tool use.Please see supplementary videos for real-world demonstration at https://sites.google.com/view/texterity.</p>
+                  <p>Agent-based models (ABMs) have shown promise for modelling various real world phenomena incompatible with traditional equilibrium analysis.However, a critical concern is the manual definition of behavioural rules in ABMs.<span class='px-1 mx-1 bg-yellow-200'>Recent developments in multi-agent reinforcement learning (MARL) offer a way to address this issue from an optimisation perspective, where agents strive to maximise their utility, eliminating the need for manual rule specification. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.868</span></span><span class='px-1 mx-1 bg-yellow-200'>This learning-focused approach aligns with established economic and financial models through the use of rational utility-maximising agents. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.822</span></span>However, this representation departs from the fundamental motivation for ABMs: that realistic dynamics emerging from bounded rationality and agent heterogeneity can be modelled.To resolve this apparent disparity between the two approaches, we propose a novel technique for representing heterogeneous processing-constrained agents within a MARL framework.The proposed approach treats agents as constrained optimisers with varying degrees of strategic skills, permitting departure from strict utility maximisation.<span class='px-1 mx-1 bg-yellow-200'>Behaviour is learnt through repeated simulations with policy gradients to adjust action likelihoods. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.837</span></span>To allow efficient computation, we use parameterised shared policy learning with distributions of agent skill levels.Shared policy learning avoids the need for agents to learn individual policies yet still enables a spectrum of bounded rational behaviours.We validate our model's effectiveness using real-world data on a range of canonical $n$-agent settings, demonstrating significantly improved predictive capability.</p>
                 </p>
               <p class="pb-2 pt-2 text-center">
-                <a class="underline decoration-2 text-green-600 text-md pt-2" href='http://arxiv.org/abs/2401.10230v1' target="_blank">
+                <a class="underline decoration-2 text-green-600 text-md pt-2" href='http://arxiv.org/abs/2402.00787v1' target="_blank">
+                  link
+                </a>
+              </p>
+            </div>
+          </div>
+        </td>
+      </tr><tr>
+          <td class="inline-block">
+            <p class='font-bold text-black px-2 mx-1 text-xs w-24'>2024-02-01</p>
+          </td>
+          <td>
+            <div x-data="{open: false}">
+              <span @click="open = ! open" class="hover:underline cursor-pointer decoration-2 decoration-green-600 text-gray-800 text-sm">
+                Distilling Conditional Diffusion Models for Offline Reinforcement Learning through Trajectory Stitching
+              </span>
+              <div x-show="open" x-collapse.duration.500ms class="text-sm text-gray-500 pt-2">
+                <div class="text-center pt-2"></div>
+                <p class="pt-2">
+                  <p><span class='px-1 mx-1 bg-yellow-200'>Deep generative models have recently emerged as an effective approach to offline reinforcement learning. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.828</span></span>However, their large model size poses challenges in computation.We address this issue by proposing a knowledge distillation method based on data augmentation.In particular, high-return trajectories are generated from a conditional diffusion model, and they are blended with the original trajectories through a novel stitching algorithm that leverages a new reward generator.Applying the resulting dataset to behavioral cloning, the learned shallow policy whose size is much smaller outperforms or nearly matches deep generative planners on several D4RL benchmarks.</p>
+                </p>
+              <p class="pb-2 pt-2 text-center">
+                <a class="underline decoration-2 text-green-600 text-md pt-2" href='http://arxiv.org/abs/2402.00807v1' target="_blank">
+                  link
+                </a>
+              </p>
+            </div>
+          </div>
+        </td>
+      </tr><tr>
+          <td class="inline-block">
+            <p class='font-bold text-black px-2 mx-1 text-xs w-24'>2024-02-01</p>
+          </td>
+          <td>
+            <div x-data="{open: false}">
+              <span @click="open = ! open" class="hover:underline cursor-pointer decoration-2 decoration-green-600 text-gray-800 text-sm">
+                Leveraging Approximate Model-based Shielding for Probabilistic Safety Guarantees in Continuous Environments
+              </span>
+              <div x-show="open" x-collapse.duration.500ms class="text-sm text-gray-500 pt-2">
+                <div class="text-center pt-2"></div>
+                <p class="pt-2">
+                  <p><span class='px-1 mx-1 bg-yellow-200'>Shielding is a popular technique for achieving safe reinforcement learning (RL). <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.835</span></span>However, classical shielding approaches come with quite restrictive assumptions making them difficult to deploy in complex environments, particularly those with continuous state or action spaces.In this paper we extend the more versatile approximate model-based shielding (AMBS) framework to the continuous setting.In particular we use Safety Gym as our test-bed, allowing for a more direct comparison of AMBS with popular constrained RL algorithms.We also provide strong probabilistic safety guarantees for the continuous setting.In addition, we propose two novel penalty techniques that directly modify the policy gradient, which empirically provide more stable convergence in our experiments.</p>
+                </p>
+              <p class="pb-2 pt-2 text-center">
+                <a class="underline decoration-2 text-green-600 text-md pt-2" href='http://arxiv.org/abs/2402.00816v1' target="_blank">
+                  link
+                </a>
+              </p>
+            </div>
+          </div>
+        </td>
+      </tr><tr>
+          <td class="inline-block">
+            <p class='font-bold text-black px-2 mx-1 text-xs w-24'>2024-02-01</p>
+          </td>
+          <td>
+            <div x-data="{open: false}">
+              <span @click="open = ! open" class="hover:underline cursor-pointer decoration-2 decoration-green-600 text-gray-800 text-sm">
+                SLIM: Skill Learning with Multiple Critics
+              </span>
+              <div x-show="open" x-collapse.duration.500ms class="text-sm text-gray-500 pt-2">
+                <div class="text-center pt-2"></div>
+                <p class="pt-2">
+                  <p><span class='px-1 mx-1 bg-yellow-200'>Self-supervised skill learning aims to acquire useful behaviors that leverage the underlying dynamics of the environment. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.833</span></span>Latent variable models, based on mutual information maximization, have been particularly successful in this task but still struggle in the context of robotic manipulation.As it requires impacting a possibly large set of degrees of freedom composing the environment, mutual information maximization fails alone in producing useful manipulation behaviors.To address this limitation, we introduce SLIM, a multi-critic learning approach for skill discovery with a particular focus on robotic manipulation.Our main insight is that utilizing multiple critics in an actor-critic framework to gracefully combine multiple reward functions leads to a significant improvement in latent-variable skill discovery for robotic manipulation while overcoming possible interference occurring among rewards which hinders convergence to useful skills.Furthermore, in the context of tabletop manipulation, we demonstrate the applicability of our novel skill discovery approach to acquire safe and efficient motor primitives in a hierarchical reinforcement learning fashion and leverage them through planning, surpassing the state-of-the-art approaches for skill discovery by a large margin.</p>
+                </p>
+              <p class="pb-2 pt-2 text-center">
+                <a class="underline decoration-2 text-green-600 text-md pt-2" href='http://arxiv.org/abs/2402.00823v1' target="_blank">
                   link
                 </a>
               </p>
@@ -283,29 +623,24 @@
       </tr><tr>
           <td></td>
           <td>
-            <h2 class="text-2xl tracking-tight pt-4 font-bold">Neural Ordinary Differential Equations</h2>
+            <h2 class="text-2xl tracking-tight pt-4 font-bold">Trajectory Optimization</h2>
           </td>
         </tr><tr>
-          <td></td>
-          <td>
-            <h2 class="text-2xl tracking-tight pt-4 font-bold">Artificial General Intelligence</h2>
-          </td>
-        </tr><tr>
           <td class="inline-block">
-            <p class='font-bold text-black px-2 mx-1 text-xs w-24'>2024-01-18</p>
+            <p class='font-bold text-black px-2 mx-1 text-xs w-24'>2024-02-01</p>
           </td>
           <td>
             <div x-data="{open: false}">
               <span @click="open = ! open" class="hover:underline cursor-pointer decoration-2 decoration-green-600 text-gray-800 text-sm">
-                Evolutionary Computation in the Era of Large Language Model: Survey and Roadmap
+                Learning Planning-based Reasoning by Trajectories Collection and Process Reward Synthesizing
               </span>
               <div x-show="open" x-collapse.duration.500ms class="text-sm text-gray-500 pt-2">
                 <div class="text-center pt-2"></div>
                 <p class="pt-2">
-                  <p><span class='px-1 mx-1 bg-yellow-200'>Large Language Models (LLMs), built upon Transformer-based architectures with massive pretraining on diverse data, have not only revolutionized natural language processing but also extended their prowess to various domains, marking a significant stride towards artificial general intelligence. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.917</span></span>The interplay between LLMs and Evolutionary Algorithms (EAs), despite differing in objectives and methodologies, reveals intriguing parallels, especially in their shared optimization nature, black-box characteristics, and proficiency in handling complex problems.Meanwhile, EA can not only provide an optimization framework for LLM's further enhancement under black-box settings but also empower LLM with flexible global search and iterative mechanism in applications.On the other hand, LLM's abundant domain knowledge enables EA to perform smarter searches, while its text processing capability assist in deploying EA across various tasks.Based on their complementary advantages, this paper presents a comprehensive review and forward-looking roadmap, categorizing their mutual inspiration into LLM-enhanced evolutionary optimization and EA-enhanced LLM.Some integrated synergy methods are further introduced to exemplify the amalgamation of LLMs and EAs in various application scenarios, including neural architecture search, code generation, software engineering, and text generation.As the first comprehensive review specifically focused on the EA research in the era of LLMs, this paper provides a foundational stepping stone for understanding and harnessing the collaborative potential of LLMs and EAs.By presenting a comprehensive review, categorization, and critical analysis, we contribute to the ongoing discourse on the cross-disciplinary study of these two powerful paradigms.The identified challenges and future directions offer guidance to unlock the full potential of this innovative collaboration.</p>
+                  <p>Large Language Models (LLMs) have demonstrated significant potential in handling complex reasoning tasks through step-by-step rationale generation.However, recent studies have raised concerns regarding the hallucination and flaws in their reasoning process.Substantial efforts are being made to improve the reliability and faithfulness of the generated rationales.Some approaches model reasoning as planning, while others focus on annotating for process supervision.Nevertheless, the planning-based search process often results in high latency due to the frequent assessment of intermediate reasoning states and the extensive exploration space.Additionally, supervising the reasoning process with human annotation is costly and challenging to scale for LLM training.<span class='px-1 mx-1 bg-yellow-200'>To address these issues, in this paper, we propose a framework to learn planning-based reasoning through direct preference optimization (DPO) on collected trajectories, which are ranked according to synthesized process rewards. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.822</span></span>Our results on challenging logical reasoning benchmarks demonstrate the effectiveness of our learning framework, showing that our 7B model can surpass the strong counterparts like GPT-3.5-Turbo.</p>
                 </p>
               <p class="pb-2 pt-2 text-center">
-                <a class="underline decoration-2 text-green-600 text-md pt-2" href='http://arxiv.org/abs/2401.10034v1' target="_blank">
+                <a class="underline decoration-2 text-green-600 text-md pt-2" href='http://arxiv.org/abs/2402.00658v1' target="_blank">
                   link
                 </a>
               </p>
@@ -314,39 +649,27 @@
         </td>
       </tr><tr>
           <td class="inline-block">
-            <p class='font-bold text-black px-2 mx-1 text-xs w-24'>2024-01-18</p>
+            <p class='font-bold text-black px-2 mx-1 text-xs w-24'>2024-02-01</p>
           </td>
           <td>
             <div x-data="{open: false}">
               <span @click="open = ! open" class="hover:underline cursor-pointer decoration-2 decoration-green-600 text-gray-800 text-sm">
-                Edit One for All: Interactive Batch Image Editing
+                Distilling Conditional Diffusion Models for Offline Reinforcement Learning through Trajectory Stitching
               </span>
               <div x-show="open" x-collapse.duration.500ms class="text-sm text-gray-500 pt-2">
                 <div class="text-center pt-2"></div>
                 <p class="pt-2">
-                  <p>In recent years, image editing has advanced remarkably.With increased human control, it is now possible to edit an image in a plethora of ways; from specifying in text what we want to change, to straight up dragging the contents of the image in an interactive point-based manner.However, most of the focus has remained on editing single images at a time.Whether and how we can simultaneously edit large batches of images has remained understudied.<span class='px-1 mx-1 bg-yellow-200'>With the goal of minimizing human supervision in the editing process, this paper presents a novel method for interactive batch image editing using StyleGAN as the medium. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.888</span></span>Given an edit specified by users in an example image (e.g., make the face frontal), our method can automatically transfer that edit to other test images, so that regardless of their initial state (pose), they all arrive at the same final state (e.g., all facing front).Extensive experiments demonstrate that edits performed using our method have similar visual quality to existing single-image-editing methods, while having more visual consistency and saving significant time and human effort.</p>
+                  <p>Deep generative models have recently emerged as an effective approach to offline reinforcement learning.However, their large model size poses challenges in computation.We address this issue by proposing a knowledge distillation method based on data augmentation.<span class='px-1 mx-1 bg-yellow-200'>In particular, high-return trajectories are generated from a conditional diffusion model, and they are blended with the original trajectories through a novel stitching algorithm that leverages a new reward generator. <span style='font-size: 0.65rem;' class='text-purple-500 font-bold'>0.824</span></span>Applying the resulting dataset to behavioral cloning, the learned shallow policy whose size is much smaller outperforms or nearly matches deep generative planners on several D4RL benchmarks.</p>
                 </p>
               <p class="pb-2 pt-2 text-center">
-                <a class="underline decoration-2 text-green-600 text-md pt-2" href='http://arxiv.org/abs/2401.10219v1' target="_blank">
+                <a class="underline decoration-2 text-green-600 text-md pt-2" href='http://arxiv.org/abs/2402.00807v1' target="_blank">
                   link
                 </a>
               </p>
             </div>
           </div>
         </td>
-      </tr><tr>
-          <td></td>
-          <td>
-            <h2 class="text-2xl tracking-tight pt-4 font-bold">Thermodynamic Computing</h2>
-          </td>
-        </tr></tbody>
-        </td>
-      </tr><tr>
-          <td></td>
-          <td>
-            <h2 class="text-2xl tracking-tight pt-4 font-bold">Thermodynamic Computing</h2>
-          </td>
-        </tr></tbody>
+      </tr></tbody>
   </table>
   <br><br>
 </div>
