@@ -15,6 +15,8 @@ class LabelConfig(BaseModel):
     name: str
     instructions: str = ""
     label: str
+    query: str
+    embed_label: str = ""
     threshold: float = 0.7
     detail: str = ""
     keywords: List[str] = []

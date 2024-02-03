@@ -1,7 +1,9 @@
 sections:
   - name: "Artificial General Intelligence"
     label: "artificial general intelligence"
-    threshold: 0.87
+    query: "'artificial general intelligence'"
+    embed_label: "Concerned with the description or creation of systems that exhibit artificial general intelligence"
+    threshold: 0.82
     keywords:
       - "artificial general intelligence"
       - "agi"
@@ -10,20 +12,37 @@ sections:
       - "general artificial intelligence"
   - name: "Collective Intelligence"
     label: "collective intelligence"
-    threshold: 0.87
+    query: "collective intelligence"
+    embed_label: "Collective intelligence is the shared or group intelligence that emerges when agents work together, to solve complex problems, representing an emergent property arising from the synergies among individuals' activities but not predictable from the knowledge of individual group members"
+    threshold: 0.82
     keywords:
       - "collective intelligence"
       - "collective"
   - name: "Complex Systems"
-    label: "complex systems, but not computational complexity"
-    threshold: 0.87
+    label: "complex systems"
+    query: "complex systems"
+    embed_label: "Complex systems are systems whose behavior is intrinsically difficult to model due to the dependencies, competitions, relationships, or other types of interactions between their parts or between a given system and its environment"
+    threshold: 0.82
     keywords:
       - "complex systems"
       - "complexity"
       - "complex"
+  - name: "Decision Making Under Uncertainty"
+    label: "decision making under uncertainty"
+    query: "decision making under uncertainty"
+    embed_label: "Decision making under uncertainty is the process of making decisions based on imperfect knowledge of the outcomes of those decisions"
+    threshold: 0.82
+    keywords:
+      - "decision making under uncertainty"
+      - "decision making"
+      - "uncertainty"
+      - "decision"
+      - "decisions"
   - name: "Dissipative Adaptation"
     label: "dissipative adaptation"
-    threshold: 0.87
+    query: "dissipative adaptation"
+    embed_label: "Dissipative adaptation is a process by which a system adapts to its environment by dissipating energy"
+    threshold: 0.82
     keywords:
       - "dissipative adaptation"
       - "dissipative"
@@ -31,7 +50,9 @@ sections:
       - "dissipative adaptation"
   - name: "Neural Ordinary Differential Equations"
     label: "neural ordinary differential equations"
-    threshold: 0.87
+    query: "neural ordinary differential equations"
+    embed_label: "Neural Ordinary Differential Equations (Neural ODEs) are a class of neural networks that are defined by ordinary differential equations (ODEs) with respect to time, as opposed to a discrete sequence of layers"
+    threshold: 0.82
     keywords: 
       - "neural ordinary differential equations"
       - "neural differential equations"
@@ -40,14 +61,19 @@ sections:
       - "neural odes" 
   - name: "Reinforcement Learning"
     label: "reinforcement learning or multi-agent reinforcement learning"
-    threshold: 0.87
+    query: "reinforcement learning"
+    embed_label: "Reinforcement learning is an area of machine learning concerned with how software agents ought to take actions in an environment in order to maximize the notion of cumulative reward"
+    threshold: 0.82
     keywords:
       - "reinforcement learning"
       - "multi-agent reinforcement learning"
       - "multi-agent"
+      - "multiagent"
   - name: "Thermodynamic Computing"
     label: "thermodynamic computing"
-    threshold: 0.87
+    query: "thermodynamic computing"
+    embed_label: "Thermodynamic computing is a field of research that explores the connection between thermodynamics and computing"
+    threshold: 0.82
     keywords:
       - "thermodynamic computing"
       - "thermodynamic"
@@ -58,3 +84,11 @@ sections:
       - "thermodynamic computations"
       - "thermodynamic computer"
       - "thermodynamic computers"
+  - name: "Trajectory Optimization"
+    label: "trajectory optimization"
+    query: "'trajectory optimization'"
+    embed_label: "Trajectory optimization is the process of designing a trajectory that minimizes or maximizes some measure of performance while satisfying a set of constraints"
+    threshold: 0.82
+    keywords:
+      - "trajectory optimization"
+      - "trajectory"
