@@ -1,4 +1,5 @@
-import datetime as dt 
+import time
+import datetime as dt
 from pathlib import Path
 from typing import List
 
@@ -6,11 +7,14 @@ import srsly
 import tqdm
 import arxiv
 from arxiv import Result
-from retry import retry 
+from retry import retry
 import spacy
 from spacy.language import Language
 from .types import ArxivArticle
-from rich.console import Console 
+from rich.console import Console
+
+from .constants import QUERIES
+
 
 console = Console()
 
@@ -26,9 +30,9 @@ def parse(res: Result, nlp: Language) -> ArxivArticle:
     summary = res.summary.replace("\n", " ")
     doc = nlp(summary)
     sents = [s.text for s in doc.sents]
-    
+
     return ArxivArticle(
-        created=str(res.published)[:19], 
+        created=str(res.published)[:19],
         title=str(res.title),
         abstract=summary,
         sentences=sents,
@@ -36,70 +40,88 @@ def parse(res: Result, nlp: Language) -> ArxivArticle:
         category=res.primary_category,
     )
 
-@retry(tries=5, delay=1, backoff=2)
+
+@retry(tries=2, delay=3, backoff=2)
 def main():
     nlp = spacy.load("en_core_web_sm", disable=["ner", "lemmatizer", "tagger"])
     console.log(f"Starting arxiv search.")
-    items = arxiv.Search(
-        query="the",
-        max_results=300,
-        sort_by=arxiv.SortCriterion.SubmittedDate,
-    )
+    console.log(f"Searching for {QUERIES}")
+    results = []
 
-    results = list(items.results())
+    # QUERIES.append("the")
+    for query in QUERIES:
+        console.log(f"Searching for {query}")
+        items = arxiv.Search(
+            query=query,
+            max_results=200,
+            sort_by=arxiv.SortCriterion.SubmittedDate,
+        )
+
+        results.extend(list(items.results()))
+        time.sleep(2)
 
     console.log(f"Found {len(results)} results.")
     categories = [
-                    "cs.AI",
-                    "cs.CE",
-                    "cs.LG",
-                    "cs.GT",
-                    "cs.MA",
-                    "cs.SI",
-                    "cs.NE",
-                    
-                    "gr-qc",
-                    "hep-th",
-                    "math-ph",
-                    
-                    "nlin.AO",
-                    
-                    "physics.comp-ph",
-                    "physics.soc-ph",
-                    "quant-ph",
-                    
-                    "q-fin.RM",
+        "cs.AI",
+        "cs.CE",
+        "cs.LG",
+        "cs.GT",
+        "cs.MA",
+        "cs.SI",
+        "cs.NE",
+        "gr-qc",
+        "hep-th",
+        "math-ph",
+        "nlin.AO",
+        "physics.comp-ph",
+        "physics.soc-ph",
+        "quant-ph",
+        "q-fin.RM",
     ]
-    
+
     starts_with = ["cs"]
 
-    articles = [dict(parse(r, nlp=nlp)) 
-                for r in tqdm.tqdm(results) 
-                # if age_in_days(r) < 2.5 and r.primary_category.startswith("cs")
-                # if age_in_days(r) < 3.0 and r.primary_category in categories
-                if age_in_days(r) < 3.0 and (
-                    any(r.primary_category.startswith(sw) for sw in starts_with) or any(elem in r.categories for elem in categories)
-                )
+    articles = [
+        dict(parse(r, nlp=nlp))
+        for r in tqdm.tqdm(results)
+        # if age_in_days(r) < 2.5 and r.primary_category.startswith("cs")
+        # if age_in_days(r) < 3.0 and r.primary_category in categories
+        # if age_in_days(r) < 3.0 and (
+        #     any(r.primary_category.startswith(sw) for sw in starts_with) or any(elem in r.categories for elem in categories)
+        # )
+        if age_in_days(r) < 3.0
     ]
 
     dist = [age_in_days(r) for r in results]
     if dist:
         console.log(f"Minimum article age: {min(dist)}")
         console.log(f"Maximum article age: {max(dist)}")
-    articles_dict = {ex['title']: ex for ex in articles}
+    articles_dict = {ex["title"]: ex for ex in articles}
     try:
         most_recent = list(sorted(Path("data/downloads/").glob("*.jsonl")))[-1]
-        old_articles_dict = {ex['title']: ex for ex in srsly.read_jsonl(most_recent)}
+        old_articles_dict = {ex["title"]: ex for ex in srsly.read_jsonl(most_recent)}
 
-        new_articles = [ex for title, ex in articles_dict.items() if title not in old_articles_dict.keys()]
-        old_articles = [ex for title, ex in articles_dict.items() if title in old_articles_dict.keys()]
+        new_articles = [
+            ex
+            for title, ex in articles_dict.items()
+            if title not in old_articles_dict.keys()
+        ]
+        old_articles = [
+            ex
+            for title, ex in articles_dict.items()
+            if title in old_articles_dict.keys()
+        ]
     except IndexError:
         new_articles = [ex for title, ex in articles_dict.items()]
         old_articles = []
     if old_articles:
-        console.log(f"Found {len(old_articles)} old articles in current batch. Skipping.")
+        console.log(
+            f"Found {len(old_articles)} old articles in current batch. Skipping."
+        )
     if new_articles:
-        console.log(f"Found {len(new_articles)} new articles in current batch to write.")
+        console.log(
+            f"Found {len(new_articles)} new articles in current batch to write."
+        )
         filename = str(dt.datetime.now()).replace(" ", "-")[:13] + "h.jsonl"
         srsly.write_jsonl(Path("data") / "downloads" / filename, new_articles)
         console.log(f"Wrote {len(new_articles)} articles into {filename}.")

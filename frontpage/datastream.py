@@ -293,11 +293,10 @@ class DataStream:
                     aligns="r,r,r,r".split(","))
     
     def get_site_stream(self):
-        # model = SentenceModel.from_disk()
-        model = "" #TODO REMOVE
         keywords = list(it.chain(*[s.keywords for s in CONFIG.sections]))
         
         def upper_limit(stream):
+            # This function ensures that we don't have more than 50 papers per section
             tracker = {lab: 0 for lab in LABELS}
             limit = 50
             for ex in stream:
@@ -322,40 +321,11 @@ class DataStream:
         
         pipe = (LazyLines(self.get_clean_download_stream())
                 .pipe(keyword_filter)
-                .pipe(add_predictions, model=model)
+                .pipe(add_predictions)
                 .pipe(upper_limit)
                 .collect())
         
         return pipe
-    
-    def get_site_stream2(self):
-        # model = SentenceModel.from_disk()
-        model = ""
-
-        def upper_limit(stream):
-            tracker = {lab: 0 for lab in LABELS}
-            limit = 50
-            for ex in stream:
-                for preds in ex['preds']:
-                    for name, proba in preds.items():
-                        if name in tracker and proba > THRESHOLDS[name] and tracker[name] < limit:
-                            tracker[name] += 1
-                            if "sections" not in ex:
-                                ex['sections'] = []
-                            ex['sections'].append(name)
-                            ex['sections'] = list(set(ex['sections']))
-                            yield ex
-                if all(v == limit for v in tracker.values()):
-                    break
-
-        console.log("Filtering recent content.")
-        return (
-            LazyLines(self.get_clean_download_stream())
-                .head(10)
-                .pipe(add_predictions, model=model)
-                # .pipe(upper_limit)
-                .collect()
-        )
     
     def get_site_content(self):
         site_stream = dedup_stream(self.get_site_stream(), key="abstract")
@@ -378,10 +348,13 @@ class DataStream:
                 editable = item.copy()
                 editable['html'] = render_html(editable, section)
                 sections[section]['content'].append(editable)
-
+        # TODO cleanup
         for section in sections.keys():
-            uniq_content = dedup_stream(sections[section]['content'], key="abstract")
-            sections[section]['content'] = reversed(sorted(uniq_content, key=lambda d: d['created']))
+            if sections[section]['content']:
+                uniq_content = dedup_stream(sections[section]['content'], key="abstract")
+                sections[section]['content'] = reversed(sorted(uniq_content, key=lambda d: d['created']))
+        non_empty_sections = [section for section in sections.values() if section['content']]
         console.log("Sections generated.")
-        return list(sections.values())
+        # return list(sections.values())
+        return non_empty_sections
         

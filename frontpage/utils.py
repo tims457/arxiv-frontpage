@@ -3,7 +3,8 @@ from rich.console import Console
 import itertools as it
 
 from spacy.tokens import Span
-from .hf_models import HFModel
+from .hf_models import Model
+from .constants import MODEL_TYPE
 
 console = Console()
 
@@ -70,11 +71,13 @@ def attach_spans(stream, label, min_spans=1, max_spans=1):
                 yield ex
 
 
-def add_predictions(stream, model):
-    model = HFModel()
+def add_predictions(stream):
+    model = Model()
     for ex in tqdm.tqdm(stream):
-        preds = model.predict(ex['sentences'])
-        ex['preds'] = preds
+        if MODEL_TYPE == "classifier":
+            ex['preds'] = model.predict(ex['sentences'])
+        elif MODEL_TYPE == "embedding":           
+            ex['preds'] = model.predict_embeddings(ex['sentences'])
         ex['created'] = ex['created'][:10]
         yield ex
 

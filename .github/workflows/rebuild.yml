@@ -2,6 +2,7 @@ name: Rebuild Site
 
 env:
   WANDB_API_KEY: ${{ secrets.WANDB_API_KEY }}
+  OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
 
 on:
   workflow_dispatch:
