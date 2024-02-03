@@ -174,3 +174,6 @@ data/annot/second-opinion.jsonl
 configs/*/*.spacy
 *.ipynb
 *.code-workspace
+*backup/
+index.html
+
