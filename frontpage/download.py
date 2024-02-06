@@ -49,16 +49,23 @@ def main():
     results = []
 
     # QUERIES.append("the")
-    for query in QUERIES:
-        console.log(f"Searching for {query}")
-        items = arxiv.Search(
-            query=query,
-            max_results=200,
-            sort_by=arxiv.SortCriterion.SubmittedDate,
-        )
+    try:
+        for query in QUERIES:
+            console.log(f"Searching for {query}")
+            items = arxiv.Search(
+                query=query,
+                max_results=200,
+                sort_by=arxiv.SortCriterion.SubmittedDate,
+            )
 
-        results.extend(list(items.results()))
-        time.sleep(2)
+            results.extend(list(items.results()))
+            time.sleep(2)
+    except Exception as e:
+        console.log(f"Download Error: {e}")
+    
+    if not results:
+        console.log(f"No results found.")
+        raise ValueError("No results found.")
 
     console.log(f"Found {len(results)} results.")
     categories = [
