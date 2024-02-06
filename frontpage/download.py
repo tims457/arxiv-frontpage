@@ -41,7 +41,7 @@ def parse(res: Result, nlp: Language) -> ArxivArticle:
     )
 
 
-@retry(tries=2, delay=3, backoff=2)
+@retry(tries=3, delay=10, backoff=2)
 def main():
     nlp = spacy.load("en_core_web_sm", disable=["ner", "lemmatizer", "tagger"])
     console.log(f"Starting arxiv search.")
