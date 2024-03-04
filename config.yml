@@ -24,7 +24,6 @@ sections:
     embed_label: "Complex systems are systems whose behavior is intrinsically difficult to model due to the dependencies, competitions, relationships, or other types of interactions between their parts or between a given system and its environment"
     threshold: 0.82
     keywords:
-      - "complex systems"
       - "complexity"
       - "complex"
   - name: "Decision Making Under Uncertainty"
@@ -77,3 +76,11 @@ sections:
     keywords:
       - "trajectory optimization"
       - "trajectory"
+  - name: "Active Inference"
+    label: "active inference"
+    query: "'active inference' 'free energy principle'"
+    embed_label: "Active inference is a theory that characterizes perception, planning, and action in terms of probabilistic inference"
+    threshold: 0.82
+    keywords:
+      - "active inference"
+      - "free energy principle"
